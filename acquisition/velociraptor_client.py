@@ -12,6 +12,7 @@ CLI:
 from __future__ import annotations
 
 import argparse
+import base64
 import json
 import os
 import sys
@@ -33,6 +34,35 @@ DEFAULT_ENV_PATH = REPO_ROOT / "config" / ".env"
 FLOW_POLL_INTERVAL_SEC = 2.0
 FLOW_TIMEOUT_SEC = 180.0
 AGENT_FRESHNESS_MAX_AGE_SEC = 120.0
+
+
+def _vql_literal(value: Any) -> str:
+    """Encode a Python value as a VQL literal suitable for inlining into queries.
+
+    Strings are base64-encoded and wrapped in `base64decode(string='...')` so
+    that arbitrary content (multi-line YARA rules with quotes, dollar signs,
+    backslashes, etc.) passes through the VQL parser cleanly. Velociraptor's
+    VQL only supports `'...'` and `'''...'''` string literals — neither is
+    safe for rule corpora because at least one real-world YARA rule contains
+    `'''` inside a string variable definition. Base64 sidesteps all of this.
+    """
+    if isinstance(value, bool):
+        return "TRUE" if value else "FALSE"
+    if isinstance(value, (int, float)):
+        return str(value)
+    encoded = base64.standard_b64encode(str(value).encode("utf-8")).decode("ascii")
+    return f"base64decode(string='{encoded}')"
+
+
+def _build_spec_clause(artifact_name: str, parameters: dict | None) -> str:
+    """Build the `, spec=dict(<artifact>=dict(...))` fragment for collect_client.
+
+    Returns empty string if parameters is None/empty.
+    """
+    if not parameters:
+        return ""
+    pairs = ", ".join(f"{k}={_vql_literal(v)}" for k, v in parameters.items())
+    return f", spec=dict(`{artifact_name}`=dict({pairs}))"
 
 
 class VelociraptorClient:
@@ -68,9 +98,21 @@ class VelociraptorClient:
             Query=[api_pb2.VQLRequest(Name=name, VQL=vql)],
         )
         rows: list[dict[str, Any]] = []
+        error_logs: list[str] = []
         for response in self._stub.Query(request):
             if response.Response:
                 rows.extend(json.loads(response.Response))
+            log_msg = (getattr(response, "log", "") or "").strip()
+            # Velociraptor surfaces parse and execution errors via the `log`
+            # field with phrases like "VQL Error" or "Error:". Informational
+            # logs ("Starting query execution", "Sending response part") are
+            # also delivered here — we only surface the ones that look like
+            # real errors so genuine empty results aren't mistaken for failures.
+            if log_msg and ("VQL Error" in log_msg or "Error:" in log_msg):
+                error_logs.append(log_msg)
+        if error_logs:
+            joined = "; ".join(error_logs)
+            raise RuntimeError(f"VQL {name!r} server error: {joined}")
         return rows
 
     def list_clients(self) -> list[dict[str, Any]]:
@@ -110,25 +152,30 @@ class VelociraptorClient:
         client_id: str,
         artifact_name: str,
         parameters: dict | None = None,
+        max_rows: int | None = None,
+        timeout_sec: float | None = None,
     ) -> list[dict[str, Any]]:
         """Dispatch one artifact to the agent, poll until done, return result rows.
 
-        Note: we deliberately do NOT pass `wait=TRUE` to `collect_client`. In
-        Velociraptor 0.76.x, that flag causes the function to return null
-        instead of the expected flow context. Instead we schedule the flow,
-        capture the `flow_id` from the immediate return value, and poll
-        `flows()` until state is FINISHED.
+        Notes on Velociraptor 0.76.x quirks (see memory file):
+          - We deliberately do NOT pass `wait=TRUE` to `collect_client`. That flag
+            causes the function to return null instead of the flow context dict.
+          - Artifact parameters are passed via the `spec` argument as
+            `spec=dict(`<ArtifactName>`=dict(Param='value', ...))`. We embed string
+            values inside triple-single-quoted VQL literals to handle multi-line
+            content (YARA rules) without escape hell.
+          - `max_rows` caps the rows the agent emits; useful for chatty artifacts
+            like Yara scans.
         """
-        params_clause = ""
-        if parameters:
-            kv = ", ".join(f"'{k}', '''{v}'''" for k, v in parameters.items())
-            params_clause = f", env=dict({kv})"
+        spec_clause = _build_spec_clause(artifact_name, parameters)
+        max_rows_clause = f", max_rows={int(max_rows)}" if max_rows else ""
 
         collect_vql = (
             f"SELECT collect_client("
             f"client_id='{client_id}', "
             f"artifacts=['{artifact_name}']"
-            f"{params_clause}"
+            f"{spec_clause}"
+            f"{max_rows_clause}"
             f") AS flow FROM scope()"
         )
         collect_rows = self._run_vql(collect_vql, name="collect")
@@ -145,7 +192,11 @@ class VelociraptorClient:
         if not flow_id:
             raise RuntimeError(f"no flow_id in collect_client response: {flow}")
 
-        self._wait_for_flow(client_id=client_id, flow_id=flow_id)
+        self._wait_for_flow(
+            client_id=client_id,
+            flow_id=flow_id,
+            timeout_sec=timeout_sec if timeout_sec is not None else FLOW_TIMEOUT_SEC,
+        )
 
         source_vql = (
             f"SELECT * FROM source("
@@ -156,8 +207,13 @@ class VelociraptorClient:
         )
         return self._run_vql(source_vql, name=f"source_{artifact_name}")
 
-    def _wait_for_flow(self, client_id: str, flow_id: str) -> None:
-        deadline = time.monotonic() + FLOW_TIMEOUT_SEC
+    def _wait_for_flow(
+        self,
+        client_id: str,
+        flow_id: str,
+        timeout_sec: float = FLOW_TIMEOUT_SEC,
+    ) -> None:
+        deadline = time.monotonic() + timeout_sec
         while time.monotonic() < deadline:
             rows = self._run_vql(
                 f"SELECT state, status FROM flows("
@@ -173,7 +229,7 @@ class VelociraptorClient:
                         )
                     return
             time.sleep(FLOW_POLL_INTERVAL_SEC)
-        raise TimeoutError(f"flow {flow_id} did not finish within {FLOW_TIMEOUT_SEC}s")
+        raise TimeoutError(f"flow {flow_id} did not finish within {timeout_sec}s")
 
 
 def _from_env() -> VelociraptorClient:

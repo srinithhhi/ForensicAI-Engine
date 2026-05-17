@@ -46,10 +46,14 @@ class VelociraptorArtifactStep(CollectionStep):
         name: str,
         artifact_name: str,
         parameters: dict | None = None,
+        max_rows: int | None = None,
+        timeout_sec: float | None = None,
     ) -> None:
         self.name = name
         self.artifact_name = artifact_name
         self.parameters = parameters or {}
+        self.max_rows = max_rows
+        self.timeout_sec = timeout_sec
 
     def execute(self, ctx: AcquisitionContext) -> StepResult:
         started_at = utcnow_iso()
@@ -63,6 +67,8 @@ class VelociraptorArtifactStep(CollectionStep):
                 client_id=ctx.velociraptor_client_id,
                 artifact_name=self.artifact_name,
                 parameters=self.parameters,
+                max_rows=self.max_rows,
+                timeout_sec=self.timeout_sec,
             )
             with output_path.open("w") as f:
                 json.dump(rows, f, indent=2, sort_keys=True)
