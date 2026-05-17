@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forensicai-engine/schemas/acquisition_manifest_v1.json",
+  "title": "Acquisition Manifest v1",
+  "description": "Canonical manifest written by Acquirer implementations to data/raw/{incident_id}/manifest.json. Locked contract consumed by the OCSF mappers.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "incident_id",
+    "scope",
+    "acquirer_version",
+    "started_at",
+    "ended_at",
+    "steps"
+  ],
+  "properties": {
+    "incident_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope": {
+      "type": "string",
+      "enum": ["bare_metal", "vmware", "cloud"]
+    },
+    "acquirer_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ended_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "steps": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/step_result"}
+    }
+  },
+  "$defs": {
+    "step_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "kind", "status", "started_at", "ended_at"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "kind": {"type": "string", "enum": ["velociraptor", "ssh_stream"]},
+        "status": {"type": "string", "enum": ["success", "failed"]},
+        "artifact": {"type": ["string", "null"]},
+        "path": {"type": ["string", "null"]},
+        "sha256": {
+          "type": ["string", "null"],
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "size_bytes": {"type": ["integer", "null"], "minimum": 0},
+        "started_at": {"type": "string", "format": "date-time"},
+        "ended_at": {"type": "string", "format": "date-time"},
+        "error": {"type": ["string", "null"]}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"status": {"const": "success"}}},
+          "then": {
+            "required": ["path", "sha256", "size_bytes"],
+            "properties": {
+              "path": {"type": "string"},
+              "sha256": {"type": "string"},
+              "size_bytes": {"type": "integer"}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"status": {"const": "failed"}}},
+          "then": {
+            "required": ["error"],
+            "properties": {"error": {"type": "string", "minLength": 1}}
+          }
+        }
+      ]
+    }
+  }
+}

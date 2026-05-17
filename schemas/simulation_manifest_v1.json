@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forensicai-engine/schemas/simulation_manifest_v1.json",
+  "title": "Simulation Manifest v1",
+  "description": "Canonical manifest written by Simulator implementations to data/simulations/{incident_id}/simulation_manifest.json. Shares incident_id with the acquisition manifest for label join.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "incident_id",
+    "scope",
+    "target",
+    "runner_version",
+    "started_at",
+    "ended_at",
+    "runs"
+  ],
+  "properties": {
+    "incident_id": {"type": "string", "minLength": 1},
+    "scope": {"type": "string", "enum": ["bare_metal", "vmware", "cloud"]},
+    "target": {"type": "string"},
+    "runner_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "started_at": {"type": "string", "format": "date-time"},
+    "ended_at": {"type": ["string", "null"], "format": "date-time"},
+    "runs": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/technique_run"}
+    }
+  },
+  "$defs": {
+    "technique_run": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "technique_id",
+        "test_number",
+        "command",
+        "started_at",
+        "ended_at",
+        "exit_code",
+        "success"
+      ],
+      "properties": {
+        "technique_id": {
+          "type": "string",
+          "pattern": "^T\\d{4}(\\.\\d{3})?$"
+        },
+        "test_number": {"type": "integer", "minimum": 1},
+        "command": {"type": "string"},
+        "started_at": {"type": "string", "format": "date-time"},
+        "ended_at": {"type": "string", "format": "date-time"},
+        "exit_code": {"type": "integer"},
+        "success": {"type": "boolean"},
+        "stdout_path": {"type": ["string", "null"]},
+        "stderr_path": {"type": ["string", "null"]},
+        "error": {"type": ["string", "null"]}
+      }
+    }
+  }
+}
