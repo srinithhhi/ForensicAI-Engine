@@ -1,0 +1,76 @@
+name: Custom.Linux.Sys.AIDE
+description: |
+  Run `aide --check` against the local AIDE baseline database and emit one
+  row per run summarizing change counts plus the full raw report.
+
+  AIDE exits non-zero when changes are detected against the baseline — this
+  is by-design behaviour, not a failure. Real errors (missing baseline DB,
+  missing config, IO errors) ALSO produce non-zero codes; downstream
+  consumers distinguish by inspecting `total_entries` and `raw_stderr`.
+
+  Per the project's "collect raw, filter downstream" principle, this artifact
+  parses ONLY the summary counts at the agent. The full report text is
+  preserved in `raw_report` so the OCSF mapper can later extract per-file
+  change rows without re-running AIDE.
+
+  Requirements on the agent:
+    - aide >= 0.17 installed at /usr/bin/aide (override via AideBinaryPath)
+    - baseline database initialized (typically /var/lib/aide/aide.db)
+    - agent runs as root (standard Velociraptor systemd install) so the
+      baseline DB and all monitored paths are readable without sudo
+    - aide.conf must keep `report_summarize_changes=yes` for the count
+      regex to match (Ubuntu's package default)
+
+author: ForensicAI-Engine
+type: CLIENT
+
+parameters:
+  - name: AideBinaryPath
+    description: Path to the aide binary on the agent
+    default: /usr/bin/aide
+  - name: AideConfigPath
+    description: Path to the aide configuration file on the agent
+    default: /etc/aide/aide.conf
+
+# Restrict this artifact to Linux clients. Without this, the server lets
+# you dispatch it to Windows agents and you'd get a confusing exec failure.
+precondition: |
+  SELECT OS FROM info() WHERE OS = 'linux'
+
+sources:
+  - query: |
+      -- Run aide --check once and capture stdout / stderr / exit code.
+      -- length=10000000 caps stdout at 10 MB so a runaway report can't
+      -- exhaust agent memory; typical clean-VM output is <100 KB.
+      LET run <= SELECT *
+                 FROM execve(
+                   argv=[AideBinaryPath, '--check', '--config', AideConfigPath],
+                   length=10000000
+                 )
+                 LIMIT 1
+
+      -- Emit exactly one row with structured summary counts + raw text.
+      -- Counts come from AIDE's "Summary:" block, which is only present
+      -- when changes were detected. When zero changes are found, the count
+      -- columns are NULL — that's the correct signal for "baseline matches".
+      SELECT
+        ReturnCode AS aide_exit_code,
+        parse_string_with_regex(
+          regex='Total number of entries:\\s+(?P<v>\\d+)',
+          string=Stdout
+        ).v AS total_entries,
+        parse_string_with_regex(
+          regex='Added entries:\\s+(?P<v>\\d+)',
+          string=Stdout
+        ).v AS added_count,
+        parse_string_with_regex(
+          regex='Removed entries:\\s+(?P<v>\\d+)',
+          string=Stdout
+        ).v AS removed_count,
+        parse_string_with_regex(
+          regex='Changed entries:\\s+(?P<v>\\d+)',
+          string=Stdout
+        ).v AS changed_count,
+        Stdout AS raw_report,
+        Stderr AS raw_stderr
+      FROM run

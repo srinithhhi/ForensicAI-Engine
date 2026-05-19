@@ -77,7 +77,16 @@ class VelociraptorClient:
             private_key=config["client_private_key"].encode(),
             certificate_chain=config["client_cert"].encode(),
         )
-        options = (("grpc.ssl_target_name_override", "VelociraptorServer"),)
+        # gRPC defaults to a 4 MB message size limit, both directions.
+        # AIDE's raw_report can exceed this (~10 MB observed on a 5-day-old
+        # baseline); future Windows artifacts (registry hives, evtx dumps)
+        # may go higher. 100 MB is a cap, not a pre-allocation — it just
+        # prevents the channel from rejecting large messages.
+        options = (
+            ("grpc.ssl_target_name_override", "VelociraptorServer"),
+            ("grpc.max_receive_message_length", 100 * 1024 * 1024),
+            ("grpc.max_send_message_length", 100 * 1024 * 1024),
+        )
         self._channel = grpc.secure_channel(
             config["api_connection_string"], creds, options
         )

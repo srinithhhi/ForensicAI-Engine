@@ -47,17 +47,38 @@ YARA_FLOW_MAX_ROWS = 2000
 # a per-step timeout here and leave the global default (180s) alone.
 YARA_FLOW_TIMEOUT_SEC = 600.0
 
+# AIDE walks the filesystem subset defined in /etc/aide/aide.conf (default
+# Ubuntu config covers /etc, /bin, /sbin, /usr/bin, /usr/sbin, /lib, etc.).
+# Walk time scales with disk usage of monitored paths and with kernel cache
+# state. Empirically: 390s in isolation (warm cache), >600s when chained
+# after other steps (cold cache, I/O contention). 1200s gives comfortable
+# headroom for the worst case without ever blocking that long on healthy runs.
+# Loaded into the server via the --definitions flag;
+# see [[project-velociraptor-custom-artifacts-via-definitions-flag]].
+AIDE_FLOW_TIMEOUT_SEC = 1200.0
+
 
 def _default_steps() -> list[CollectionStep]:
-    # Artifact names verified against the Velociraptor 0.76.1 default pack.
-    # aide_diff is still deferred — needs a custom Linux.Sys.AIDE.yaml because
-    # the default pack has no AIDE artifact.
+    # Artifact names verified against the Velociraptor 0.76.1 default pack,
+    # except Custom.Linux.Sys.AIDE which lives in
+    # acquisition/velociraptor_artifacts/ and is loaded via the server's
+    # --definitions flag.
+    #
+    # Step order is intentionally fast-to-slow. journald is ~1 min, the next
+    # four are ~seconds each, aide_diff is ~3–10 min, yara_proc is ~5 min.
+    # Putting slow steps last lets a partial run still capture the cheap
+    # high-signal artifacts even if the slow steps time out.
     return [
         VelociraptorArtifactStep("journald", "Linux.Forensics.Journal"),
         VelociraptorArtifactStep("processes", "Linux.Sys.Pslist"),
         VelociraptorArtifactStep("sockets", "Linux.Network.NetstatEnriched"),
         VelociraptorArtifactStep("cron", "Linux.Sys.Crontab"),
         VelociraptorArtifactStep("systemd", "Linux.Sys.Services"),
+        VelociraptorArtifactStep(
+            "aide_diff",
+            "Custom.Linux.Sys.AIDE",
+            timeout_sec=AIDE_FLOW_TIMEOUT_SEC,
+        ),
         VelociraptorArtifactStep(
             "yara_proc",
             "Linux.Detection.Yara.Process",
