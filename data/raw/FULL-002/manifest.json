@@ -1,0 +1,93 @@
+{
+  "acquirer_version": "0.1.0",
+  "ended_at": "2026-05-19T17:52:06Z",
+  "incident_id": "FULL-002",
+  "scope": "bare_metal",
+  "started_at": "2026-05-19T17:42:13Z",
+  "steps": [
+    {
+      "artifact": "Linux.Forensics.Journal",
+      "ended_at": "2026-05-19T17:43:40Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "journald",
+      "path": "velociraptor/Linux.Forensics.Journal.json",
+      "sha256": "366c9d486faa42e8089cada066e2d30aa49b13c703cc360f804bcc763c37f347",
+      "size_bytes": 5259116,
+      "started_at": "2026-05-19T17:42:13Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Sys.Pslist",
+      "ended_at": "2026-05-19T17:43:44Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "processes",
+      "path": "velociraptor/Linux.Sys.Pslist.json",
+      "sha256": "c50fcffb2e383543353541856f4ce3ef0eafa5eae65f70e6cc69d24f651a4816",
+      "size_bytes": 47228,
+      "started_at": "2026-05-19T17:43:40Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Network.NetstatEnriched",
+      "ended_at": "2026-05-19T17:43:46Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "sockets",
+      "path": "velociraptor/Linux.Network.NetstatEnriched.json",
+      "sha256": "5959500d710a3d40dcd734ef5423cfc2673ba729b24c7e66eb975f53f5255cfa",
+      "size_bytes": 9972,
+      "started_at": "2026-05-19T17:43:44Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Sys.Crontab",
+      "ended_at": "2026-05-19T17:43:48Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "cron",
+      "path": "velociraptor/Linux.Sys.Crontab.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "size_bytes": 2,
+      "started_at": "2026-05-19T17:43:46Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Sys.Services",
+      "ended_at": "2026-05-19T17:43:50Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "systemd",
+      "path": "velociraptor/Linux.Sys.Services.json",
+      "sha256": "34f833da7c0bb35f0a76418bde63d86da12f016220204427755d8836f38ec37b",
+      "size_bytes": 9366,
+      "started_at": "2026-05-19T17:43:48Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Custom.Linux.Sys.AIDE",
+      "ended_at": "2026-05-19T17:49:54Z",
+      "error": "_MultiThreadedRendezvous: <_MultiThreadedRendezvous of RPC that terminated with:\n\tstatus = StatusCode.RESOURCE_EXHAUSTED\n\tdetails = \"CLIENT: Received message larger than max (10165729 vs. 4194304)\"\n\tdebug_error_string = \"UNKNOWN:Error received from peer ipv4:127.0.0.1:8001 {grpc_status:8, grpc_message:\"CLIENT: Received message larger than max (10165729 vs. 4194304)\"}\"\n>",
+      "kind": "velociraptor",
+      "name": "aide_diff",
+      "path": null,
+      "sha256": null,
+      "size_bytes": null,
+      "started_at": "2026-05-19T17:43:50Z",
+      "status": "failed"
+    },
+    {
+      "artifact": "Linux.Detection.Yara.Process",
+      "ended_at": "2026-05-19T17:52:06Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "yara_proc",
+      "path": "velociraptor/Linux.Detection.Yara.Process.json",
+      "sha256": "f589e4f99c3f0c6637a15a8b4a5987d597c2e61715b94e4237c8570aa6c18e7b",
+      "size_bytes": 502644,
+      "started_at": "2026-05-19T17:49:54Z",
+      "status": "success"
+    }
+  ]
+}

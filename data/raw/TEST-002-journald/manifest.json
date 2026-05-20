@@ -1,0 +1,21 @@
+{
+  "acquirer_version": "0.1.0",
+  "ended_at": "2026-05-17T11:30:31Z",
+  "incident_id": "TEST-002-journald",
+  "scope": "bare_metal",
+  "started_at": "2026-05-17T11:29:22Z",
+  "steps": [
+    {
+      "artifact": "Linux.Forensics.Journal",
+      "ended_at": "2026-05-17T11:30:31Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "journald",
+      "path": "velociraptor/Linux.Forensics.Journal.json",
+      "sha256": "30f68a831933143fea31f3617c8ac1cc204a988772cdd8a192f7a99db00e0a6f",
+      "size_bytes": 834754,
+      "started_at": "2026-05-17T11:29:22Z",
+      "status": "success"
+    }
+  ]
+}

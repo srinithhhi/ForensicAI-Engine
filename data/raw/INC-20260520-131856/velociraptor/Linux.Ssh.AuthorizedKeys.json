@@ -1,0 +1,10 @@
+[
+  {
+    "OSPath": "/home/admin/.ssh/authorized_keys",
+    "_Upload": null,
+    "base64key": "AAAAB3NzaC1yc2EAAAADAQABAAACAQClzn0HRKl7kRdHoVQaFab/16inBM9TA9a8eLNNkLvxBtEFOT81dHqfybuf3PIrosRlFLTDXGKbNwVnlJtOmv+0NIDutQiJ1hFnThK8wo/gSPy9g7N25iRtV8c92ex4GSSSswrxu0u3LTOECUEyKLWltSssqc19Jm8F+MTxRUJgiIv1k6zo9KgNeNnxzyDSLm9WlYKjMgUnhxn0BAD3OvNEOzjvHJfxzf7GbcfUirh+4/YFlv1Ail2Gv3SrdncnqggH+4z2MVTkbCnlZu/rKBP5ikQGa39XKqoP1qsJCcl483EPGx916StM5cdZm/OH+oEGrJ35ntJFHkOBsS5yHeBjVNV/NbTxHxplJguziVQDbofR9EGxvWKbWqW2Vt23X0chUxp3Iy9/f9ff1SMFxIZSKKkyMGezLKL0im+70m9JkattA+5XY6J2IYAyqo/PzBepsXK4xL4zslMccUSAcFDFGgABnI3dfoVlU/TWe5lpZvc/F2Y5NnZyo8KChjgdhsHs6GQUysy6n1lHt7B77jhKncxvXs/cSNq/hOKZ7Yb0bi9c92b1omlKdewcIQly4cHcLaQ9awhZcNhbiGnIDWCs9Men2XMgmb1AWwi54+eXpH1ckomE9zThcOB3KOwz5mHNhCMyuwNNkzvgaPyYppWQ0/qDEDZz7se78o0TXW4twQ==",
+    "comment": "srinithi@sris-MacBook-Air.local",
+    "keytype": "ssh-rsa",
+    "options": ""
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "acquirer_version": "0.1.0",
+  "ended_at": "2026-05-17T11:30:39Z",
+  "incident_id": "TEST-002-cron",
+  "scope": "bare_metal",
+  "started_at": "2026-05-17T11:30:37Z",
+  "steps": [
+    {
+      "artifact": "Linux.Sys.Crontab",
+      "ended_at": "2026-05-17T11:30:39Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "cron",
+      "path": "velociraptor/Linux.Sys.Crontab.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "size_bytes": 2,
+      "started_at": "2026-05-17T11:30:37Z",
+      "status": "success"
+    }
+  ]
+}

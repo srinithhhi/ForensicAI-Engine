@@ -1,0 +1,387 @@
+[
+  {
+    "Active": "active",
+    "Description": "Load AppArmor profiles",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "apparmor.service"
+  },
+  {
+    "Active": "active",
+    "Description": "LSB: automatic crash report generation",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "apport.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Availability of block devices",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "blk-availability.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Cloud-init: Config Stage",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "cloud-config.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Cloud-init: Final Stage",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "cloud-final.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Cloud-init: Local Stage (pre-network)",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "cloud-init-local.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Cloud-init: Network Stage",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "cloud-init.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Set console font and keymap",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "console-setup.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Regular background program processing daemon",
+    "Load": "loaded",
+    "Sub": "running",
+    "Unit": "cron.service"
+  },
+  {
+    "Active": "active",
+    "Description": "D-Bus System Message Bus",
+    "Load": "loaded",
+    "Sub": "running",
+    "Unit": "dbus.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Create final runtime dir for shutdown pivot root",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "finalrd.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Getty on tty1",
+    "Load": "loaded",
+    "Sub": "running",
+    "Unit": "getty@tty1.service"
+  },
+  {
+    "Active": "active",
+    "Description": "irqbalance daemon",
+    "Load": "loaded",
+    "Sub": "running",
+    "Unit": "irqbalance.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Set the console keyboard layout",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "keyboard-setup.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Create List of Static Device Nodes",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "kmod-static-nodes.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "lvm2-monitor.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Modem Manager",
+    "Load": "loaded",
+    "Sub": "running",
+    "Unit": "ModemManager.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Device-Mapper Multipath Device Controller",
+    "Load": "loaded",
+    "Sub": "running",
+    "Unit": "multipathd.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Dispatcher daemon for systemd-networkd",
+    "Load": "loaded",
+    "Sub": "running",
+    "Unit": "networkd-dispatcher.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Hold until boot process finishes up",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "plymouth-quit-wait.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Terminate Plymouth Boot Screen",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "plymouth-quit.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Tell Plymouth To Write Out Runtime Data",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "plymouth-read-write.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Authorization Manager",
+    "Load": "loaded",
+    "Sub": "running",
+    "Unit": "polkit.service"
+  },
+  {
+    "Active": "active",
+    "Description": "System Logging Service",
+    "Load": "loaded",
+    "Sub": "running",
+    "Unit": "rsyslog.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Set console scheme",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "setvtrgb.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Load AppArmor profiles managed internally by snapd",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "snapd.apparmor.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Wait until snapd is fully seeded",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "snapd.seeded.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Snap Daemon",
+    "Load": "loaded",
+    "Sub": "running",
+    "Unit": "snapd.service"
+  },
+  {
+    "Active": "active",
+    "Description": "OpenBSD Secure Shell server",
+    "Load": "loaded",
+    "Sub": "running",
+    "Unit": "ssh.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Set Up Additional Binary Formats",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "systemd-binfmt.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Flush Journal to Persistent Storage",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "systemd-journal-flush.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Journal Service",
+    "Load": "loaded",
+    "Sub": "running",
+    "Unit": "systemd-journald.service"
+  },
+  {
+    "Active": "active",
+    "Description": "User Login Management",
+    "Load": "loaded",
+    "Sub": "running",
+    "Unit": "systemd-logind.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Load Kernel Modules",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "systemd-modules-load.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Wait for Network to be Configured",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "systemd-networkd-wait-online.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Network Configuration",
+    "Load": "loaded",
+    "Sub": "running",
+    "Unit": "systemd-networkd.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Load/Save Random Seed",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "systemd-random-seed.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Remount Root and Kernel File Systems",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "systemd-remount-fs.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Network Name Resolution",
+    "Load": "loaded",
+    "Sub": "running",
+    "Unit": "systemd-resolved.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Apply Kernel Variables",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "systemd-sysctl.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Create System Users",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "systemd-sysusers.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Network Time Synchronization",
+    "Load": "loaded",
+    "Sub": "running",
+    "Unit": "systemd-timesyncd.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Create Static Device Nodes in /dev",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "systemd-tmpfiles-setup-dev.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Create Volatile Files and Directories",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "systemd-tmpfiles-setup.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Coldplug All udev Devices",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "systemd-udev-trigger.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Rule-based Manager for Device Events and Files",
+    "Load": "loaded",
+    "Sub": "running",
+    "Unit": "systemd-udevd.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Record System Boot/Shutdown in UTMP",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "systemd-update-utmp.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Permit User Sessions",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "systemd-user-sessions.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Disk Manager",
+    "Load": "loaded",
+    "Sub": "running",
+    "Unit": "udisks2.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Uncomplicated firewall",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "ufw.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Unattended Upgrades Shutdown",
+    "Load": "loaded",
+    "Sub": "running",
+    "Unit": "unattended-upgrades.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Daemon for power management",
+    "Load": "loaded",
+    "Sub": "running",
+    "Unit": "upower.service"
+  },
+  {
+    "Active": "active",
+    "Description": "User Runtime Directory /run/user/1000",
+    "Load": "loaded",
+    "Sub": "exited",
+    "Unit": "user-runtime-dir@1000.service"
+  },
+  {
+    "Active": "active",
+    "Description": "User Manager for UID 1000",
+    "Load": "loaded",
+    "Sub": "running",
+    "Unit": "user@1000.service"
+  },
+  {
+    "Active": "active",
+    "Description": "Velociraptor client",
+    "Load": "loaded",
+    "Sub": "running",
+    "Unit": "velociraptor_client.service"
+  }
+]

@@ -1,0 +1,93 @@
+{
+  "acquirer_version": "0.1.0",
+  "ended_at": "2026-05-18T19:07:19Z",
+  "incident_id": "FULL-001",
+  "scope": "bare_metal",
+  "started_at": "2026-05-18T18:52:16Z",
+  "steps": [
+    {
+      "artifact": "Linux.Forensics.Journal",
+      "ended_at": "2026-05-18T18:52:21Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "journald",
+      "path": "velociraptor/Linux.Forensics.Journal.json",
+      "sha256": "156af6ea1e23cb9d9ea95436ce35b2b446b9423e57d5b23b9364bec081f39ddd",
+      "size_bytes": 3539548,
+      "started_at": "2026-05-18T18:52:16Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Sys.Pslist",
+      "ended_at": "2026-05-18T18:52:27Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "processes",
+      "path": "velociraptor/Linux.Sys.Pslist.json",
+      "sha256": "5227ed02d799e031ce791b8955a49a9976f1a4f67f781952cb3c3c94177dbdfd",
+      "size_bytes": 45939,
+      "started_at": "2026-05-18T18:52:21Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Network.NetstatEnriched",
+      "ended_at": "2026-05-18T18:52:29Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "sockets",
+      "path": "velociraptor/Linux.Network.NetstatEnriched.json",
+      "sha256": "c2346c01fbef612cae85973b82822aca6264d018c319352bd876036a6678f1e8",
+      "size_bytes": 9992,
+      "started_at": "2026-05-18T18:52:27Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Sys.Crontab",
+      "ended_at": "2026-05-18T18:52:31Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "cron",
+      "path": "velociraptor/Linux.Sys.Crontab.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "size_bytes": 2,
+      "started_at": "2026-05-18T18:52:29Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Sys.Services",
+      "ended_at": "2026-05-18T18:52:33Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "systemd",
+      "path": "velociraptor/Linux.Sys.Services.json",
+      "sha256": "50cde67f6c765634b6e30bb6f245adf74710ab09430ca2b2b0fb9b71aef311dc",
+      "size_bytes": 9066,
+      "started_at": "2026-05-18T18:52:31Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Custom.Linux.Sys.AIDE",
+      "ended_at": "2026-05-18T19:02:34Z",
+      "error": "TimeoutError: flow F.D85LVSEUQQUHS did not finish within 600.0s",
+      "kind": "velociraptor",
+      "name": "aide_diff",
+      "path": null,
+      "sha256": null,
+      "size_bytes": null,
+      "started_at": "2026-05-18T18:52:33Z",
+      "status": "failed"
+    },
+    {
+      "artifact": "Linux.Detection.Yara.Process",
+      "ended_at": "2026-05-18T19:07:19Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "yara_proc",
+      "path": "velociraptor/Linux.Detection.Yara.Process.json",
+      "sha256": "d867d1a255aca5529a5f165a144dcb9048d9d26ae49eb3b5138e4f94c16f4732",
+      "size_bytes": 454508,
+      "started_at": "2026-05-18T19:02:34Z",
+      "status": "success"
+    }
+  ]
+}

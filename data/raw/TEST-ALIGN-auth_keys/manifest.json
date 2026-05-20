@@ -1,0 +1,21 @@
+{
+  "acquirer_version": "0.1.0",
+  "ended_at": "2026-05-19T21:06:05Z",
+  "incident_id": "TEST-ALIGN-auth_keys",
+  "scope": "bare_metal",
+  "started_at": "2026-05-19T21:06:03Z",
+  "steps": [
+    {
+      "artifact": "Linux.Ssh.AuthorizedKeys",
+      "ended_at": "2026-05-19T21:06:05Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "auth_keys",
+      "path": "velociraptor/Linux.Ssh.AuthorizedKeys.json",
+      "sha256": "843c97a6a9da81169af9ccc6d72b9f180f43197658039f0aa1dae6db380f357e",
+      "size_bytes": 913,
+      "started_at": "2026-05-19T21:06:03Z",
+      "status": "success"
+    }
+  ]
+}

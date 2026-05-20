@@ -1,0 +1,141 @@
+{
+  "acquirer_version": "0.1.0",
+  "ended_at": "2026-05-20T12:58:23Z",
+  "incident_id": "SIM-20260520T124841Z-T1053-003t3_T1078-003t8_T1543-002t1_T1098-004t1_T1105t27_T1548-001t3",
+  "scope": "bare_metal",
+  "started_at": "2026-05-20T12:48:54Z",
+  "steps": [
+    {
+      "artifact": "Linux.Forensics.Journal",
+      "ended_at": "2026-05-20T12:49:03Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "journald",
+      "path": "velociraptor/Linux.Forensics.Journal.json",
+      "sha256": "2a4d70494f8a3c5034e071cb98b73dbac47bc6f0779d2925dda50319a4836d94",
+      "size_bytes": 11505717,
+      "started_at": "2026-05-20T12:48:54Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Sys.Pslist",
+      "ended_at": "2026-05-20T12:49:07Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "processes",
+      "path": "velociraptor/Linux.Sys.Pslist.json",
+      "sha256": "11340a43e0100549cbef28bca25e52c40228d6308b7a95e76dbbe78c69dd6314",
+      "size_bytes": 48157,
+      "started_at": "2026-05-20T12:49:03Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Network.NetstatEnriched",
+      "ended_at": "2026-05-20T12:49:09Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "sockets",
+      "path": "velociraptor/Linux.Network.NetstatEnriched.json",
+      "sha256": "80a61ac4d0044c703443407b98ae8aed49e91acde7600325a19d52afea1a9fcb",
+      "size_bytes": 9996,
+      "started_at": "2026-05-20T12:49:07Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Sys.Crontab",
+      "ended_at": "2026-05-20T12:49:11Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "cron",
+      "path": "velociraptor/Linux.Sys.Crontab.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "size_bytes": 2,
+      "started_at": "2026-05-20T12:49:09Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Sys.Services",
+      "ended_at": "2026-05-20T12:49:13Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "systemd",
+      "path": "velociraptor/Linux.Sys.Services.json",
+      "sha256": "50cde67f6c765634b6e30bb6f245adf74710ab09430ca2b2b0fb9b71aef311dc",
+      "size_bytes": 9066,
+      "started_at": "2026-05-20T12:49:11Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Sys.BashHistory",
+      "ended_at": "2026-05-20T12:49:15Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "bash_history",
+      "path": "velociraptor/Linux.Sys.BashHistory.json",
+      "sha256": "5fbd00e02688704ba204dc5b839879a113eb5d88af98f921d2ccbce9308fbb3e",
+      "size_bytes": 6994,
+      "started_at": "2026-05-20T12:49:13Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Ssh.AuthorizedKeys",
+      "ended_at": "2026-05-20T12:49:17Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "auth_keys",
+      "path": "velociraptor/Linux.Ssh.AuthorizedKeys.json",
+      "sha256": "843c97a6a9da81169af9ccc6d72b9f180f43197658039f0aa1dae6db380f357e",
+      "size_bytes": 913,
+      "started_at": "2026-05-20T12:49:15Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Sys.SUID",
+      "ended_at": "2026-05-20T12:49:21Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "suid_files",
+      "path": "velociraptor/Linux.Sys.SUID.json",
+      "sha256": "df0241795d75e7bee6d1346b10062919431c61cba74528c8ca7470ac5ec2dde3",
+      "size_bytes": 4085,
+      "started_at": "2026-05-20T12:49:17Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Search.FileFinder",
+      "ended_at": "2026-05-20T12:49:23Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "recently_modified",
+      "path": "velociraptor/Linux.Search.FileFinder.json",
+      "sha256": "f721117d0142aa0078f40d7c9f3da3f06d2b500991ded3624c6094e527320f2e",
+      "size_bytes": 22389,
+      "started_at": "2026-05-20T12:49:21Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Custom.Linux.Sys.AIDE",
+      "ended_at": "2026-05-20T12:56:22Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "aide_diff",
+      "path": "velociraptor/Custom.Linux.Sys.AIDE.json",
+      "sha256": "56a314cd03ef3c473b6b168d2dc5536da37e456cfc0590cc000e4dbf1a965368",
+      "size_bytes": 10150130,
+      "started_at": "2026-05-20T12:49:23Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Detection.Yara.Process",
+      "ended_at": "2026-05-20T12:58:23Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "yara_proc",
+      "path": "velociraptor/Linux.Detection.Yara.Process.json",
+      "sha256": "aec2a042ec7226957cb82f9666d919905c3754777b8a215009eb70fc3c29d0fa",
+      "size_bytes": 479166,
+      "started_at": "2026-05-20T12:56:22Z",
+      "status": "success"
+    }
+  ]
+}

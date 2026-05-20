@@ -1,0 +1,21 @@
+{
+  "acquirer_version": "0.1.0",
+  "ended_at": "2026-05-17T11:30:35Z",
+  "incident_id": "TEST-002-processes",
+  "scope": "bare_metal",
+  "started_at": "2026-05-17T11:30:31Z",
+  "steps": [
+    {
+      "artifact": "Linux.Sys.Pslist",
+      "ended_at": "2026-05-17T11:30:35Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "processes",
+      "path": "velociraptor/Linux.Sys.Pslist.json",
+      "sha256": "f0f733fe6739944aed8e11f2e6de442638e18a68038b20028d49107f8f20745d",
+      "size_bytes": 45494,
+      "started_at": "2026-05-17T11:30:31Z",
+      "status": "success"
+    }
+  ]
+}

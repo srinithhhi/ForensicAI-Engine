@@ -1,0 +1,141 @@
+{
+  "acquirer_version": "0.1.0",
+  "ended_at": "2026-05-20T07:48:41Z",
+  "incident_id": "FULL-011",
+  "scope": "bare_metal",
+  "started_at": "2026-05-20T07:27:44Z",
+  "steps": [
+    {
+      "artifact": "Linux.Forensics.Journal",
+      "ended_at": "2026-05-20T07:27:49Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "journald",
+      "path": "velociraptor/Linux.Forensics.Journal.json",
+      "sha256": "2009e3b6292589b5a63cf05bfe6d1f6fa1042f40bbd0fbfcd924c0b38faeead1",
+      "size_bytes": 6413297,
+      "started_at": "2026-05-20T07:27:44Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Sys.Pslist",
+      "ended_at": "2026-05-20T07:27:55Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "processes",
+      "path": "velociraptor/Linux.Sys.Pslist.json",
+      "sha256": "79578a5bcb354262eaba428520d28e354fe0212d169c2d5a4f94c986cd6e2b85",
+      "size_bytes": 44213,
+      "started_at": "2026-05-20T07:27:49Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Network.NetstatEnriched",
+      "ended_at": "2026-05-20T07:27:57Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "sockets",
+      "path": "velociraptor/Linux.Network.NetstatEnriched.json",
+      "sha256": "c14380d547cdb345f1fa6ba22929c7ecfc34025cc87bc5145ac77e699a27363f",
+      "size_bytes": 8083,
+      "started_at": "2026-05-20T07:27:55Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Sys.Crontab",
+      "ended_at": "2026-05-20T07:27:59Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "cron",
+      "path": "velociraptor/Linux.Sys.Crontab.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "size_bytes": 2,
+      "started_at": "2026-05-20T07:27:57Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Sys.Services",
+      "ended_at": "2026-05-20T07:28:01Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "systemd",
+      "path": "velociraptor/Linux.Sys.Services.json",
+      "sha256": "74bbd62f16c4eda41720bab452cdedd0f18d292c730001bb272ea7880af1d49d",
+      "size_bytes": 8910,
+      "started_at": "2026-05-20T07:27:59Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Sys.BashHistory",
+      "ended_at": "2026-05-20T07:28:03Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "bash_history",
+      "path": "velociraptor/Linux.Sys.BashHistory.json",
+      "sha256": "004121d2db3c6f5ba892892d18ce51fcf1d1f0e796551609dfd42d3affc6bd36",
+      "size_bytes": 5754,
+      "started_at": "2026-05-20T07:28:01Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Ssh.AuthorizedKeys",
+      "ended_at": "2026-05-20T07:28:05Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "auth_keys",
+      "path": "velociraptor/Linux.Ssh.AuthorizedKeys.json",
+      "sha256": "843c97a6a9da81169af9ccc6d72b9f180f43197658039f0aa1dae6db380f357e",
+      "size_bytes": 913,
+      "started_at": "2026-05-20T07:28:03Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Sys.SUID",
+      "ended_at": "2026-05-20T07:28:35Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "suid_files",
+      "path": "velociraptor/Linux.Sys.SUID.json",
+      "sha256": "ff15ad5f6ab4578294df0c541c87aa4a897c097c3cfee12e2c470dfd4f9331fc",
+      "size_bytes": 4085,
+      "started_at": "2026-05-20T07:28:05Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Linux.Search.FileFinder",
+      "ended_at": "2026-05-20T07:28:39Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "recently_modified",
+      "path": "velociraptor/Linux.Search.FileFinder.json",
+      "sha256": "58799d60db6cdd47b56366bdc6d2e0614e536c2d74701f99e5820403444adb0c",
+      "size_bytes": 7755,
+      "started_at": "2026-05-20T07:28:35Z",
+      "status": "success"
+    },
+    {
+      "artifact": "Custom.Linux.Sys.AIDE",
+      "ended_at": "2026-05-20T07:38:40Z",
+      "error": "RuntimeError: flow F.D86M59RF8DT7E errored: Query timed out after 600 seconds",
+      "kind": "velociraptor",
+      "name": "aide_diff",
+      "path": null,
+      "sha256": null,
+      "size_bytes": null,
+      "started_at": "2026-05-20T07:28:39Z",
+      "status": "failed"
+    },
+    {
+      "artifact": "Linux.Detection.Yara.Process",
+      "ended_at": "2026-05-20T07:48:41Z",
+      "error": "TimeoutError: flow F.D86MA02UI2PJE did not finish within 600.0s",
+      "kind": "velociraptor",
+      "name": "yara_proc",
+      "path": null,
+      "sha256": null,
+      "size_bytes": null,
+      "started_at": "2026-05-20T07:38:40Z",
+      "status": "failed"
+    }
+  ]
+}

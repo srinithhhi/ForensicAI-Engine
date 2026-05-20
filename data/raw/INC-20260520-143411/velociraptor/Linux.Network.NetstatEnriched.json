@@ -1,0 +1,417 @@
+[
+  {
+    "CallChain": "sshd",
+    "ChildrenTree": {
+      "children": null,
+      "data": {
+        "CommandLine": "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups",
+        "CreateTime": "2026-05-20T06:37:51Z",
+        "Cwd": "/",
+        "EndTime": "0001-01-01T00:00:00Z",
+        "Exe": "/usr/sbin/sshd",
+        "MemoryInfo": {
+          "data": 0,
+          "hwm": 0,
+          "locked": 0,
+          "rss": 8146944,
+          "stack": 0,
+          "swap": 0,
+          "vms": 15806464
+        },
+        "Name": "sshd",
+        "Pid": "700",
+        "Ppid": "1",
+        "StartTime": "2026-05-20T06:37:51Z",
+        "Times": {
+          "cpu": "cpu",
+          "guest": 0,
+          "guestNice": 0,
+          "idle": 0,
+          "iowait": 0,
+          "irq": 0,
+          "nice": 0,
+          "softirq": 0,
+          "steal": 0,
+          "system": 0.07,
+          "user": 0.01
+        },
+        "Username": "root"
+      },
+      "id": "700",
+      "name": "sshd",
+      "start_time": "2026-05-20T06:37:51Z"
+    },
+    "Laddr": "0.0.0.0",
+    "Lport": 22,
+    "Pid": 700,
+    "ProcInfo": {
+      "CommandLine": "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups",
+      "CreateTime": "2026-05-20T06:37:51Z",
+      "Cwd": "/",
+      "EndTime": "0001-01-01T00:00:00Z",
+      "Exe": "/usr/sbin/sshd",
+      "MemoryInfo": {
+        "data": 0,
+        "hwm": 0,
+        "locked": 0,
+        "rss": 8146944,
+        "stack": 0,
+        "swap": 0,
+        "vms": 15806464
+      },
+      "Name": "sshd",
+      "Pid": "700",
+      "Ppid": "1",
+      "StartTime": "2026-05-20T06:37:51Z",
+      "Times": {
+        "cpu": "cpu",
+        "guest": 0,
+        "guestNice": 0,
+        "idle": 0,
+        "iowait": 0,
+        "irq": 0,
+        "nice": 0,
+        "softirq": 0,
+        "steal": 0,
+        "system": 0.07,
+        "user": 0.01
+      },
+      "Username": "root"
+    },
+    "Raddr": "0.0.0.0",
+    "Rport": 0,
+    "Status": "LISTEN"
+  },
+  {
+    "CallChain": "systemd-resolved",
+    "ChildrenTree": {
+      "children": null,
+      "data": {
+        "CommandLine": "/lib/systemd/systemd-resolved",
+        "CreateTime": "2026-05-20T06:37:46Z",
+        "Cwd": "/",
+        "EndTime": "0001-01-01T00:00:00Z",
+        "Exe": "/usr/lib/systemd/systemd-resolved",
+        "MemoryInfo": {
+          "data": 0,
+          "hwm": 0,
+          "locked": 0,
+          "rss": 11530240,
+          "stack": 0,
+          "swap": 0,
+          "vms": 26968064
+        },
+        "Name": "systemd-resolved",
+        "Pid": "621",
+        "Ppid": "1",
+        "StartTime": "2026-05-20T06:37:46Z",
+        "Times": {
+          "cpu": "cpu",
+          "guest": 0,
+          "guestNice": 0,
+          "idle": 0,
+          "iowait": 0,
+          "irq": 0,
+          "nice": 0,
+          "softirq": 0,
+          "steal": 0,
+          "system": 0.27,
+          "user": 0.14
+        },
+        "Username": "systemd-resolve"
+      },
+      "id": "621",
+      "name": "systemd-resolved",
+      "start_time": "2026-05-20T06:37:46Z"
+    },
+    "Laddr": "127.0.0.53",
+    "Lport": 53,
+    "Pid": 621,
+    "ProcInfo": {
+      "CommandLine": "/lib/systemd/systemd-resolved",
+      "CreateTime": "2026-05-20T06:37:46Z",
+      "Cwd": "/",
+      "EndTime": "0001-01-01T00:00:00Z",
+      "Exe": "/usr/lib/systemd/systemd-resolved",
+      "MemoryInfo": {
+        "data": 0,
+        "hwm": 0,
+        "locked": 0,
+        "rss": 11530240,
+        "stack": 0,
+        "swap": 0,
+        "vms": 26968064
+      },
+      "Name": "systemd-resolved",
+      "Pid": "621",
+      "Ppid": "1",
+      "StartTime": "2026-05-20T06:37:46Z",
+      "Times": {
+        "cpu": "cpu",
+        "guest": 0,
+        "guestNice": 0,
+        "idle": 0,
+        "iowait": 0,
+        "irq": 0,
+        "nice": 0,
+        "softirq": 0,
+        "steal": 0,
+        "system": 0.27,
+        "user": 0.14
+      },
+      "Username": "systemd-resolve"
+    },
+    "Raddr": "0.0.0.0",
+    "Rport": 0,
+    "Status": "LISTEN"
+  },
+  {
+    "CallChain": "sshd",
+    "ChildrenTree": {
+      "children": null,
+      "data": {
+        "CommandLine": "sshd: admin [priv]",
+        "CreateTime": "2026-05-20T13:51:43Z",
+        "Cwd": "/",
+        "EndTime": "0001-01-01T00:00:00Z",
+        "Exe": "/usr/sbin/sshd",
+        "MemoryInfo": {
+          "data": 0,
+          "hwm": 0,
+          "locked": 0,
+          "rss": 11169792,
+          "stack": 0,
+          "swap": 0,
+          "vms": 17330176
+        },
+        "Name": "sshd",
+        "Pid": "65056",
+        "Ppid": "700",
+        "StartTime": "2026-05-20T13:51:43Z",
+        "Times": {
+          "cpu": "cpu",
+          "guest": 0,
+          "guestNice": 0,
+          "idle": 0,
+          "iowait": 0,
+          "irq": 0,
+          "nice": 0,
+          "softirq": 0,
+          "steal": 0,
+          "system": 0,
+          "user": 0.01
+        },
+        "Username": "root"
+      },
+      "id": "65056",
+      "name": "sshd",
+      "start_time": "2026-05-20T13:51:43Z"
+    },
+    "Laddr": "192.168.1.10",
+    "Lport": 22,
+    "Pid": 65056,
+    "ProcInfo": {
+      "CommandLine": "sshd: admin [priv]",
+      "CreateTime": "2026-05-20T13:51:43Z",
+      "Cwd": "/",
+      "EndTime": "0001-01-01T00:00:00Z",
+      "Exe": "/usr/sbin/sshd",
+      "MemoryInfo": {
+        "data": 0,
+        "hwm": 0,
+        "locked": 0,
+        "rss": 11169792,
+        "stack": 0,
+        "swap": 0,
+        "vms": 17330176
+      },
+      "Name": "sshd",
+      "Pid": "65056",
+      "Ppid": "700",
+      "StartTime": "2026-05-20T13:51:43Z",
+      "Times": {
+        "cpu": "cpu",
+        "guest": 0,
+        "guestNice": 0,
+        "idle": 0,
+        "iowait": 0,
+        "irq": 0,
+        "nice": 0,
+        "softirq": 0,
+        "steal": 0,
+        "system": 0,
+        "user": 0.01
+      },
+      "Username": "root"
+    },
+    "Raddr": "192.168.1.3",
+    "Rport": 55788,
+    "Status": "ESTABLISHED"
+  },
+  {
+    "CallChain": "velociraptor_client",
+    "ChildrenTree": {
+      "children": null,
+      "data": {
+        "CommandLine": "/usr/local/bin/velociraptor_client --config /etc/velociraptor/client.config.yaml client --quiet",
+        "CreateTime": "2026-05-20T06:37:51Z",
+        "Cwd": "/",
+        "EndTime": "0001-01-01T00:00:00Z",
+        "Exe": "/usr/local/bin/velociraptor_client",
+        "MemoryInfo": {
+          "data": 0,
+          "hwm": 0,
+          "locked": 0,
+          "rss": 159174656,
+          "stack": 0,
+          "swap": 0,
+          "vms": 6508199936
+        },
+        "Name": "velociraptor_client",
+        "Pid": "656",
+        "Ppid": "1",
+        "StartTime": "2026-05-20T06:37:51Z",
+        "Times": {
+          "cpu": "cpu",
+          "guest": 0,
+          "guestNice": 0,
+          "idle": 0,
+          "iowait": 0,
+          "irq": 0,
+          "nice": 0,
+          "softirq": 0,
+          "steal": 0,
+          "system": 188.12,
+          "user": 681.33
+        },
+        "Username": "root"
+      },
+      "id": "656",
+      "name": "velociraptor_client",
+      "start_time": "2026-05-20T06:37:51Z"
+    },
+    "Laddr": "192.168.1.10",
+    "Lport": 54942,
+    "Pid": 656,
+    "ProcInfo": {
+      "CommandLine": "/usr/local/bin/velociraptor_client --config /etc/velociraptor/client.config.yaml client --quiet",
+      "CreateTime": "2026-05-20T06:37:51Z",
+      "Cwd": "/",
+      "EndTime": "0001-01-01T00:00:00Z",
+      "Exe": "/usr/local/bin/velociraptor_client",
+      "MemoryInfo": {
+        "data": 0,
+        "hwm": 0,
+        "locked": 0,
+        "rss": 159174656,
+        "stack": 0,
+        "swap": 0,
+        "vms": 6508199936
+      },
+      "Name": "velociraptor_client",
+      "Pid": "656",
+      "Ppid": "1",
+      "StartTime": "2026-05-20T06:37:51Z",
+      "Times": {
+        "cpu": "cpu",
+        "guest": 0,
+        "guestNice": 0,
+        "idle": 0,
+        "iowait": 0,
+        "irq": 0,
+        "nice": 0,
+        "softirq": 0,
+        "steal": 0,
+        "system": 188.12,
+        "user": 681.33
+      },
+      "Username": "root"
+    },
+    "Raddr": "192.168.1.3",
+    "Rport": 8000,
+    "Status": "ESTABLISHED"
+  },
+  {
+    "CallChain": "sshd",
+    "ChildrenTree": {
+      "children": null,
+      "data": {
+        "CommandLine": "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups",
+        "CreateTime": "2026-05-20T06:37:51Z",
+        "Cwd": "/",
+        "EndTime": "0001-01-01T00:00:00Z",
+        "Exe": "/usr/sbin/sshd",
+        "MemoryInfo": {
+          "data": 0,
+          "hwm": 0,
+          "locked": 0,
+          "rss": 8146944,
+          "stack": 0,
+          "swap": 0,
+          "vms": 15806464
+        },
+        "Name": "sshd",
+        "Pid": "700",
+        "Ppid": "1",
+        "StartTime": "2026-05-20T06:37:51Z",
+        "Times": {
+          "cpu": "cpu",
+          "guest": 0,
+          "guestNice": 0,
+          "idle": 0,
+          "iowait": 0,
+          "irq": 0,
+          "nice": 0,
+          "softirq": 0,
+          "steal": 0,
+          "system": 0.07,
+          "user": 0.01
+        },
+        "Username": "root"
+      },
+      "id": "700",
+      "name": "sshd",
+      "start_time": "2026-05-20T06:37:51Z"
+    },
+    "Laddr": "::",
+    "Lport": 22,
+    "Pid": 700,
+    "ProcInfo": {
+      "CommandLine": "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups",
+      "CreateTime": "2026-05-20T06:37:51Z",
+      "Cwd": "/",
+      "EndTime": "0001-01-01T00:00:00Z",
+      "Exe": "/usr/sbin/sshd",
+      "MemoryInfo": {
+        "data": 0,
+        "hwm": 0,
+        "locked": 0,
+        "rss": 8146944,
+        "stack": 0,
+        "swap": 0,
+        "vms": 15806464
+      },
+      "Name": "sshd",
+      "Pid": "700",
+      "Ppid": "1",
+      "StartTime": "2026-05-20T06:37:51Z",
+      "Times": {
+        "cpu": "cpu",
+        "guest": 0,
+        "guestNice": 0,
+        "idle": 0,
+        "iowait": 0,
+        "irq": 0,
+        "nice": 0,
+        "softirq": 0,
+        "steal": 0,
+        "system": 0.07,
+        "user": 0.01
+      },
+      "Username": "root"
+    },
+    "Raddr": "::",
+    "Rport": 0,
+    "Status": "LISTEN"
+  }
+]

@@ -1,0 +1,194 @@
+[
+  {
+    "GroupID": null,
+    "Mode": "urwxr-xr-x",
+    "Mtime": "2026-04-28T00:38:10Z",
+    "OSPath": "/usr/lib/openssh/ssh-keysign",
+    "OwnerID": null,
+    "Size": 338536
+  },
+  {
+    "GroupID": null,
+    "Mode": "urwxr-xr--",
+    "Mtime": "2022-10-25T13:15:07Z",
+    "OSPath": "/usr/lib/dbus-1.0/dbus-daemon-launch-helper",
+    "OwnerID": null,
+    "Size": 35112
+  },
+  {
+    "GroupID": null,
+    "Mode": "grwxr-xr-x",
+    "Mtime": "2022-03-24T16:13:50Z",
+    "OSPath": "/usr/lib/x86_64-linux-gnu/utempter/utempter",
+    "OwnerID": null,
+    "Size": 14488
+  },
+  {
+    "GroupID": null,
+    "Mode": "grwxr-xr-x",
+    "Mtime": "2025-06-12T14:45:28Z",
+    "OSPath": "/usr/sbin/pam_extrausers_chkpwd",
+    "OwnerID": null,
+    "Size": 22680
+  },
+  {
+    "GroupID": null,
+    "Mode": "gr-xr-xr-x",
+    "Mtime": "2026-05-05T15:48:07Z",
+    "OSPath": "/usr/sbin/postdrop",
+    "OwnerID": null,
+    "Size": 22960
+  },
+  {
+    "GroupID": null,
+    "Mode": "gr-xr-xr-x",
+    "Mtime": "2026-05-05T15:48:07Z",
+    "OSPath": "/usr/sbin/postqueue",
+    "OwnerID": null,
+    "Size": 22912
+  },
+  {
+    "GroupID": null,
+    "Mode": "grwxr-xr-x",
+    "Mtime": "2025-06-12T14:45:28Z",
+    "OSPath": "/usr/sbin/unix_chkpwd",
+    "OwnerID": null,
+    "Size": 26776
+  },
+  {
+    "GroupID": null,
+    "Mode": "grwxr-xr-x",
+    "Mtime": "2024-02-06T12:54:23Z",
+    "OSPath": "/usr/bin/chage",
+    "OwnerID": null,
+    "Size": 72184
+  },
+  {
+    "GroupID": null,
+    "Mode": "urwxr-xr-x",
+    "Mtime": "2024-02-06T12:54:23Z",
+    "OSPath": "/usr/bin/chfn",
+    "OwnerID": null,
+    "Size": 72712
+  },
+  {
+    "GroupID": null,
+    "Mode": "urwxr-xr-x",
+    "Mtime": "2024-02-06T12:54:23Z",
+    "OSPath": "/usr/bin/chsh",
+    "OwnerID": null,
+    "Size": 44808
+  },
+  {
+    "GroupID": null,
+    "Mode": "grwxr-xr-x",
+    "Mtime": "2022-03-23T13:49:13Z",
+    "OSPath": "/usr/bin/crontab",
+    "OwnerID": null,
+    "Size": 39568
+  },
+  {
+    "GroupID": null,
+    "Mode": "grwxr-xr-x",
+    "Mtime": "2022-03-24T12:13:14Z",
+    "OSPath": "/usr/bin/dotlockfile",
+    "OwnerID": null,
+    "Size": 22680
+  },
+  {
+    "GroupID": null,
+    "Mode": "grwxr-xr-x",
+    "Mtime": "2024-02-06T12:54:23Z",
+    "OSPath": "/usr/bin/expiry",
+    "OwnerID": null,
+    "Size": 23136
+  },
+  {
+    "GroupID": null,
+    "Mode": "urwxr-xr-x",
+    "Mtime": "2022-03-23T13:53:14Z",
+    "OSPath": "/usr/bin/fusermount3",
+    "OwnerID": null,
+    "Size": 35200
+  },
+  {
+    "GroupID": null,
+    "Mode": "urwxr-xr-x",
+    "Mtime": "2024-02-06T12:54:23Z",
+    "OSPath": "/usr/bin/gpasswd",
+    "OwnerID": null,
+    "Size": 72072
+  },
+  {
+    "GroupID": null,
+    "Mode": "urwxr-xr-x",
+    "Mtime": "2026-03-06T16:10:04Z",
+    "OSPath": "/usr/bin/mount",
+    "OwnerID": null,
+    "Size": 47488
+  },
+  {
+    "GroupID": null,
+    "Mode": "urwxr-xr-x",
+    "Mtime": "2024-02-06T12:54:23Z",
+    "OSPath": "/usr/bin/newgrp",
+    "OwnerID": null,
+    "Size": 40496
+  },
+  {
+    "GroupID": null,
+    "Mode": "urwxr-xr-x",
+    "Mtime": "2024-02-06T12:54:23Z",
+    "OSPath": "/usr/bin/passwd",
+    "OwnerID": null,
+    "Size": 59976
+  },
+  {
+    "GroupID": null,
+    "Mode": "urwxr-xr-x",
+    "Mtime": "2026-04-10T10:59:20Z",
+    "OSPath": "/usr/bin/pkexec",
+    "OwnerID": null,
+    "Size": 30872
+  },
+  {
+    "GroupID": null,
+    "Mode": "grwxr-xr-x",
+    "Mtime": "2026-04-28T00:38:10Z",
+    "OSPath": "/usr/bin/ssh-agent",
+    "OwnerID": null,
+    "Size": 293304
+  },
+  {
+    "GroupID": null,
+    "Mode": "urwxr-xr-x",
+    "Mtime": "2026-03-06T16:10:04Z",
+    "OSPath": "/usr/bin/su",
+    "OwnerID": null,
+    "Size": 55680
+  },
+  {
+    "GroupID": null,
+    "Mode": "urwxr-xr-x",
+    "Mtime": "2026-03-02T13:08:06Z",
+    "OSPath": "/usr/bin/sudo",
+    "OwnerID": null,
+    "Size": 232416
+  },
+  {
+    "GroupID": null,
+    "Mode": "urwxr-xr-x",
+    "Mtime": "2026-03-06T16:10:04Z",
+    "OSPath": "/usr/bin/umount",
+    "OwnerID": null,
+    "Size": 35200
+  },
+  {
+    "GroupID": null,
+    "Mode": "urwxr-xr-x",
+    "Mtime": "2026-04-10T10:59:20Z",
+    "OSPath": "/usr/libexec/polkit-agent-helper-1",
+    "OwnerID": null,
+    "Size": 22832
+  }
+]

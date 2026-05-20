@@ -1,0 +1,21 @@
+{
+  "acquirer_version": "0.1.0",
+  "ended_at": "2026-05-19T21:06:03Z",
+  "incident_id": "TEST-ALIGN-bash_history",
+  "scope": "bare_metal",
+  "started_at": "2026-05-19T21:06:00Z",
+  "steps": [
+    {
+      "artifact": "Linux.Sys.BashHistory",
+      "ended_at": "2026-05-19T21:06:03Z",
+      "error": null,
+      "kind": "velociraptor",
+      "name": "bash_history",
+      "path": "velociraptor/Linux.Sys.BashHistory.json",
+      "sha256": "004121d2db3c6f5ba892892d18ce51fcf1d1f0e796551609dfd42d3affc6bd36",
+      "size_bytes": 5754,
+      "started_at": "2026-05-19T21:06:00Z",
+      "status": "success"
+    }
+  ]
+}
