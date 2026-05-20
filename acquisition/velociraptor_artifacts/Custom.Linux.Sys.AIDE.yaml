@@ -24,6 +24,15 @@ description: |
 author: ForensicAI-Engine
 type: CLIENT
 
+# Velociraptor's default per-VQL-query timeout is 600s. AIDE's filesystem
+# walk against a 4.6 GB Ubuntu install commonly takes 5–10 minutes and has
+# been observed exceeding 600s when the VM is busy or cold-cached. Bump
+# the server-side timeout to 1800s (30 min) so the agent's flow has time
+# to complete before the server force-cancels it. Our client-side
+# `AIDE_FLOW_TIMEOUT_SEC` poll budget (1200s) still caps overall wait.
+resources:
+  timeout: 1800
+
 parameters:
   - name: AideBinaryPath
     description: Path to the aide binary on the agent

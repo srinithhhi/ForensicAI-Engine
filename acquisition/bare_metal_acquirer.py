@@ -4,13 +4,16 @@ Composes a fixed list of `VelociraptorArtifactStep` instances and writes the
 canonical raw bundle to `data/raw/{incident_id}/`.
 
 v0 covers logs, processes, sockets, persistence (cron + systemd), file integrity
-(AIDE), and YARA-on-process. Memory and disk imaging are deferred to v1 — see
-the plan's "How this leaves the door open for v1" section for the seam.
+(AIDE), YARA-on-process, plus four supporting snapshot steps (bash history,
+authorized SSH keys, SUID binaries, recently-modified files in attacker drop
+targets). Memory and disk imaging are deferred to v1 — see the plan's "How this
+leaves the door open for v1" section for the seam.
 """
 
 from __future__ import annotations
 
 import os
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -42,10 +45,12 @@ DEFAULT_RAW_DIR = REPO_ROOT / "data" / "raw"
 # not start with `[`" (kernel threads in /proc are reported as `[name]`).
 YARA_PROCESS_REGEX = r"^[^\[]"
 YARA_FLOW_MAX_ROWS = 2000
-# YARA scans of all user-space processes against 884 rules take ~3–5 minutes
-# on a typical Ubuntu VM. The other v0 artifacts finish in seconds, so we use
-# a per-step timeout here and leave the global default (180s) alone.
-YARA_FLOW_TIMEOUT_SEC = 600.0
+# YARA scans of user-space processes against 884 rules take ~2–5 minutes
+# in isolation but can stretch to 10+ min when chained after AIDE (CPU/IO
+# contention from aide's filesystem walk). 1200s gives comfortable
+# headroom for the chained case. The global default (180s) still applies
+# to the other v0 artifacts.
+YARA_FLOW_TIMEOUT_SEC = 1200.0
 
 # AIDE walks the filesystem subset defined in /etc/aide/aide.conf (default
 # Ubuntu config covers /etc, /bin, /sbin, /usr/bin, /usr/sbin, /lib, etc.).
@@ -57,6 +62,29 @@ YARA_FLOW_TIMEOUT_SEC = 600.0
 # see [[project-velociraptor-custom-artifacts-via-definitions-flag]].
 AIDE_FLOW_TIMEOUT_SEC = 1200.0
 
+# authorized_keys hunt: default artifact glob misses /root/.ssh. SSH key
+# persistence (T1098.004) is a common attacker move so root must be included.
+AUTH_KEYS_GLOB = "/{root,home/*}/.ssh/authorized_keys*"
+
+# recently_modified scope: attacker drop targets that AIDE's default config
+# does NOT watch. /tmp and /var/tmp are common curl/wget destinations
+# (T1105); /dev/shm is an in-memory FS some attackers use to avoid disk
+# artifacts; /root and /home cover user-space staging.
+RECENTLY_MODIFIED_GLOB = "/{tmp,var/tmp,root,dev/shm,home}/**"
+# Files modified in the last 24h. Computed at acquirer init-time, so a
+# long-lived acquirer instance would see drift — acceptable for the
+# one-shot usage pattern; refactor to compute-at-execute if a service
+# wraps this. The cutoff is intentionally generous; the OCSF mapper will
+# filter further by joining with the simulation manifest's time window.
+RECENTLY_MODIFIED_WINDOW_HOURS = 24
+RECENTLY_MODIFIED_MAX_ROWS = 5000
+RECENTLY_MODIFIED_TIMEOUT_SEC = 300.0
+
+
+def _recently_modified_cutoff() -> str:
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=RECENTLY_MODIFIED_WINDOW_HOURS)
+    return cutoff.strftime("%Y-%m-%dT%H:%M:%SZ")
+
 
 def _default_steps() -> list[CollectionStep]:
     # Artifact names verified against the Velociraptor 0.76.1 default pack,
@@ -64,16 +92,45 @@ def _default_steps() -> list[CollectionStep]:
     # acquisition/velociraptor_artifacts/ and is loaded via the server's
     # --definitions flag.
     #
-    # Step order is intentionally fast-to-slow. journald is ~1 min, the next
-    # four are ~seconds each, aide_diff is ~3–10 min, yara_proc is ~5 min.
-    # Putting slow steps last lets a partial run still capture the cheap
-    # high-signal artifacts even if the slow steps time out.
+    # Step order is intentionally fast-to-slow. The first five plus the
+    # four "alignment" steps are seconds each; aide_diff is ~5-15 min,
+    # yara_proc is ~5 min. Putting slow steps last lets a partial run still
+    # capture the cheap high-signal artifacts if the slow steps time out.
+    #
+    # Coverage matrix for the v0 attack set (Module B):
+    #   T1078.003 (local user)    -> journald, processes, aide_diff
+    #   T1059.004 (encoded shell) -> bash_history (partial)
+    #   T1053.003 (cron)          -> cron, aide_diff
+    #   T1543.002 (systemd)       -> systemd, aide_diff
+    #   T1105     (file transfer) -> recently_modified
     return [
+        # snapshot of system state (fast, no params)
         VelociraptorArtifactStep("journald", "Linux.Forensics.Journal"),
         VelociraptorArtifactStep("processes", "Linux.Sys.Pslist"),
         VelociraptorArtifactStep("sockets", "Linux.Network.NetstatEnriched"),
         VelociraptorArtifactStep("cron", "Linux.Sys.Crontab"),
         VelociraptorArtifactStep("systemd", "Linux.Sys.Services"),
+        # alignment steps — close gaps left by the original 7 against the
+        # v0 attack set. See coverage matrix above.
+        VelociraptorArtifactStep("bash_history", "Linux.Sys.BashHistory"),
+        VelociraptorArtifactStep(
+            "auth_keys",
+            "Linux.Ssh.AuthorizedKeys",
+            parameters={"sshKeyFilesGlob": AUTH_KEYS_GLOB},
+        ),
+        VelociraptorArtifactStep("suid_files", "Linux.Sys.SUID"),
+        VelociraptorArtifactStep(
+            "recently_modified",
+            "Linux.Search.FileFinder",
+            parameters={
+                "SearchFilesGlob": RECENTLY_MODIFIED_GLOB,
+                "MoreRecentThan": _recently_modified_cutoff(),
+                "LocalFilesystemOnly": "Y",
+            },
+            max_rows=RECENTLY_MODIFIED_MAX_ROWS,
+            timeout_sec=RECENTLY_MODIFIED_TIMEOUT_SEC,
+        ),
+        # slow steps last
         VelociraptorArtifactStep(
             "aide_diff",
             "Custom.Linux.Sys.AIDE",
