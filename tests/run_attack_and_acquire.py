@@ -2,9 +2,21 @@
 
 Manual invocation only. The two modules meet here and nowhere else.
 
+Sequence:
+    1. simulate(... auto_cleanup=False)   — fire attacks, leave evidence
+    2. acquire(incident_id)               — capture evidence
+    3. cleanup(simulation_manifest)       — restore VM state (always runs)
+
+Even if acquisition crashes, cleanup runs via try/finally so the VM is
+never left in a dirty state.
+
+Technique specs accept "T1053.003" (test 1) or "T1053.003#2" (explicit
+test number). Use whichever test of the technique actually leaves the
+evidence you want the acquirer to catch.
+
 Usage:
-    python tests/run_attack_and_acquire.py T1053.003
-    python tests/run_attack_and_acquire.py T1078.003 T1059.004
+    python tests/run_attack_and_acquire.py T1053.003#2
+    python tests/run_attack_and_acquire.py T1053.003#2 T1078.003 T1105
 """
 
 from __future__ import annotations
@@ -21,27 +33,37 @@ from acquisition.bare_metal_acquirer import BareMetalAcquirer  # noqa: E402
 from simulation.atomic_runner import AtomicRedTeamRunner  # noqa: E402
 
 
-def make_incident_id(techniques: list[str]) -> str:
-    ts = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-    tag = "_".join(t.replace(".", "-") for t in techniques)
-    return f"SIM-{ts}-{tag}"
+def make_incident_id(specs: list[str]) -> str:
+    # Format: INC-YYYYMMDD-HHMMSS  (UTC, no timezone marker for brevity).
+    # We intentionally do NOT encode the technique list in the directory
+    # name — that lives in simulation_manifest.json where it belongs.
+    # Keeps incident_id short and consistent length regardless of how many
+    # techniques fired.
+    ts = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
+    return f"INC-{ts}"
 
 
-def run(techniques: list[str]) -> str:
-    incident_id = make_incident_id(techniques)
+def run(specs: list[str]) -> str:
+    incident_id = make_incident_id(specs)
     print(f"[harness] incident_id = {incident_id}")
 
-    print(f"[harness] firing {techniques} on the VM")
-    AtomicRedTeamRunner().simulate(incident_id, techniques)
-    print(f"[harness] simulation written to data/simulations/{incident_id}/")
+    runner = AtomicRedTeamRunner()
+    print(f"[harness] firing {specs} on the VM (cleanup deferred)")
+    sim_manifest = runner.simulate(incident_id, specs, auto_cleanup=False)
+    print(f"[harness]   simulation written to data/simulations/{incident_id}/")
 
-    print("[harness] acquiring evidence via Velociraptor")
-    manifest = BareMetalAcquirer().acquire(incident_id)
-    failed = [s for s in manifest.steps if s.status != "success"]
-    print(
-        f"[harness] acquisition wrote {len(manifest.steps)} steps "
-        f"({len(failed)} failed) to data/raw/{incident_id}/"
-    )
+    try:
+        print("[harness] acquiring evidence via Velociraptor")
+        acq_manifest = BareMetalAcquirer().acquire(incident_id)
+        failed = [s for s in acq_manifest.steps if s.status != "success"]
+        print(
+            f"[harness]   acquisition wrote {len(acq_manifest.steps)} steps "
+            f"({len(failed)} failed) to data/raw/{incident_id}/"
+        )
+    finally:
+        print("[harness] restoring VM state (cleanup)")
+        runner.cleanup(sim_manifest)
+        print("[harness]   cleanup complete")
 
     return incident_id
 
@@ -51,7 +73,7 @@ def main() -> int:
     parser.add_argument(
         "techniques",
         nargs="+",
-        help="MITRE ATT&CK technique IDs, e.g. T1053.003",
+        help="MITRE ATT&CK technique specs, e.g. T1053.003 or T1053.003#2",
     )
     args = parser.parse_args()
     run(args.techniques)

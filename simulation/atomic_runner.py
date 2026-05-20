@@ -5,6 +5,23 @@ setup on the VM: install `pwsh` and the `invoke-atomicredteam` module (see
 simulation/README.md).
 
 Never invoked by the orchestrator. Only the dev harness in tests/ calls this.
+
+Technique specs accept either `"T1053.003"` (test 1 by default) or
+`"T1053.003#2"` (explicit test number 2). Per-technique test numbers are
+necessary because different tests of the same technique often touch different
+parts of the filesystem (e.g. T1053.003 test 1 modifies a user crontab,
+test 2 drops a file in /etc/cron.d/).
+
+Cleanup is decoupled from `simulate()` so the dev harness can interleave
+attack → acquire → cleanup:
+    sim = runner.simulate(incident_id, specs, auto_cleanup=False)
+    try:
+        acquirer.acquire(incident_id)   # captures evidence WHILE it exists
+    finally:
+        runner.cleanup(sim)             # restores VM state
+
+With `auto_cleanup=True` (the default), cleanup runs inline immediately after
+each test — safe for standalone use, but blocks the labeling workflow.
 """
 
 from __future__ import annotations
@@ -30,11 +47,25 @@ DEFAULT_SIM_DIR = REPO_ROOT / "data" / "simulations"
 
 DEFAULT_TEST_NUMBER = 1
 COMMAND_TIMEOUT_SEC = 600.0
-TECHNIQUE_PATTERN = re.compile(r"^T\d{4}(?:\.\d{3})?$")
+# Accept either "T1053.003" or "T1053.003#2". The `#N` suffix overrides the
+# default test number for that one technique.
+TECHNIQUE_SPEC_PATTERN = re.compile(r"^T\d{4}(?:\.\d{3})?(?:#\d+)?$")
 
 
 def _safe_filename(s: str) -> str:
     return re.sub(r"[^A-Za-z0-9._-]", "_", s)
+
+
+def _parse_technique_spec(spec: str) -> tuple[str, int]:
+    """Split a technique spec into (technique_id, test_number).
+
+    "T1053.003"   -> ("T1053.003", 1)
+    "T1053.003#2" -> ("T1053.003", 2)
+    """
+    if "#" in spec:
+        technique_id, test_str = spec.split("#", 1)
+        return technique_id, int(test_str)
+    return spec, DEFAULT_TEST_NUMBER
 
 
 def _build_invoke_command(technique: str, test_number: int, atomics_path: str) -> str:
@@ -52,7 +83,13 @@ def _build_invoke_command(technique: str, test_number: int, atomics_path: str) -
     )
     # Single-quote the whole pwsh argument to keep the remote shell from interpreting it.
     escaped = pwsh_script.replace("'", "'\"'\"'")
-    return f"pwsh -NoProfile -Command '{escaped}'"
+    # Invoke-AtomicTest does NOT auto-escalate on Linux — it just prints
+    # "Elevation required but not provided" and runs the embedded shell
+    # commands at whatever privilege pwsh was launched with. To actually
+    # execute atomics that need root (most filesystem-touching ones), we
+    # launch pwsh itself under sudo. `-n` makes sudo fail immediately if
+    # NOPASSWD is not configured rather than hanging on a password prompt.
+    return f"sudo -n pwsh -NoProfile -Command '{escaped}'"
 
 
 def _build_cleanup_command(technique: str, test_number: int, atomics_path: str) -> str:
@@ -65,7 +102,8 @@ def _build_cleanup_command(technique: str, test_number: int, atomics_path: str) 
         f"-Cleanup -Force"
     )
     escaped = pwsh_script.replace("'", "'\"'\"'")
-    return f"pwsh -NoProfile -Command '{escaped}'"
+    # Cleanup must also run as root since the attack created root-owned files.
+    return f"sudo -n pwsh -NoProfile -Command '{escaped}'"
 
 
 class AtomicRedTeamRunner(Simulator):
@@ -87,12 +125,23 @@ class AtomicRedTeamRunner(Simulator):
         self,
         incident_id: str,
         techniques: list[str],
-        test_number: int = DEFAULT_TEST_NUMBER,
+        auto_cleanup: bool = True,
     ) -> SimulationManifest:
+        """Fire the listed atomic techniques against the VM.
+
+        Each entry in `techniques` is a spec like "T1053.003" (test 1) or
+        "T1053.003#2" (test 2). See `_parse_technique_spec`.
+
+        When `auto_cleanup=True` (default — safe for standalone use), runs
+        Invoke-AtomicTest -Cleanup immediately after each test so the VM is
+        left clean when this method returns. When False, the caller MUST
+        call `self.cleanup(manifest)` later to restore VM state — the
+        labeled-training harness pattern.
+        """
         for t in techniques:
-            if not TECHNIQUE_PATTERN.match(t):
+            if not TECHNIQUE_SPEC_PATTERN.match(t):
                 raise ValueError(
-                    f"technique {t!r} does not match MITRE pattern Txxxx[.yyy]"
+                    f"technique spec {t!r} does not match Txxxx[.yyy][#N]"
                 )
 
         output_dir = self.sim_dir / incident_id
@@ -112,15 +161,41 @@ class AtomicRedTeamRunner(Simulator):
 
         try:
             with from_env() as ssh:
-                for technique in techniques:
+                for spec in techniques:
+                    technique_id, test_number = _parse_technique_spec(spec)
                     manifest.add_run(
-                        self._run_one(ssh, technique, test_number, output_dir)
+                        self._run_one(ssh, technique_id, test_number, output_dir)
                     )
+                if auto_cleanup:
+                    self._cleanup_with_ssh(ssh, manifest)
         finally:
             manifest.ended_at = utcnow_iso()
             manifest.write(output_dir)
 
         return manifest
+
+    def cleanup(self, manifest: SimulationManifest) -> None:
+        """Run Invoke-AtomicTest -Cleanup for every technique in the manifest.
+
+        Idempotent: cleanup commands (typically `rm -f`, `userdel`, `crontab -r`)
+        silently succeed if the target is already gone. Safe to call multiple
+        times. Errors are swallowed — there is no production-critical state
+        being managed here.
+        """
+        with from_env() as ssh:
+            self._cleanup_with_ssh(ssh, manifest)
+
+    def _cleanup_with_ssh(
+        self, ssh: SSHClient, manifest: SimulationManifest
+    ) -> None:
+        for run in manifest.runs:
+            cmd = _build_cleanup_command(
+                run.technique_id, run.test_number, self.atomics_path
+            )
+            try:
+                ssh.run(cmd, timeout_sec=COMMAND_TIMEOUT_SEC)
+            except Exception:  # noqa: BLE001 — cleanup failure is best-effort
+                pass
 
     def _run_one(
         self,
@@ -151,14 +226,6 @@ class AtomicRedTeamRunner(Simulator):
 
         (output_dir / stdout_rel).write_text(result.stdout)
         (output_dir / stderr_rel).write_text(result.stderr)
-
-        # Always attempt cleanup — even if the test "failed", residual state on
-        # the VM would taint downstream acquisitions.
-        cleanup = _build_cleanup_command(technique, test_number, self.atomics_path)
-        try:
-            ssh.run(cleanup, timeout_sec=COMMAND_TIMEOUT_SEC)
-        except Exception:  # noqa: BLE001 — cleanup failure is logged via stderr, not fatal
-            pass
 
         return TechniqueRun(
             technique_id=technique,
