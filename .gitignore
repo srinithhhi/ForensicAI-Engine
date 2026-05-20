@@ -1,5 +1,4 @@
 config/.env
-data/raw/
 data/processed/
 data/simulations/
 logs/
