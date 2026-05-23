@@ -117,6 +117,18 @@ sources:
           query={ SELECT * FROM foreach(row=parse_json_array(data=Stdout)) }
         )
 
+      -- systemd_units catches transient/inactive units (e.g. Type=simple
+      -- services that ran ExecStart→ExecStop and ended before acquisition)
+      -- that Linux.Sys.Services misses because it only enumerates active
+      -- units. Verified to catch art-systemd-service after T1543.002#1.
+      LET q_systemd_units <= SELECT 'systemd_units' AS osquery_table, *
+        FROM foreach(
+          row={ SELECT * FROM execve(argv=[OsqueryBinaryPath, '--json',
+                'SELECT id, description, fragment_path, load_state, active_state, sub_state FROM systemd_units;'],
+                length=10000000) LIMIT 1 },
+          query={ SELECT * FROM foreach(row=parse_json_array(data=Stdout)) }
+        )
+
       -- Chain all per-table relations into one output stream. Order is
       -- arbitrary; the `osquery_table` field disambiguates.
       SELECT * FROM chain(
@@ -127,5 +139,6 @@ sources:
         e=q_last,
         f=q_suid_bin,
         g=q_kernel_modules,
-        h=q_crontab
+        h=q_crontab,
+        i=q_systemd_units
       )
