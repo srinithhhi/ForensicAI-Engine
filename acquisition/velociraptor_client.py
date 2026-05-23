@@ -61,7 +61,11 @@ def _build_spec_clause(artifact_name: str, parameters: dict | None) -> str:
     """
     if not parameters:
         return ""
-    pairs = ", ".join(f"{k}={_vql_literal(v)}" for k, v in parameters.items())
+    # Wrap parameter names in backticks (VQL identifier escape) — some
+    # artifacts have parameter names with spaces (e.g. Windows.Sysinternals
+    # .Autoruns "Verify digital signatures"), which otherwise breaks the
+    # spec-clause parser at the unquoted whitespace.
+    pairs = ", ".join(f"`{k}`={_vql_literal(v)}" for k, v in parameters.items())
     return f", spec=dict(`{artifact_name}`=dict({pairs}))"
 
 
@@ -163,6 +167,7 @@ class VelociraptorClient:
         parameters: dict | None = None,
         max_rows: int | None = None,
         timeout_sec: float | None = None,
+        source_name: str | None = None,
     ) -> list[dict[str, Any]]:
         """Dispatch one artifact to the agent, poll until done, return result rows.
 
@@ -207,11 +212,17 @@ class VelociraptorClient:
             timeout_sec=timeout_sec if timeout_sec is not None else FLOW_TIMEOUT_SEC,
         )
 
+        # Multi-source artifacts (e.g. Windows.Forensics.Amcache) emit rows into
+        # multiple named sub-sources; source() with only `artifact=` returns the
+        # default/unnamed one. Pass `source_name` to target a specific sub-source.
+        artifact_clause = (
+            f"'{artifact_name}/{source_name}'" if source_name else f"'{artifact_name}'"
+        )
         source_vql = (
             f"SELECT * FROM source("
             f"client_id='{client_id}', "
             f"flow_id='{flow_id}', "
-            f"artifact='{artifact_name}'"
+            f"artifact={artifact_clause}"
             f")"
         )
         return self._run_vql(source_vql, name=f"source_{artifact_name}")

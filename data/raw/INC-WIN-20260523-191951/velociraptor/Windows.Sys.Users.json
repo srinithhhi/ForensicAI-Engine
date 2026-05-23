@@ -1,0 +1,58 @@
+[
+  {
+    "Data": {
+      "ProfileLoadTime": null,
+      "ProfileUnloadTime": null
+    },
+    "Description": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\ProfileList\\S-1-5-18",
+    "Directory": "%systemroot%\\system32\\config\\systemprofile",
+    "Gid": "",
+    "HomedirMtime": "2026-05-23T18:35:48.4410987Z",
+    "Mtime": "2019-12-07T09:17:27.2565096Z",
+    "Name": "SYSTEM",
+    "UUID": "S-1-5-18",
+    "Uid": "18"
+  },
+  {
+    "Data": {
+      "ProfileLoadTime": null,
+      "ProfileUnloadTime": null
+    },
+    "Description": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\ProfileList\\S-1-5-19",
+    "Directory": "%systemroot%\\ServiceProfiles\\LocalService",
+    "Gid": "",
+    "HomedirMtime": "2026-05-17T17:17:21.8651603Z",
+    "Mtime": "2019-12-07T09:17:27.2565096Z",
+    "Name": "LOCAL SERVICE",
+    "UUID": "S-1-5-19",
+    "Uid": "19"
+  },
+  {
+    "Data": {
+      "ProfileLoadTime": null,
+      "ProfileUnloadTime": null
+    },
+    "Description": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\ProfileList\\S-1-5-20",
+    "Directory": "%systemroot%\\ServiceProfiles\\NetworkService",
+    "Gid": "",
+    "HomedirMtime": "2026-05-17T17:17:21.8495464Z",
+    "Mtime": "2019-12-07T09:17:27.2565096Z",
+    "Name": "NETWORK SERVICE",
+    "UUID": "S-1-5-20",
+    "Uid": "20"
+  },
+  {
+    "Data": {
+      "ProfileLoadTime": "2026-05-23T18:20:41Z",
+      "ProfileUnloadTime": "2026-05-23T18:20:08Z"
+    },
+    "Description": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\ProfileList\\S-1-5-21-475419108-1456305403-1574970505-1000",
+    "Directory": "C:\\Users\\admin",
+    "Gid": "",
+    "HomedirMtime": "2026-05-17T17:20:59.4335771Z",
+    "Mtime": "2026-05-23T18:20:41.4417946Z",
+    "Name": "admin",
+    "UUID": "S-1-5-21-475419108-1456305403-1574970505-1000",
+    "Uid": "1000"
+  }
+]

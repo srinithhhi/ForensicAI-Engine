@@ -89,6 +89,13 @@ class Acquirer(ABC):
     """The only acquisition surface the orchestrator sees."""
 
     scope: str
+    # Per-scope freshness budget for the pre-flight agent-online check.
+    # The Velociraptor agent's last_seen_at advances on poll/dispatch — when
+    # nothing's happening the timestamp ages even though the agent will still
+    # accept a flow on the next dispatch. The default (120s) is tight enough
+    # to catch a truly offline agent without flagging idle ones. Scopes with
+    # longer poll intervals can raise it.
+    agent_freshness_max_age_sec: float = 120.0
 
     @abstractmethod
     def acquire(self, incident_id: str) -> AcquisitionManifest:

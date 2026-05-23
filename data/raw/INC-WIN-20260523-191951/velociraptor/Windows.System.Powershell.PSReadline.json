@@ -1,0 +1,2130 @@
+[
+  {
+    "Line": "netsh advfirewall firewall add rule name= \"Allow Ping\" protocol=icmpv4:8, any dir=in action=allow",
+    "LineNum": 1,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "netsh advfirewall set allprofiles state off",
+    "LineNum": 2,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "ping 192.168.56.103",
+    "LineNum": 3,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "ipconfig",
+    "LineNum": 4,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "ping 192.168.1.7",
+    "LineNum": 5,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "ping 192.168.1.3",
+    "LineNum": 6,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "ipconfig",
+    "LineNum": 7,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "systeminfo",
+    "LineNum": 8,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "ping 192.168.1.7",
+    "LineNum": 9,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "ping 192.168.1.10",
+    "LineNum": 10,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "clear",
+    "LineNum": 11,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Enable-PSRemoting -Force",
+    "LineNum": 12,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Set-Item WSMan:\\localhost\\Client\\TrustedHosts -Value \"*\" -Force",
+    "LineNum": 13,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0",
+    "LineNum": 14,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Start-Service sshd",
+    "LineNum": 15,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Set-Service -Name sshd -StartupType 'Automatic'",
+    "LineNum": 16,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Get-Service sshd",
+    "LineNum": 17,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "ifconfig",
+    "LineNum": 18,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "ipconfig",
+    "LineNum": 19,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "admin@WINDOWS10-SCOPE C:\\Users\\admin>Invoke-WebRequest -Uri \"https://download.sysin`",
+    "LineNum": 20,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "ternals.com/files/Sysmon.zip\" -OutFile \"C:\\Sysmon.zip\"",
+    "LineNum": 21,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Invoke-WebRequest -Uri \"https://download.sysinternals.com/files/Sysmon.zip\" -OutFile \"C:\\Sysmon.zip\"",
+    "LineNum": 22,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Expand-Archive -Path \"C:\\Sysmon.zip\" -DestinationPath \"C:\\Sysmon\"",
+    "LineNum": 23,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Invoke-WebRequest -Uri \"https://raw.githubusercontent.com/SwiftOnSecurity/sysmon-config/master/sysmonconfig-export.xml\" -OutFile \"C:\\Sysmon\\sysmonconfig.xml\"",
+    "LineNum": 24,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "cd C:\\Sysmon",
+    "LineNum": 25,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": ".\\Sysmon64.exe -accepteula -i sysmonconfig.xml",
+    "LineNum": 26,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "cd C:\\Sysmon",
+    "LineNum": 27,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": ".\\Sysmon64.exe -accepteula -i sysmonconfig.xml",
+    "LineNum": 28,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Get-WinEvent -LogName \"Microsoft-Windows-Sysmon/Operational\" -MaxEvents 5",
+    "LineNum": 29,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "exit",
+    "LineNum": 30,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "pwd",
+    "LineNum": 31,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "ls",
+    "LineNum": 32,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "pwd",
+    "LineNum": 33,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "cd ..",
+    "LineNum": 34,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "ls",
+    "LineNum": 35,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "cd ..",
+    "LineNum": 36,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "ls",
+    "LineNum": 37,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "cd C:\\KAPE",
+    "LineNum": 38,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": ".\\kape.exe",
+    "LineNum": 39,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Start-Service sshd",
+    "LineNum": 40,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Get-Service sshd",
+    "LineNum": 41,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Set-Service -Name sshd -StartupType 'Automatic'",
+    "LineNum": 42,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Start-Service sshd\\",
+    "LineNum": 43,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Get-Service sshd",
+    "LineNum": 44,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "ipconfig",
+    "LineNum": 45,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Invoke-WebRequest -Uri \"https://f001.backblazeb2.com/file/EricZimmermanTools/net6/EvtxECmd.zip\" -OutFile \"C:\\EvtxECmd.zip\"",
+    "LineNum": 46,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Invoke-WebRequest -Uri \"https://ericzimmerman.github.io/EZToolsManifest.zip\" -OutFile \"C:\\EZTools.zip\"",
+    "LineNum": 47,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Expand-Archive -Path \"C:\\EZTools.zip\" -DestinationPath \"C:\\EZTools\"",
+    "LineNum": 48,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Invoke-WebRequest -Uri \"https://github.com/EricZimmerman/evtx/releases/latest/download/EvtxECmd.zip\" -OutFile \"C:\\EvtxECmd.zip\"",
+    "LineNum": 49,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Invoke-WebRequest -Uri \"https://raw.githubusercontent.com/EricZimmerman/Get-ZimmermanTools/master/Get-ZimmermanTools.ps1\" -OutFile \"C:\\Get-ZimmermanTools.ps1\"",
+    "LineNum": 50,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Set-ExecutionPolicy Bypass -Scope Process -Force",
+    "LineNum": 51,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "C:\\Get-ZimmermanTools.ps1 -Dest C:\\EZTools -NetVersion 9",
+    "LineNum": 52,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Get-ChildItem C:\\EZTools | Where-Object { $_.Name -notlike \"*EvtxECmd*\" } | Remove-Item -Recurse -Force",
+    "LineNum": 53,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Get-ChildItem C:\\EZTools",
+    "LineNum": 54,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "ls",
+    "LineNum": 55,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "cd ..",
+    "LineNum": 56,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "ls",
+    "LineNum": 57,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "cd ..",
+    "LineNum": 58,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "ls",
+    "LineNum": 59,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "cd EZTools",
+    "LineNum": 60,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "ls",
+    "LineNum": 61,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Invoke-WebRequest -Uri \"https://download.ericzimmermanstools.com/net9/EvtxECmd.zip\" -OutFile \"C:\\EvtxECmd.zip\"",
+    "LineNum": 62,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Expand-Archive -Path \"C:\\EvtxECmd.zip\" -DestinationPath \"C:\\EZTools\" -Force",
+    "LineNum": 63,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Get-ChildItem C:\\EZTools",
+    "LineNum": 64,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "C:\\EZTools\\EvtxECmd\\EvtxECmd.exe --version",
+    "LineNum": 65,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Invoke-WebRequest -Uri \"https://dot.net/v1/dotnet-install.ps1\" -OutFile \"C:\\dotnet-install.ps1\"",
+    "LineNum": 66,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Set-ExecutionPolicy Bypass -Scope Process -Force",
+    "LineNum": 67,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "C:\\dotnet-install.ps1 -Channel 9.0 -Runtime dotnet",
+    "LineNum": 68,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "C:\\EZTools\\EvtxECmd\\EvtxECmd.exe --version",
+    "LineNum": 69,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "PS C:\\EZTools> Invoke-WebRequest -Uri \"https://dot.net/v1/dotnet-install.ps1\" -OutFile \"C:\\d`",
+    "LineNum": 70,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "otnet-install.ps1\"",
+    "LineNum": 71,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "PS C:\\EZTools> Set-ExecutionPolicy Bypass -Scope Process -Force",
+    "LineNum": 72,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "PS C:\\EZTools> C:\\dotnet-install.ps1 -Channel 9.0 -Runtime dotnet",
+    "LineNum": 73,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "dotnet-install: Remote file https://builds.dotnet.microsoft.com/dotnet/Runtime/9.0.16/dotnet",
+    "LineNum": 74,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "-runtime-9.0.16-win-x64.zip size is 35894151 bytes.",
+    "LineNum": 75,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "dotnet-install: Downloaded file https://builds.dotnet.microsoft.com/dotnet/Runtime/9.0.16/do",
+    "LineNum": 76,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "tnet-runtime-9.0.16-win-x64.zip size is 35894151 bytes.",
+    "LineNum": 77,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "dotnet-install: The remote and local file sizes are equal.",
+    "LineNum": 78,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "dotnet-install: Extracting the archive.",
+    "LineNum": 79,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "dotnet-install: Adding to current process PATH: \"C:\\Users\\admin\\AppData\\Local\\Microsoft\\dotn`",
+    "LineNum": 80,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "et\\\". Note: This change will not be visible if PowerShell was run as a child process.       ",
+    "LineNum": 81,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "dotnet-install: Note that the script does not ensure your Windows version is supported durin",
+    "LineNum": 82,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "g the installation.",
+    "LineNum": 83,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "dotnet-install: To check the list of supported versions, go to https://learn.microsoft.com/d",
+    "LineNum": 84,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "otnet/core/install/windows#supported-versions",
+    "LineNum": 85,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "dotnet-install: Installed version is 9.0.16",
+    "LineNum": 86,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "dotnet-install: Installation finished",
+    "LineNum": 87,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "PS C:\\EZTools> C:\\EZTools\\EvtxECmd\\EvtxECmd.exe --version",
+    "LineNum": 88,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "You must install .NET to run this application.",
+    "LineNum": 89,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "App: C:\\EZTools\\EvtxECmd\\EvtxECmd.exe",
+    "LineNum": 90,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Architecture: x64",
+    "LineNum": 91,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "App host version: 9.0.15",
+    "LineNum": 92,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": ".NET location: Not found",
+    "LineNum": 93,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Learn more:",
+    "LineNum": 94,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "https://aka.ms/dotnet/app-launch-failed",
+    "LineNum": 95,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Download the .NET runtime:",
+    "LineNum": 96,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "https://aka.ms/dotnet-core-applaunch?missing_runtime=true&arch=x64&rid=win-x64&os=win10&apph",
+    "LineNum": 97,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "ost_version=9.0.15",
+    "LineNum": 98,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Invoke-WebRequest -Uri \"https://dot.net/v1/dotnet-install.ps1\" -OutFile \"C:\\dotnet-install.ps1\"",
+    "LineNum": 99,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "C:\\dotnet-install.ps1 -Channel 9.0 -Runtime dotnet -InstallDir \"C:\\Program Files\\dotnet\"",
+    "LineNum": 100,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "[Environment]::SetEnvironmentVariable(\"Path\", $env:Path + \";C:\\Program Files\\dotnet\", \"Machine\")",
+    "LineNum": 101,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "$env:Path += \";C:\\Program Files\\dotnet\"",
+    "LineNum": 102,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "C:\\EZTools\\EvtxECmd\\EvtxECmd.exe --version",
+    "LineNum": 103,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "exit",
+    "LineNum": 104,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Start-Service sshd",
+    "LineNum": 105,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Get-Service sshd",
+    "LineNum": 106,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "scp /Users/srinithi/velociraptor-server/client.config.yaml admin@192.168.1.6:C:/client.config.yaml",
+    "LineNum": 107,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Invoke-WebRequest -Uri \"https://github.com/Velocidex/velociraptor/releases/download/v0.76.1/velociraptor-v0.76.1-windows-amd64.exe\" -OutFile \"C:\\velociraptor.exe\"",
+    "LineNum": 108,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Get-Service sshd",
+    "LineNum": 109,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "C:\\velociraptor.exe --config C:\\client.config.yaml service install",
+    "LineNum": 110,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "$url = \"https://github.com/Velocidex/velociraptor/releases/download/v0.76.1/velociraptor-v0.76.1-windows-amd64.exe\"",
+    "LineNum": 111,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "$client = New-Object System.Net.WebClient",
+    "LineNum": 112,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "$client.DownloadFile($url, \"C:\\velociraptor.exe\")",
+    "LineNum": 113,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "$url = \"https://github.com/Velocidex/velociraptor/releases/download/v0.76.1/velociraptor-v0.76.1-windows-amd64.exe\"",
+    "LineNum": 114,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "$client = New-Object System.Net.WebClient",
+    "LineNum": 115,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "$client.DownloadFile($url, \"C:\\velociraptor.exe\")",
+    "LineNum": 116,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "$VeloLatest = Invoke-WebRequest https://api.github.com/repos/velocidex/velociraptor/releases/latest",
+    "LineNum": 117,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "$VeloURL = ($VeloLatest.content | ConvertFrom-Json).assets.browser_download_url | Select-String \"windows-amd64.exe$\" | Select-Object -First 1",
+    "LineNum": 118,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Invoke-WebRequest -Uri $VeloURL.ToString() -OutFile \"C:\\velociraptor.exe\"",
+    "LineNum": 119,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Get-Service sshd",
+    "LineNum": 120,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Start-Service sshd",
+    "LineNum": 121,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Get-Service sshd",
+    "LineNum": 122,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Restart-Service sshd",
+    "LineNum": 123,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Start-Service sshd",
+    "LineNum": 124,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Get-Service sshd",
+    "LineNum": 125,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Get-Service velociraptor",
+    "LineNum": 126,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "C:\\velociraptor.exe --config C:\\client.config.yaml service install",
+    "LineNum": 127,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Start-Service velociraptor",
+    "LineNum": 128,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Get-Service velociraptor",
+    "LineNum": 129,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "admin",
+    "LineNum": 130,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "clear",
+    "LineNum": 131,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Get-Service Sysmon64",
+    "LineNum": 132,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Get-ChildItem C:\\KAPE\\",
+    "LineNum": 133,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "C:\\EZTools\\EvtxECmd\\EvtxECmd.exe --version",
+    "LineNum": 134,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "winrm enumerate winrm/config/listener",
+    "LineNum": 135,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Install-Module -Name invoke-atomicredteam -Force",
+    "LineNum": 136,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Install-Module -Name powershell-yaml -Force",
+    "LineNum": 137,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Get-Module -ListAvailable | Where-Object Name -like \"*atomic*\"",
+    "LineNum": 138,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Import-Module invoke-atomicredteam",
+    "LineNum": 139,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Set-ExecutionPolicy Bypass -Scope CurrentUser -Force",
+    "LineNum": 140,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Import-Module invoke-atomicredteam",
+    "LineNum": 141,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1')",
+    "LineNum": 142,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Invoke-AtomicRedTeam",
+    "LineNum": 143,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Get-Command -Module invoke-atomicredteam",
+    "LineNum": 144,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Invoke-AtomicRedTest",
+    "LineNum": 145,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Invoke-AtomicTest",
+    "LineNum": 146,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Invoke-AtomicTest T1057 -ShowDetails",
+    "LineNum": 147,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Invoke-WebRequest -Uri \"https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1\" -OutFile \"C:\\install-atomicredteam.ps1\"",
+    "LineNum": 148,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": ". C:\\install-atomicredteam.ps1",
+    "LineNum": 149,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Install-AtomicRedTeam -getAtomics -Force",
+    "LineNum": 150,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "Invoke-AtomicTest T1057 -ShowDetails",
+    "LineNum": 151,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  },
+  {
+    "Line": "ipconfig",
+    "LineNum": 152,
+    "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+    "Stat": {
+      "Atime": "2026-05-23T16:57:30.4790064Z",
+      "Btime": "2026-05-12T19:33:21.7213342Z",
+      "Ctime": "2026-05-23T16:57:30.4790064Z",
+      "Mtime": "2026-05-23T16:57:30.4790064Z",
+      "OSPath": "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt",
+      "Size": 7141
+    },
+    "Username": "admin"
+  }
+]
