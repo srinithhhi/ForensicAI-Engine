@@ -55,12 +55,14 @@ YARA_FLOW_TIMEOUT_SEC = 1200.0
 # AIDE walks the filesystem subset defined in /etc/aide/aide.conf (default
 # Ubuntu config covers /etc, /bin, /sbin, /usr/bin, /usr/sbin, /lib, etc.).
 # Walk time scales with disk usage of monitored paths and with kernel cache
-# state. Empirically: 390s in isolation (warm cache), >600s when chained
-# after other steps (cold cache, I/O contention). 1200s gives comfortable
-# headroom for the worst case without ever blocking that long on healthy runs.
+# state. Empirically observed: 390s in isolation (warm cache), 1227s when
+# chained after the snapshot block + osquery (cold cache, I/O contention) on
+# 2026-05-23. Match the server-side resources.timeout in the AIDE YAML (1800s)
+# so the client never gives up before the server does — earlier 1200s budget
+# tripped TimeoutError at 27s short of completion.
 # Loaded into the server via the --definitions flag;
 # see [[project-velociraptor-custom-artifacts-via-definitions-flag]].
-AIDE_FLOW_TIMEOUT_SEC = 1200.0
+AIDE_FLOW_TIMEOUT_SEC = 1800.0
 
 # authorized_keys hunt: default artifact glob misses /root/.ssh. SSH key
 # persistence (T1098.004) is a common attacker move so root must be included.
@@ -71,6 +73,23 @@ AUTH_KEYS_GLOB = "/{root,home/*}/.ssh/authorized_keys*"
 # (T1105); /dev/shm is an in-memory FS some attackers use to avoid disk
 # artifacts; /root and /home cover user-space staging.
 RECENTLY_MODIFIED_GLOB = "/{tmp,var/tmp,root,dev/shm,home}/**"
+
+# yara_files: same drop-target paths as recently_modified, scanned with the
+# 884-rule corpus. SizeMax caps each file at 10 MB so a single bloated log
+# can't dominate the scan budget — typical malware payloads are <2 MB.
+# NumberOfHits=100 lets one file match up to 100 different rules (vs the
+# default 1) so we capture the full picture instead of stopping at the first
+# detection. Same RE2-safe behavior caveat as YARA_PROCESS_REGEX.
+YARA_FILES_GLOB = "/{tmp,var/tmp,root,dev/shm,home/*}/**"
+YARA_FILES_SIZE_MAX = 10 * 1024 * 1024
+YARA_FILES_HITS_PER_FILE = 100
+YARA_FILES_MAX_ROWS = 2000
+YARA_FILES_TIMEOUT_SEC = 1500.0
+
+# Plaso wraps log2timeline + psort over the auth artifact set (wtmp / btmp /
+# lastlog / auth.log*). On a fresh-imaged VM this completes in ~30-60s; on
+# systems with months of auth history it can stretch to 3-5 min. 900s.
+PLASO_FLOW_TIMEOUT_SEC = 900.0
 # Files modified in the last 24h. Computed at acquirer init-time, so a
 # long-lived acquirer instance would see drift — acceptable for the
 # one-shot usage pattern; refactor to compute-at-execute if a service
@@ -110,6 +129,13 @@ def _default_steps() -> list[CollectionStep]:
         VelociraptorArtifactStep("sockets", "Linux.Network.NetstatEnriched"),
         VelociraptorArtifactStep("cron", "Linux.Sys.Crontab"),
         VelociraptorArtifactStep("systemd", "Linux.Sys.Services"),
+        # osquery: independent second view of process / socket / user /
+        # persistence state. Same evidence categories as the artifacts above,
+        # but walks /proc, netlink, and the passwd DB via osquery's code path
+        # rather than Velociraptor's. Disagreement between the two views is
+        # itself a tampering signal. Custom YAML loaded via --definitions; see
+        # [[project-velociraptor-custom-artifacts-via-definitions-flag]].
+        VelociraptorArtifactStep("osquery", "Custom.Linux.Sys.Osquery"),
         # alignment steps — close gaps left by the original 7 against the
         # v0 attack set. See coverage matrix above.
         VelociraptorArtifactStep("bash_history", "Linux.Sys.BashHistory"),
@@ -145,6 +171,32 @@ def _default_steps() -> list[CollectionStep]:
             },
             max_rows=YARA_FLOW_MAX_ROWS,
             timeout_sec=YARA_FLOW_TIMEOUT_SEC,
+        ),
+        # File-glob YARA: complements yara_proc by scanning attacker drop
+        # targets on disk. Same rule corpus, different surface. The diagram
+        # box "YARA scan — Rule hits on files / memory" is satisfied by the
+        # pair (yara_proc = memory, yara_files = files).
+        VelociraptorArtifactStep(
+            "yara_files",
+            "Linux.Detection.Yara.Glob",
+            parameters={
+                "PathGlob": YARA_FILES_GLOB,
+                "YaraRule": load_yara_rules(),
+                "SizeMax": YARA_FILES_SIZE_MAX,
+                "NumberOfHits": YARA_FILES_HITS_PER_FILE,
+            },
+            max_rows=YARA_FILES_MAX_ROWS,
+            timeout_sec=YARA_FILES_TIMEOUT_SEC,
+        ),
+        # Plaso login-history timeline: parses wtmp, btmp, lastlog, and
+        # auth.log* into l2tcsv on the agent and ships the raw CSV back.
+        # Scoped narrowly per the report's "wtmp / btmp history" intent.
+        # Custom YAML loaded via --definitions; see
+        # [[project-velociraptor-custom-artifacts-via-definitions-flag]].
+        VelociraptorArtifactStep(
+            "plaso_timeline",
+            "Custom.Linux.Forensics.PlasoTimeline",
+            timeout_sec=PLASO_FLOW_TIMEOUT_SEC,
         ),
     ]
 

@@ -1,0 +1,76 @@
+name: Custom.Linux.Forensics.PlasoTimeline
+description: |
+  Run Plaso's log2timeline.py + psort.py against the agent's authentication
+  log artifacts (wtmp, btmp, lastlog, auth.log*) and emit the resulting
+  l2tcsv timeline as a single row containing the raw CSV blob.
+
+  Why scope to auth artifacts only: the report's diagram box says
+  "Plaso timeline — wtmp / btmp history" — a narrow login-history view, not
+  a full super-timeline. A full /var/log walk would take 10+ min and produce
+  100+ MB of CSV, mostly redundant with journald data already captured.
+
+  Per the project's "collect raw, filter downstream" principle, this artifact
+  emits the raw CSV exactly as psort writes it (no parsing on the agent).
+  The OCSF mapper parses each CSV row into 3002 Authentication events.
+
+  Requirements on the agent:
+    - plaso (log2timeline.py + psort.py) installed at /usr/bin
+    - agent runs as root (standard Velociraptor systemd install) so /var/log/wtmp
+      and friends are readable
+
+author: ForensicAI-Engine
+type: CLIENT
+
+# log2timeline + psort over wtmp/btmp/lastlog/auth.log* on a freshly-imaged
+# VM takes ~30-60s. Older systems with months of auth history can take
+# 3-5 min. 900s timeout gives comfortable headroom for chained runs.
+resources:
+  timeout: 900
+
+parameters:
+  - name: Log2TimelinePath
+    description: Path to the log2timeline.py binary on the agent
+    default: /usr/bin/log2timeline.py
+  - name: PsortPath
+    description: Path to the psort.py binary on the agent
+    default: /usr/bin/psort.py
+
+precondition: |
+  SELECT OS FROM info() WHERE OS = 'linux'
+
+sources:
+  - query: |
+      -- Plaso wants a single source path. We stage the auth files into a
+      -- tempdir, run log2timeline against the dir, then psort to CSV.
+      -- length=50000000 caps stdout at 50 MB; a year of dense auth.log
+      -- produces ~20 MB of l2tcsv so headroom is comfortable.
+      --
+      -- All Plaso progress output is redirected to stderr (1>&2) so the
+      -- CSV we cat at the end is the ONLY thing on stdout. Failed copies
+      -- of optional files (e.g. auth.log on journald-only systems) are
+      -- swallowed with `|| true` so the artifact still runs against
+      -- whatever subset is present.
+      LET run <= SELECT * FROM execve(
+        argv=['/bin/bash', '-c', '''set -eu
+        L2T="$1"
+        PSORT="$2"
+        TMP=$(mktemp -d)
+        trap "rm -rf $TMP" EXIT
+        mkdir -p "$TMP/src"
+        cp /var/log/wtmp /var/log/btmp /var/log/lastlog "$TMP/src/" 2>/dev/null || true
+        cp /var/log/auth.log* "$TMP/src/" 2>/dev/null || true
+        "$L2T" --status_view none --quiet "$TMP/plaso.dump" "$TMP/src/" 1>&2
+        "$PSORT" -q -o l2tcsv -w "$TMP/plaso.csv" "$TMP/plaso.dump" 1>&2
+        cat "$TMP/plaso.csv"
+        ''', 'plaso-runner', Log2TimelinePath, PsortPath],
+        length=50000000
+      ) LIMIT 1
+
+      -- One row out: exit code, the raw CSV blob, and stderr (which carries
+      -- log2timeline's progress lines + any psort warnings — useful for
+      -- diagnosing empty timelines).
+      SELECT
+        ReturnCode AS plaso_exit_code,
+        Stdout AS raw_csv,
+        Stderr AS raw_stderr
+      FROM run

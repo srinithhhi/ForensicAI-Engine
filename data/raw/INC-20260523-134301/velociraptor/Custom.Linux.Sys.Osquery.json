@@ -1,0 +1,5115 @@
+[
+  {
+    "cmdline": "/sbin/init",
+    "gid": "0",
+    "name": "systemd",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "0",
+    "path": "/usr/lib/systemd/systemd",
+    "pid": "1",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "mm_percpu_wq",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "10",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "scsi_eh_1",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "100",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "scsi_tmf_1",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "101",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "vfio-irqfd-clea",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "103",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kworker/0:1H-kblockd",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "105",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "mld",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "106",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "ipv6_addrconf",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "107",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "/lib/systemd/systemd-networkd",
+    "gid": "102",
+    "name": "systemd-network",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1",
+    "path": "/usr/lib/systemd/systemd-networkd",
+    "pid": "1081",
+    "start_time": "1779537474",
+    "uid": "101"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "rcu_tasks_rude_",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "11",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kstrp",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "118",
+    "start_time": "1779537415",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "rcu_tasks_trace",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "12",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "zswap-shrink",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "121",
+    "start_time": "1779537415",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kworker/u5:0",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "122",
+    "start_time": "1779537415",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "charger_manager",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "127",
+    "start_time": "1779537415",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "ksoftirqd/0",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "13",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "rcu_sched",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "14",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "migration/0",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "15",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "idle_inject/0",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "16",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "/bin/bash /usr/local/sbin/network-watchdog.sh",
+    "gid": "0",
+    "name": "network-watchdo",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1",
+    "path": "/usr/bin/bash",
+    "pid": "1631",
+    "start_time": "1779538493",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "cryptd",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "167",
+    "start_time": "1779537416",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "scsi_eh_2",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "170",
+    "start_time": "1779537416",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "scsi_tmf_2",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "171",
+    "start_time": "1779537416",
+    "uid": "0"
+  },
+  {
+    "cmdline": "sshd: admin [priv]",
+    "gid": "0",
+    "name": "sshd",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "694",
+    "path": "/usr/sbin/sshd",
+    "pid": "1764",
+    "start_time": "1779539237",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "cpuhp/0",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "18",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "sshd: admin@pts/0",
+    "gid": "1000",
+    "name": "sshd",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1764",
+    "path": "/usr/sbin/sshd",
+    "pid": "1811",
+    "start_time": "1779539238",
+    "uid": "1000"
+  },
+  {
+    "cmdline": "-bash",
+    "gid": "1000",
+    "name": "bash",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1811",
+    "path": "/usr/bin/bash",
+    "pid": "1812",
+    "start_time": "1779539238",
+    "uid": "1000"
+  },
+  {
+    "cmdline": "/usr/local/bin/velociraptor_client --config /etc/velociraptor/client.config.yaml client --quiet",
+    "gid": "0",
+    "name": "velociraptor_cl",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1",
+    "path": "/usr/local/bin/velociraptor_client",
+    "pid": "1874",
+    "start_time": "1779539254",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kworker/1:1-cgwb_release",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "1878",
+    "start_time": "1779539254",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kworker/0:0-mm_percpu_wq",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "1880",
+    "start_time": "1779539254",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "cpuhp/1",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "19",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kthreadd",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "0",
+    "path": "",
+    "pid": "2",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "idle_inject/1",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "20",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "migration/1",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "21",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "ttm_swap",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "213",
+    "start_time": "1779537416",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "ksoftirqd/1",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "22",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "irq/18-vmwgfx",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "220",
+    "start_time": "1779537416",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "card0-crtc0",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "221",
+    "start_time": "1779537416",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "card0-crtc1",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "222",
+    "start_time": "1779537416",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "card0-crtc2",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "223",
+    "start_time": "1779537416",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "card0-crtc3",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "224",
+    "start_time": "1779537416",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "card0-crtc4",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "225",
+    "start_time": "1779537416",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "card0-crtc5",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "226",
+    "start_time": "1779537416",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "card0-crtc6",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "227",
+    "start_time": "1779537416",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "card0-crtc7",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "228",
+    "start_time": "1779537416",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kworker/1:0H-events_highpri",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "24",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kdevtmpfs",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "25",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "raid5wq",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "253",
+    "start_time": "1779537418",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "inet_frag_wq",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "26",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kauditd",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "27",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "khungtaskd",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "28",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "oom_reaper",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "29",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "rcu_gp",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "3",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "writeback",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "30",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "jbd2/sda2-8",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "300",
+    "start_time": "1779537418",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "ext4-rsv-conver",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "301",
+    "start_time": "1779537418",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kcompactd0",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "31",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "ksmd",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "32",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "khugepaged",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "33",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kworker/u4:2-loop5",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "3397",
+    "start_time": "1779540682",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kworker/u4:1-flush-8:0",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "3472",
+    "start_time": "1779541739",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kworker/1:2-cgroup_free",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "3623",
+    "start_time": "1779541922",
+    "uid": "0"
+  },
+  {
+    "cmdline": "/lib/systemd/systemd-journald",
+    "gid": "0",
+    "name": "systemd-journal",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1",
+    "path": "/usr/lib/systemd/systemd-journald",
+    "pid": "376",
+    "start_time": "1779537419",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kworker/0:2-cgroup_free",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "3832",
+    "start_time": "1779541938",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "rcu_par_gp",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "4",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kaluad",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "401",
+    "start_time": "1779537420",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kmpath_rdacd",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "410",
+    "start_time": "1779537420",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kmpathd",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "413",
+    "start_time": "1779537420",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kmpath_handlerd",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "414",
+    "start_time": "1779537420",
+    "uid": "0"
+  },
+  {
+    "cmdline": "/sbin/multipathd -d -s",
+    "gid": "0",
+    "name": "multipathd",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1",
+    "path": "/usr/sbin/multipathd",
+    "pid": "415",
+    "start_time": "1779537420",
+    "uid": "0"
+  },
+  {
+    "cmdline": "/lib/systemd/systemd-udevd",
+    "gid": "0",
+    "name": "systemd-udevd",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1",
+    "path": "/usr/bin/udevadm",
+    "pid": "416",
+    "start_time": "1779537420",
+    "uid": "0"
+  },
+  {
+    "cmdline": "/lib/systemd/systemd-timesyncd",
+    "gid": "105",
+    "name": "systemd-timesyn",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1",
+    "path": "/usr/lib/systemd/systemd-timesyncd",
+    "pid": "450",
+    "start_time": "1779537420",
+    "uid": "104"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "slub_flushwq",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "5",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kworker/u4:3-events_freezable_power_",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "5024",
+    "start_time": "1779543219",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kworker/u4:0-flush-8:0",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "5150",
+    "start_time": "1779543787",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kworker/u4:4-events_power_efficient",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "5151",
+    "start_time": "1779543787",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kworker/0:1-rcu_gp",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "5181",
+    "start_time": "1779543797",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kworker/0:3-events",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "5245",
+    "start_time": "1779543803",
+    "uid": "0"
+  },
+  {
+    "cmdline": "sleep 30",
+    "gid": "0",
+    "name": "sleep",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1631",
+    "path": "/usr/bin/sleep",
+    "pid": "5502",
+    "start_time": "1779543825",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kworker/1:0-mm_percpu_wq",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "5574",
+    "start_time": "1779543831",
+    "uid": "0"
+  },
+  {
+    "cmdline": "/usr/bin/osqueryi --json SELECT pid, parent, name, path, cmdline, uid, gid, start_time, on_disk FROM processes;",
+    "gid": "0",
+    "name": "osqueryi",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1874",
+    "path": "/opt/osquery/bin/osqueryd",
+    "pid": "5576",
+    "start_time": "1779543852",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "netns",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "6",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "/lib/systemd/systemd-resolved",
+    "gid": "103",
+    "name": "systemd-resolve",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1",
+    "path": "/usr/lib/systemd/systemd-resolved",
+    "pid": "622",
+    "start_time": "1779537421",
+    "uid": "102"
+  },
+  {
+    "cmdline": "/usr/sbin/cron -f -P",
+    "gid": "0",
+    "name": "cron",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1",
+    "path": "/usr/sbin/cron",
+    "pid": "633",
+    "start_time": "1779537423",
+    "uid": "0"
+  },
+  {
+    "cmdline": "@dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only",
+    "gid": "104",
+    "name": "dbus-daemon",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1",
+    "path": "/usr/bin/dbus-daemon",
+    "pid": "634",
+    "start_time": "1779537423",
+    "uid": "103"
+  },
+  {
+    "cmdline": "/usr/sbin/irqbalance --foreground",
+    "gid": "0",
+    "name": "irqbalance",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1",
+    "path": "/usr/sbin/irqbalance",
+    "pid": "641",
+    "start_time": "1779537423",
+    "uid": "0"
+  },
+  {
+    "cmdline": "/usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers",
+    "gid": "0",
+    "name": "networkd-dispat",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1",
+    "path": "/usr/bin/python3.10",
+    "pid": "642",
+    "start_time": "1779537423",
+    "uid": "0"
+  },
+  {
+    "cmdline": "/usr/libexec/polkitd --no-debug",
+    "gid": "0",
+    "name": "polkitd",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1",
+    "path": "/usr/libexec/polkitd",
+    "pid": "643",
+    "start_time": "1779537423",
+    "uid": "0"
+  },
+  {
+    "cmdline": "/usr/sbin/rsyslogd -n -iNONE",
+    "gid": "113",
+    "name": "rsyslogd",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1",
+    "path": "/usr/sbin/rsyslogd",
+    "pid": "645",
+    "start_time": "1779537423",
+    "uid": "106"
+  },
+  {
+    "cmdline": "/snap/snapd/current/usr/lib/snapd/snapd",
+    "gid": "0",
+    "name": "snapd",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1",
+    "path": "/snap/snapd/26865/usr/lib/snapd/snapd",
+    "pid": "651",
+    "start_time": "1779537423",
+    "uid": "0"
+  },
+  {
+    "cmdline": "/lib/systemd/systemd-logind",
+    "gid": "0",
+    "name": "systemd-logind",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1",
+    "path": "/usr/lib/systemd/systemd-logind",
+    "pid": "653",
+    "start_time": "1779537423",
+    "uid": "0"
+  },
+  {
+    "cmdline": "/usr/libexec/udisks2/udisksd",
+    "gid": "0",
+    "name": "udisksd",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1",
+    "path": "/usr/libexec/udisks2/udisksd",
+    "pid": "655",
+    "start_time": "1779537423",
+    "uid": "0"
+  },
+  {
+    "cmdline": "/bin/login -p --",
+    "gid": "1000",
+    "name": "login",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1",
+    "path": "/usr/bin/login",
+    "pid": "680",
+    "start_time": "1779537423",
+    "uid": "0"
+  },
+  {
+    "cmdline": "/usr/sbin/ModemManager",
+    "gid": "0",
+    "name": "ModemManager",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1",
+    "path": "/usr/sbin/ModemManager",
+    "pid": "688",
+    "start_time": "1779537423",
+    "uid": "0"
+  },
+  {
+    "cmdline": "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups",
+    "gid": "0",
+    "name": "sshd",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1",
+    "path": "/usr/sbin/sshd",
+    "pid": "694",
+    "start_time": "1779537423",
+    "uid": "0"
+  },
+  {
+    "cmdline": "/usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal",
+    "gid": "0",
+    "name": "unattended-upgr",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1",
+    "path": "/usr/bin/python3.10",
+    "pid": "710",
+    "start_time": "1779537424",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kworker/0:0H",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "8",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kintegrityd",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "80",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kblockd",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "81",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "blkcg_punt_bio",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "82",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "tpm_dev_wq",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "83",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "ata_sff",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "84",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "md",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "85",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "edac-poller",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "86",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "devfreq_wq",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "87",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "watchdogd",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "88",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kworker/1:1H-kblockd",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "90",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kswapd0",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "92",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "ecryptfs-kthrea",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "93",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "kthrotld",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "95",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "acpi_thermal_pm",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "96",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "/lib/systemd/systemd --user",
+    "gid": "1000",
+    "name": "systemd",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "1",
+    "path": "/usr/lib/systemd/systemd",
+    "pid": "979",
+    "start_time": "1779537435",
+    "uid": "1000"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "scsi_eh_0",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "98",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "cmdline": "(sd-pam)",
+    "gid": "1000",
+    "name": "(sd-pam)",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "979",
+    "path": "/usr/lib/systemd/systemd",
+    "pid": "980",
+    "start_time": "1779537435",
+    "uid": "1000"
+  },
+  {
+    "cmdline": "-bash",
+    "gid": "1000",
+    "name": "bash",
+    "on_disk": "1",
+    "osquery_table": "processes",
+    "parent": "680",
+    "path": "/usr/bin/bash",
+    "pid": "986",
+    "start_time": "1779537435",
+    "uid": "1000"
+  },
+  {
+    "cmdline": "",
+    "gid": "0",
+    "name": "scsi_tmf_0",
+    "on_disk": "-1",
+    "osquery_table": "processes",
+    "parent": "2",
+    "path": "",
+    "pid": "99",
+    "start_time": "1779537414",
+    "uid": "0"
+  },
+  {
+    "address": "127.0.0.53",
+    "family": "2",
+    "osquery_table": "listening_ports",
+    "pid": "622",
+    "port": "53",
+    "protocol": "6"
+  },
+  {
+    "address": "0.0.0.0",
+    "family": "2",
+    "osquery_table": "listening_ports",
+    "pid": "694",
+    "port": "22",
+    "protocol": "6"
+  },
+  {
+    "address": "::",
+    "family": "10",
+    "osquery_table": "listening_ports",
+    "pid": "694",
+    "port": "22",
+    "protocol": "6"
+  },
+  {
+    "address": "127.0.0.53",
+    "family": "2",
+    "osquery_table": "listening_ports",
+    "pid": "622",
+    "port": "53",
+    "protocol": "17"
+  },
+  {
+    "address": "fe80::a00:27ff:fe4f:1ef9",
+    "family": "10",
+    "osquery_table": "listening_ports",
+    "pid": "1081",
+    "port": "546",
+    "protocol": "17"
+  },
+  {
+    "address": "::",
+    "family": "10",
+    "osquery_table": "listening_ports",
+    "pid": "1081",
+    "port": "58",
+    "protocol": "255"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "979",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "979",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "979",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "415",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "979",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "979",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "979",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "979",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "979",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "979",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "979",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "645",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "1",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "1",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "622",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "634",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "651",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "651",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "1",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "641",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "1",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "1",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "1",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "1",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "1",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "1",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "645",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "1",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "376",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "376",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "376",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "416",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "376",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "376",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "634",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "634",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "376",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "634",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "376",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "376",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "376",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "376",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "634",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "634",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "376",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "376",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "376",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "376",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "376",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "634",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "376",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "634",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "634",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "634",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "634",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "376",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "376",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "376",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "376",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "376",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "634",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "1",
+    "osquery_table": "listening_ports",
+    "pid": "634",
+    "port": "0",
+    "protocol": "0"
+  },
+  {
+    "address": "",
+    "family": "17",
+    "osquery_table": "listening_ports",
+    "pid": "1081",
+    "port": "0",
+    "protocol": "35020"
+  },
+  {
+    "family": "2",
+    "local_address": "127.0.0.53",
+    "local_port": "53",
+    "osquery_table": "process_open_sockets",
+    "pid": "622",
+    "protocol": "6",
+    "remote_address": "0.0.0.0",
+    "remote_port": "0",
+    "state": "LISTEN"
+  },
+  {
+    "family": "2",
+    "local_address": "0.0.0.0",
+    "local_port": "22",
+    "osquery_table": "process_open_sockets",
+    "pid": "694",
+    "protocol": "6",
+    "remote_address": "0.0.0.0",
+    "remote_port": "0",
+    "state": "LISTEN"
+  },
+  {
+    "family": "2",
+    "local_address": "192.168.1.10",
+    "local_port": "55582",
+    "osquery_table": "process_open_sockets",
+    "pid": "1874",
+    "protocol": "6",
+    "remote_address": "192.168.1.3",
+    "remote_port": "8000",
+    "state": "ESTABLISHED"
+  },
+  {
+    "family": "2",
+    "local_address": "192.168.1.10",
+    "local_port": "22",
+    "osquery_table": "process_open_sockets",
+    "pid": "1811",
+    "protocol": "6",
+    "remote_address": "192.168.1.3",
+    "remote_port": "51658",
+    "state": "ESTABLISHED"
+  },
+  {
+    "family": "10",
+    "local_address": "::",
+    "local_port": "22",
+    "osquery_table": "process_open_sockets",
+    "pid": "694",
+    "protocol": "6",
+    "remote_address": "::",
+    "remote_port": "0",
+    "state": "LISTEN"
+  },
+  {
+    "family": "2",
+    "local_address": "127.0.0.53",
+    "local_port": "53",
+    "osquery_table": "process_open_sockets",
+    "pid": "622",
+    "protocol": "17",
+    "remote_address": "0.0.0.0",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "10",
+    "local_address": "fe80::a00:27ff:fe4f:1ef9",
+    "local_port": "546",
+    "osquery_table": "process_open_sockets",
+    "pid": "1081",
+    "protocol": "17",
+    "remote_address": "::",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "10",
+    "local_address": "::",
+    "local_port": "58",
+    "osquery_table": "process_open_sockets",
+    "pid": "1081",
+    "protocol": "255",
+    "remote_address": "::",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "979",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "979",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "979",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "415",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "979",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "979",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "979",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "979",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "979",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "979",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "979",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "645",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "622",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "634",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "651",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "651",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "641",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "645",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "376",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "376",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "376",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "416",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "376",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "376",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "634",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "980",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "634",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "376",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "634",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "450",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "643",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "416",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1081",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "376",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1081",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "376",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "680",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "622",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "376",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "450",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1081",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "655",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1764",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "622",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "651",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "376",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "642",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "634",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "634",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "450",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "694",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "376",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "634",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "376",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "651",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1081",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "688",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "633",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "642",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "710",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "376",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "376",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1081",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "376",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "710",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "450",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "634",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "622",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "416",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "634",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "450",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "710",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "653",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "376",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "980",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "416",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "642",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "655",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "979",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "634",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "5502",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1081",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "634",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "688",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "450",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "653",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "376",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "634",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "655",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "634",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "634",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "376",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "415",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "979",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "634",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "376",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "688",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "376",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "979",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "653",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1811",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1081",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "376",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "376",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "416",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1811",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "642",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1811",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "710",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "450",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "634",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "641",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "633",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "979",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "645",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "634",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "1",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1",
+    "protocol": "0",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": ""
+  },
+  {
+    "family": "17",
+    "local_address": "",
+    "local_port": "0",
+    "osquery_table": "process_open_sockets",
+    "pid": "1081",
+    "protocol": "35020",
+    "remote_address": "",
+    "remote_port": "0",
+    "state": "NONE"
+  },
+  {
+    "description": "root",
+    "directory": "/root",
+    "gid": "0",
+    "osquery_table": "users",
+    "shell": "/bin/bash",
+    "uid": "0",
+    "username": "root"
+  },
+  {
+    "description": "daemon",
+    "directory": "/usr/sbin",
+    "gid": "1",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "1",
+    "username": "daemon"
+  },
+  {
+    "description": "bin",
+    "directory": "/bin",
+    "gid": "2",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "2",
+    "username": "bin"
+  },
+  {
+    "description": "sys",
+    "directory": "/dev",
+    "gid": "3",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "3",
+    "username": "sys"
+  },
+  {
+    "description": "sync",
+    "directory": "/bin",
+    "gid": "65534",
+    "osquery_table": "users",
+    "shell": "/bin/sync",
+    "uid": "4",
+    "username": "sync"
+  },
+  {
+    "description": "games",
+    "directory": "/usr/games",
+    "gid": "60",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "5",
+    "username": "games"
+  },
+  {
+    "description": "man",
+    "directory": "/var/cache/man",
+    "gid": "12",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "6",
+    "username": "man"
+  },
+  {
+    "description": "lp",
+    "directory": "/var/spool/lpd",
+    "gid": "7",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "7",
+    "username": "lp"
+  },
+  {
+    "description": "mail",
+    "directory": "/var/mail",
+    "gid": "8",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "8",
+    "username": "mail"
+  },
+  {
+    "description": "news",
+    "directory": "/var/spool/news",
+    "gid": "9",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "9",
+    "username": "news"
+  },
+  {
+    "description": "uucp",
+    "directory": "/var/spool/uucp",
+    "gid": "10",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "10",
+    "username": "uucp"
+  },
+  {
+    "description": "proxy",
+    "directory": "/bin",
+    "gid": "13",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "13",
+    "username": "proxy"
+  },
+  {
+    "description": "www-data",
+    "directory": "/var/www",
+    "gid": "33",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "33",
+    "username": "www-data"
+  },
+  {
+    "description": "backup",
+    "directory": "/var/backups",
+    "gid": "34",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "34",
+    "username": "backup"
+  },
+  {
+    "description": "Mailing List Manager",
+    "directory": "/var/list",
+    "gid": "38",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "38",
+    "username": "list"
+  },
+  {
+    "description": "ircd",
+    "directory": "/run/ircd",
+    "gid": "39",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "39",
+    "username": "irc"
+  },
+  {
+    "description": "Gnats Bug-Reporting System (admin)",
+    "directory": "/var/lib/gnats",
+    "gid": "41",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "41",
+    "username": "gnats"
+  },
+  {
+    "description": "nobody",
+    "directory": "/nonexistent",
+    "gid": "65534",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "65534",
+    "username": "nobody"
+  },
+  {
+    "description": "",
+    "directory": "/nonexistent",
+    "gid": "65534",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "100",
+    "username": "_apt"
+  },
+  {
+    "description": "systemd Network Management,,,",
+    "directory": "/run/systemd",
+    "gid": "102",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "101",
+    "username": "systemd-network"
+  },
+  {
+    "description": "systemd Resolver,,,",
+    "directory": "/run/systemd",
+    "gid": "103",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "102",
+    "username": "systemd-resolve"
+  },
+  {
+    "description": "",
+    "directory": "/nonexistent",
+    "gid": "104",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "103",
+    "username": "messagebus"
+  },
+  {
+    "description": "systemd Time Synchronization,,,",
+    "directory": "/run/systemd",
+    "gid": "105",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "104",
+    "username": "systemd-timesync"
+  },
+  {
+    "description": "",
+    "directory": "/var/cache/pollinate",
+    "gid": "1",
+    "osquery_table": "users",
+    "shell": "/bin/false",
+    "uid": "105",
+    "username": "pollinate"
+  },
+  {
+    "description": "",
+    "directory": "/home/syslog",
+    "gid": "113",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "106",
+    "username": "syslog"
+  },
+  {
+    "description": "",
+    "directory": "/run/uuidd",
+    "gid": "114",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "107",
+    "username": "uuidd"
+  },
+  {
+    "description": "",
+    "directory": "/nonexistent",
+    "gid": "115",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "108",
+    "username": "tcpdump"
+  },
+  {
+    "description": "TPM software stack,,,",
+    "directory": "/var/lib/tpm",
+    "gid": "116",
+    "osquery_table": "users",
+    "shell": "/bin/false",
+    "uid": "109",
+    "username": "tss"
+  },
+  {
+    "description": "",
+    "directory": "/var/lib/landscape",
+    "gid": "117",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "110",
+    "username": "landscape"
+  },
+  {
+    "description": "fwupd-refresh user,,,",
+    "directory": "/run/systemd",
+    "gid": "118",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "111",
+    "username": "fwupd-refresh"
+  },
+  {
+    "description": "usbmux daemon,,,",
+    "directory": "/var/lib/usbmux",
+    "gid": "46",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "112",
+    "username": "usbmux"
+  },
+  {
+    "description": "admin",
+    "directory": "/home/admin",
+    "gid": "1000",
+    "osquery_table": "users",
+    "shell": "/bin/bash",
+    "uid": "1000",
+    "username": "admin"
+  },
+  {
+    "description": "",
+    "directory": "/var/snap/lxd/common/lxd",
+    "gid": "100",
+    "osquery_table": "users",
+    "shell": "/bin/false",
+    "uid": "999",
+    "username": "lxd"
+  },
+  {
+    "description": "",
+    "directory": "/run/sshd",
+    "gid": "65534",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "113",
+    "username": "sshd"
+  },
+  {
+    "description": "",
+    "directory": "/var/spool/postfix",
+    "gid": "120",
+    "osquery_table": "users",
+    "shell": "/usr/sbin/nologin",
+    "uid": "114",
+    "username": "postfix"
+  },
+  {
+    "description": "",
+    "directory": "/home/art",
+    "gid": "1001",
+    "osquery_table": "users",
+    "shell": "/bin/bash",
+    "uid": "1001",
+    "username": "art"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1778608397",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1778613099",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1778614478",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1778616109",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1778665458",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "192.168.1.3",
+    "osquery_table": "last",
+    "time": "1778666856",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1778668216",
+    "type": "8",
+    "username": ""
+  },
+  {
+    "host": "192.168.1.3",
+    "osquery_table": "last",
+    "time": "1778668236",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "192.168.1.3",
+    "osquery_table": "last",
+    "time": "1778672270",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1778700093",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "192.168.1.3",
+    "osquery_table": "last",
+    "time": "1778700656",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1778849995",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "192.168.1.3",
+    "osquery_table": "last",
+    "time": "1778854079",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "192.168.1.3",
+    "osquery_table": "last",
+    "time": "1778859974",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1778863439",
+    "type": "8",
+    "username": ""
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1778863444",
+    "type": "8",
+    "username": ""
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1778930758",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "192.168.1.3",
+    "osquery_table": "last",
+    "time": "1778932985",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1778933646",
+    "type": "8",
+    "username": ""
+  },
+  {
+    "host": "192.168.1.3",
+    "osquery_table": "last",
+    "time": "1778933656",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1778953792",
+    "type": "8",
+    "username": ""
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1779014691",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1779016062",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "192.168.1.15",
+    "osquery_table": "last",
+    "time": "1779016193",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1779024713",
+    "type": "8",
+    "username": ""
+  },
+  {
+    "host": "192.168.1.3",
+    "osquery_table": "last",
+    "time": "1779024741",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1779045325",
+    "type": "8",
+    "username": ""
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1779099485",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "192.168.1.3",
+    "osquery_table": "last",
+    "time": "1779100450",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1779103550",
+    "type": "8",
+    "username": ""
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1779110364",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "192.168.1.3",
+    "osquery_table": "last",
+    "time": "1779113600",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1779134196",
+    "type": "8",
+    "username": ""
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1779210442",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "192.168.1.3",
+    "osquery_table": "last",
+    "time": "1779212488",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1779225574",
+    "type": "8",
+    "username": ""
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1779259117",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "192.168.1.3",
+    "osquery_table": "last",
+    "time": "1779262519",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "192.168.1.3",
+    "osquery_table": "last",
+    "time": "1779274461",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1779274465",
+    "type": "8",
+    "username": ""
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1779275410",
+    "type": "8",
+    "username": ""
+  },
+  {
+    "host": "192.168.1.3",
+    "osquery_table": "last",
+    "time": "1779276132",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1779279242",
+    "type": "8",
+    "username": ""
+  },
+  {
+    "host": "192.168.1.3",
+    "osquery_table": "last",
+    "time": "1779279542",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1779284949",
+    "type": "8",
+    "username": ""
+  },
+  {
+    "host": "192.168.1.3",
+    "osquery_table": "last",
+    "time": "1779285105",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "192.168.1.3",
+    "osquery_table": "last",
+    "time": "1779286660",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1779286997",
+    "type": "8",
+    "username": ""
+  },
+  {
+    "host": "192.168.1.3",
+    "osquery_table": "last",
+    "time": "1779287061",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1779287359",
+    "type": "8",
+    "username": ""
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1779306754",
+    "type": "8",
+    "username": ""
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1779464046",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "192.168.1.3",
+    "osquery_table": "last",
+    "time": "1779465352",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1779466623",
+    "type": "8",
+    "username": ""
+  },
+  {
+    "host": "192.168.1.3",
+    "osquery_table": "last",
+    "time": "1779466740",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1779486868",
+    "type": "8",
+    "username": ""
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1779531138",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "",
+    "osquery_table": "last",
+    "time": "1779537402",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "host": "192.168.1.3",
+    "osquery_table": "last",
+    "time": "1779539238",
+    "type": "7",
+    "username": "admin"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/bin/passwd",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/bin/pkexec",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/bin/umount",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/bin/chsh",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/bin/sg",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/bin/sudo",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/bin/su",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "shadow",
+    "osquery_table": "suid_bin",
+    "path": "/bin/expiry",
+    "permissions": "G",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/bin/sudoedit",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/bin/chfn",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/bin/fusermount",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "shadow",
+    "osquery_table": "suid_bin",
+    "path": "/bin/chage",
+    "permissions": "G",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/bin/newgrp",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "crontab",
+    "osquery_table": "suid_bin",
+    "path": "/bin/crontab",
+    "permissions": "G",
+    "username": "root"
+  },
+  {
+    "groupname": "_ssh",
+    "osquery_table": "suid_bin",
+    "path": "/bin/ssh-agent",
+    "permissions": "G",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/bin/mount",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/bin/fusermount3",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "mail",
+    "osquery_table": "suid_bin",
+    "path": "/bin/dotlockfile",
+    "permissions": "G",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/bin/gpasswd",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "shadow",
+    "osquery_table": "suid_bin",
+    "path": "/sbin/unix_chkpwd",
+    "permissions": "G",
+    "username": "root"
+  },
+  {
+    "groupname": "postdrop",
+    "osquery_table": "suid_bin",
+    "path": "/sbin/postqueue",
+    "permissions": "G",
+    "username": "root"
+  },
+  {
+    "groupname": "shadow",
+    "osquery_table": "suid_bin",
+    "path": "/sbin/pam_extrausers_chkpwd",
+    "permissions": "G",
+    "username": "root"
+  },
+  {
+    "groupname": "postdrop",
+    "osquery_table": "suid_bin",
+    "path": "/sbin/postdrop",
+    "permissions": "G",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/usr/bin/passwd",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/usr/bin/pkexec",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/usr/bin/umount",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/usr/bin/chsh",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/usr/bin/sg",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/usr/bin/sudo",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/usr/bin/su",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "shadow",
+    "osquery_table": "suid_bin",
+    "path": "/usr/bin/expiry",
+    "permissions": "G",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/usr/bin/sudoedit",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/usr/bin/chfn",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/usr/bin/fusermount",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "shadow",
+    "osquery_table": "suid_bin",
+    "path": "/usr/bin/chage",
+    "permissions": "G",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/usr/bin/newgrp",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "crontab",
+    "osquery_table": "suid_bin",
+    "path": "/usr/bin/crontab",
+    "permissions": "G",
+    "username": "root"
+  },
+  {
+    "groupname": "_ssh",
+    "osquery_table": "suid_bin",
+    "path": "/usr/bin/ssh-agent",
+    "permissions": "G",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/usr/bin/mount",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/usr/bin/fusermount3",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "mail",
+    "osquery_table": "suid_bin",
+    "path": "/usr/bin/dotlockfile",
+    "permissions": "G",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/usr/bin/gpasswd",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "groupname": "shadow",
+    "osquery_table": "suid_bin",
+    "path": "/usr/sbin/unix_chkpwd",
+    "permissions": "G",
+    "username": "root"
+  },
+  {
+    "groupname": "postdrop",
+    "osquery_table": "suid_bin",
+    "path": "/usr/sbin/postqueue",
+    "permissions": "G",
+    "username": "root"
+  },
+  {
+    "groupname": "shadow",
+    "osquery_table": "suid_bin",
+    "path": "/usr/sbin/pam_extrausers_chkpwd",
+    "permissions": "G",
+    "username": "root"
+  },
+  {
+    "groupname": "postdrop",
+    "osquery_table": "suid_bin",
+    "path": "/usr/sbin/postdrop",
+    "permissions": "G",
+    "username": "root"
+  },
+  {
+    "groupname": "root",
+    "osquery_table": "suid_bin",
+    "path": "/tmp/evilBinary",
+    "permissions": "S",
+    "username": "root"
+  },
+  {
+    "name": "tls",
+    "osquery_table": "kernel_modules",
+    "size": "114688",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "intel_rapl_msr",
+    "osquery_table": "kernel_modules",
+    "size": "20480",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "intel_rapl_common",
+    "osquery_table": "kernel_modules",
+    "size": "40960",
+    "status": "Live",
+    "used_by": "intel_rapl_msr"
+  },
+  {
+    "name": "input_leds",
+    "osquery_table": "kernel_modules",
+    "size": "16384",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "serio_raw",
+    "osquery_table": "kernel_modules",
+    "size": "20480",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "snd_intel8x0",
+    "osquery_table": "kernel_modules",
+    "size": "45056",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "joydev",
+    "osquery_table": "kernel_modules",
+    "size": "32768",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "snd_ac97_codec",
+    "osquery_table": "kernel_modules",
+    "size": "180224",
+    "status": "Live",
+    "used_by": "snd_intel8x0"
+  },
+  {
+    "name": "vboxguest",
+    "osquery_table": "kernel_modules",
+    "size": "45056",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "ac97_bus",
+    "osquery_table": "kernel_modules",
+    "size": "16384",
+    "status": "Live",
+    "used_by": "snd_ac97_codec"
+  },
+  {
+    "name": "snd_pcm",
+    "osquery_table": "kernel_modules",
+    "size": "147456",
+    "status": "Live",
+    "used_by": "snd_intel8x0,snd_ac97_codec"
+  },
+  {
+    "name": "snd_timer",
+    "osquery_table": "kernel_modules",
+    "size": "40960",
+    "status": "Live",
+    "used_by": "snd_pcm"
+  },
+  {
+    "name": "snd",
+    "osquery_table": "kernel_modules",
+    "size": "106496",
+    "status": "Live",
+    "used_by": "snd_intel8x0,snd_ac97_codec,snd_pcm,snd_timer"
+  },
+  {
+    "name": "soundcore",
+    "osquery_table": "kernel_modules",
+    "size": "16384",
+    "status": "Live",
+    "used_by": "snd"
+  },
+  {
+    "name": "mac_hid",
+    "osquery_table": "kernel_modules",
+    "size": "16384",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "binfmt_misc",
+    "osquery_table": "kernel_modules",
+    "size": "24576",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "sch_fq_codel",
+    "osquery_table": "kernel_modules",
+    "size": "20480",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "dm_multipath",
+    "osquery_table": "kernel_modules",
+    "size": "40960",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "scsi_dh_rdac",
+    "osquery_table": "kernel_modules",
+    "size": "20480",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "scsi_dh_emc",
+    "osquery_table": "kernel_modules",
+    "size": "16384",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "scsi_dh_alua",
+    "osquery_table": "kernel_modules",
+    "size": "20480",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "msr",
+    "osquery_table": "kernel_modules",
+    "size": "16384",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "efi_pstore",
+    "osquery_table": "kernel_modules",
+    "size": "16384",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "ip_tables",
+    "osquery_table": "kernel_modules",
+    "size": "32768",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "x_tables",
+    "osquery_table": "kernel_modules",
+    "size": "53248",
+    "status": "Live",
+    "used_by": "ip_tables"
+  },
+  {
+    "name": "autofs4",
+    "osquery_table": "kernel_modules",
+    "size": "49152",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "btrfs",
+    "osquery_table": "kernel_modules",
+    "size": "1564672",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "blake2b_generic",
+    "osquery_table": "kernel_modules",
+    "size": "20480",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "zstd_compress",
+    "osquery_table": "kernel_modules",
+    "size": "229376",
+    "status": "Live",
+    "used_by": "btrfs"
+  },
+  {
+    "name": "raid10",
+    "osquery_table": "kernel_modules",
+    "size": "69632",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "raid456",
+    "osquery_table": "kernel_modules",
+    "size": "163840",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "async_raid6_recov",
+    "osquery_table": "kernel_modules",
+    "size": "24576",
+    "status": "Live",
+    "used_by": "raid456"
+  },
+  {
+    "name": "async_memcpy",
+    "osquery_table": "kernel_modules",
+    "size": "20480",
+    "status": "Live",
+    "used_by": "raid456,async_raid6_recov"
+  },
+  {
+    "name": "async_pq",
+    "osquery_table": "kernel_modules",
+    "size": "24576",
+    "status": "Live",
+    "used_by": "raid456,async_raid6_recov"
+  },
+  {
+    "name": "async_xor",
+    "osquery_table": "kernel_modules",
+    "size": "20480",
+    "status": "Live",
+    "used_by": "raid456,async_raid6_recov,async_pq"
+  },
+  {
+    "name": "async_tx",
+    "osquery_table": "kernel_modules",
+    "size": "20480",
+    "status": "Live",
+    "used_by": "raid456,async_raid6_recov,async_memcpy,async_pq,async_xor"
+  },
+  {
+    "name": "xor",
+    "osquery_table": "kernel_modules",
+    "size": "24576",
+    "status": "Live",
+    "used_by": "btrfs,async_xor"
+  },
+  {
+    "name": "raid6_pq",
+    "osquery_table": "kernel_modules",
+    "size": "122880",
+    "status": "Live",
+    "used_by": "btrfs,raid456,async_raid6_recov,async_pq"
+  },
+  {
+    "name": "libcrc32c",
+    "osquery_table": "kernel_modules",
+    "size": "16384",
+    "status": "Live",
+    "used_by": "btrfs,raid456"
+  },
+  {
+    "name": "raid1",
+    "osquery_table": "kernel_modules",
+    "size": "49152",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "raid0",
+    "osquery_table": "kernel_modules",
+    "size": "24576",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "multipath",
+    "osquery_table": "kernel_modules",
+    "size": "20480",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "linear",
+    "osquery_table": "kernel_modules",
+    "size": "20480",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "crct10dif_pclmul",
+    "osquery_table": "kernel_modules",
+    "size": "16384",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "crc32_pclmul",
+    "osquery_table": "kernel_modules",
+    "size": "16384",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "ghash_clmulni_intel",
+    "osquery_table": "kernel_modules",
+    "size": "16384",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "vmwgfx",
+    "osquery_table": "kernel_modules",
+    "size": "376832",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "sha256_ssse3",
+    "osquery_table": "kernel_modules",
+    "size": "32768",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "ttm",
+    "osquery_table": "kernel_modules",
+    "size": "86016",
+    "status": "Live",
+    "used_by": "vmwgfx"
+  },
+  {
+    "name": "sha1_ssse3",
+    "osquery_table": "kernel_modules",
+    "size": "32768",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "hid_generic",
+    "osquery_table": "kernel_modules",
+    "size": "16384",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "drm_kms_helper",
+    "osquery_table": "kernel_modules",
+    "size": "315392",
+    "status": "Live",
+    "used_by": "vmwgfx"
+  },
+  {
+    "name": "syscopyarea",
+    "osquery_table": "kernel_modules",
+    "size": "16384",
+    "status": "Live",
+    "used_by": "drm_kms_helper"
+  },
+  {
+    "name": "sysfillrect",
+    "osquery_table": "kernel_modules",
+    "size": "20480",
+    "status": "Live",
+    "used_by": "drm_kms_helper"
+  },
+  {
+    "name": "sysimgblt",
+    "osquery_table": "kernel_modules",
+    "size": "16384",
+    "status": "Live",
+    "used_by": "drm_kms_helper"
+  },
+  {
+    "name": "fb_sys_fops",
+    "osquery_table": "kernel_modules",
+    "size": "16384",
+    "status": "Live",
+    "used_by": "drm_kms_helper"
+  },
+  {
+    "name": "aesni_intel",
+    "osquery_table": "kernel_modules",
+    "size": "376832",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "cec",
+    "osquery_table": "kernel_modules",
+    "size": "65536",
+    "status": "Live",
+    "used_by": "drm_kms_helper"
+  },
+  {
+    "name": "rc_core",
+    "osquery_table": "kernel_modules",
+    "size": "65536",
+    "status": "Live",
+    "used_by": "cec"
+  },
+  {
+    "name": "crypto_simd",
+    "osquery_table": "kernel_modules",
+    "size": "16384",
+    "status": "Live",
+    "used_by": "aesni_intel"
+  },
+  {
+    "name": "cryptd",
+    "osquery_table": "kernel_modules",
+    "size": "24576",
+    "status": "Live",
+    "used_by": "ghash_clmulni_intel,crypto_simd"
+  },
+  {
+    "name": "ahci",
+    "osquery_table": "kernel_modules",
+    "size": "49152",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "drm",
+    "osquery_table": "kernel_modules",
+    "size": "622592",
+    "status": "Live",
+    "used_by": "vmwgfx,ttm,drm_kms_helper"
+  },
+  {
+    "name": "psmouse",
+    "osquery_table": "kernel_modules",
+    "size": "184320",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "libahci",
+    "osquery_table": "kernel_modules",
+    "size": "49152",
+    "status": "Live",
+    "used_by": "ahci"
+  },
+  {
+    "name": "e1000",
+    "osquery_table": "kernel_modules",
+    "size": "159744",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "i2c_piix4",
+    "osquery_table": "kernel_modules",
+    "size": "32768",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "pata_acpi",
+    "osquery_table": "kernel_modules",
+    "size": "16384",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "video",
+    "osquery_table": "kernel_modules",
+    "size": "65536",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "usbhid",
+    "osquery_table": "kernel_modules",
+    "size": "65536",
+    "status": "Live",
+    "used_by": "-"
+  },
+  {
+    "name": "hid",
+    "osquery_table": "kernel_modules",
+    "size": "151552",
+    "status": "Live",
+    "used_by": "hid_generic,usbhid"
+  },
+  {
+    "command": "root cd / && run-parts --report /etc/cron.hourly",
+    "day_of_month": "*",
+    "day_of_week": "*",
+    "event": "",
+    "hour": "*",
+    "minute": "17",
+    "month": "*",
+    "osquery_table": "crontab",
+    "path": "/etc/crontab"
+  },
+  {
+    "command": "root test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )",
+    "day_of_month": "*",
+    "day_of_week": "*",
+    "event": "",
+    "hour": "6",
+    "minute": "25",
+    "month": "*",
+    "osquery_table": "crontab",
+    "path": "/etc/crontab"
+  },
+  {
+    "command": "root test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )",
+    "day_of_month": "*",
+    "day_of_week": "7",
+    "event": "",
+    "hour": "6",
+    "minute": "47",
+    "month": "*",
+    "osquery_table": "crontab",
+    "path": "/etc/crontab"
+  },
+  {
+    "command": "root test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )",
+    "day_of_month": "1",
+    "day_of_week": "*",
+    "event": "",
+    "hour": "6",
+    "minute": "52",
+    "month": "*",
+    "osquery_table": "crontab",
+    "path": "/etc/crontab"
+  },
+  {
+    "command": "root test -e /run/systemd/system || SERVICE_MODE=1 /usr/lib/x86_64-linux-gnu/e2fsprogs/e2scrub_all_cron",
+    "day_of_month": "*",
+    "day_of_week": "0",
+    "event": "",
+    "hour": "3",
+    "minute": "30",
+    "month": "*",
+    "osquery_table": "crontab",
+    "path": "/etc/cron.d/e2scrub_all"
+  },
+  {
+    "command": "root test -e /run/systemd/system || SERVICE_MODE=1 /sbin/e2scrub_all -A -r",
+    "day_of_month": "*",
+    "day_of_week": "*",
+    "event": "",
+    "hour": "3",
+    "minute": "10",
+    "month": "*",
+    "osquery_table": "crontab",
+    "path": "/etc/cron.d/e2scrub_all"
+  },
+  {
+    "command": "* root echo Hello from Atomic Red Team' > /tmp/atomic.log",
+    "day_of_month": "*",
+    "day_of_week": "*",
+    "event": "",
+    "hour": "'*/5",
+    "minute": "echo",
+    "month": "*",
+    "osquery_table": "crontab",
+    "path": "/etc/cron.d/persistevil"
+  }
+]

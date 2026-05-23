@@ -29,6 +29,13 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
+# Sleep-prevention is handled externally by wrapping the invocation in
+# `caffeinate` (or equivalent). An earlier version self-execed caffeinate
+# from inside main(); that turned out to be unreliable when launched as a
+# background task — the PID supervisor desynced after execvp. Keep the
+# harness Python pure; wrap at the shell level instead. See
+# host_setup/README.md for the recommended invocation.
+
 from acquisition.bare_metal_acquirer import BareMetalAcquirer  # noqa: E402
 from simulation.atomic_runner import AtomicRedTeamRunner  # noqa: E402
 

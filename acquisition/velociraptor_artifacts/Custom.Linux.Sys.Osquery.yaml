@@ -1,0 +1,131 @@
+name: Custom.Linux.Sys.Osquery
+description: |
+  Run a curated osquery SQL bundle on the agent and emit one row per record
+  from each query. Each row is tagged with `osquery_table` so the OCSF mapper
+  can demux back to the originating query.
+
+  Why a second independent view of process / socket / persistence state when
+  Velociraptor's own artifacts already cover it: osquery and Velociraptor walk
+  different code paths to /proc, netlink, and the password DB. If the two
+  disagree on the same incident bundle (e.g. pslist shows pid 4242 but osquery
+  does not, or vice versa) that itself is a strong tampering signal — the kind
+  of evidence a single-collector pipeline cannot produce.
+
+  Per the project's "collect raw, filter downstream" principle, no filtering
+  happens here. All rows from all queries flow through; the OCSF mapper picks
+  what each query feeds into which class.
+
+  Requirements on the agent:
+    - osqueryi >= 5.0 installed at /usr/bin/osqueryi (override via OsqueryBinaryPath)
+    - agent runs as root (standard Velociraptor systemd install) so privileged
+      tables (process_open_sockets, kernel_modules, suid_bin) are readable
+
+author: ForensicAI-Engine
+type: CLIENT
+
+# Eight queries in series take ~5-15s on a clean Ubuntu VM. 300s is comfortable
+# headroom for chained runs (cold cache, IO contention from preceding steps).
+resources:
+  timeout: 300
+
+parameters:
+  - name: OsqueryBinaryPath
+    description: Path to the osqueryi binary on the agent
+    default: /usr/bin/osqueryi
+
+# Restrict this artifact to Linux clients. Without this, the server lets
+# you dispatch it to Windows agents and you'd get a confusing exec failure.
+precondition: |
+  SELECT OS FROM info() WHERE OS = 'linux'
+
+sources:
+  - query: |
+      -- Each LET runs one osqueryi --json invocation and parses the resulting
+      -- JSON array into individual rows. The outer SELECT tags every row with
+      -- the originating table so chained output stays demuxable.
+      --
+      -- length=10000000 caps stdout at 10 MB per query; typical full output
+      -- across all queries on a clean VM is <500 KB.
+      --
+      -- Each query block follows the same shape:
+      --   1. nested foreach: outer pulls one row from execve (exposes Stdout
+      --      into scope), inner iterates the parsed JSON array
+      --   2. SELECT prepends the `osquery_table` label and re-exports all
+      --      osquery columns via `*`
+
+      LET q_processes <= SELECT 'processes' AS osquery_table, *
+        FROM foreach(
+          row={ SELECT * FROM execve(argv=[OsqueryBinaryPath, '--json',
+                'SELECT pid, parent, name, path, cmdline, uid, gid, start_time, on_disk FROM processes;'],
+                length=10000000) LIMIT 1 },
+          query={ SELECT * FROM foreach(row=parse_json_array(data=Stdout)) }
+        )
+
+      LET q_listening_ports <= SELECT 'listening_ports' AS osquery_table, *
+        FROM foreach(
+          row={ SELECT * FROM execve(argv=[OsqueryBinaryPath, '--json',
+                'SELECT pid, port, protocol, family, address FROM listening_ports;'],
+                length=10000000) LIMIT 1 },
+          query={ SELECT * FROM foreach(row=parse_json_array(data=Stdout)) }
+        )
+
+      LET q_process_open_sockets <= SELECT 'process_open_sockets' AS osquery_table, *
+        FROM foreach(
+          row={ SELECT * FROM execve(argv=[OsqueryBinaryPath, '--json',
+                'SELECT pid, family, protocol, local_address, local_port, remote_address, remote_port, state FROM process_open_sockets;'],
+                length=10000000) LIMIT 1 },
+          query={ SELECT * FROM foreach(row=parse_json_array(data=Stdout)) }
+        )
+
+      LET q_users <= SELECT 'users' AS osquery_table, *
+        FROM foreach(
+          row={ SELECT * FROM execve(argv=[OsqueryBinaryPath, '--json',
+                'SELECT uid, gid, username, description, directory, shell FROM users;'],
+                length=10000000) LIMIT 1 },
+          query={ SELECT * FROM foreach(row=parse_json_array(data=Stdout)) }
+        )
+
+      LET q_last <= SELECT 'last' AS osquery_table, *
+        FROM foreach(
+          row={ SELECT * FROM execve(argv=[OsqueryBinaryPath, '--json',
+                'SELECT username, type, time, host FROM last;'],
+                length=10000000) LIMIT 1 },
+          query={ SELECT * FROM foreach(row=parse_json_array(data=Stdout)) }
+        )
+
+      LET q_suid_bin <= SELECT 'suid_bin' AS osquery_table, *
+        FROM foreach(
+          row={ SELECT * FROM execve(argv=[OsqueryBinaryPath, '--json',
+                'SELECT path, username, groupname, permissions FROM suid_bin;'],
+                length=10000000) LIMIT 1 },
+          query={ SELECT * FROM foreach(row=parse_json_array(data=Stdout)) }
+        )
+
+      LET q_kernel_modules <= SELECT 'kernel_modules' AS osquery_table, *
+        FROM foreach(
+          row={ SELECT * FROM execve(argv=[OsqueryBinaryPath, '--json',
+                'SELECT name, size, used_by, status FROM kernel_modules;'],
+                length=10000000) LIMIT 1 },
+          query={ SELECT * FROM foreach(row=parse_json_array(data=Stdout)) }
+        )
+
+      LET q_crontab <= SELECT 'crontab' AS osquery_table, *
+        FROM foreach(
+          row={ SELECT * FROM execve(argv=[OsqueryBinaryPath, '--json',
+                'SELECT event, minute, hour, day_of_month, month, day_of_week, command, path FROM crontab;'],
+                length=10000000) LIMIT 1 },
+          query={ SELECT * FROM foreach(row=parse_json_array(data=Stdout)) }
+        )
+
+      -- Chain all per-table relations into one output stream. Order is
+      -- arbitrary; the `osquery_table` field disambiguates.
+      SELECT * FROM chain(
+        a=q_processes,
+        b=q_listening_ports,
+        c=q_process_open_sockets,
+        d=q_users,
+        e=q_last,
+        f=q_suid_bin,
+        g=q_kernel_modules,
+        h=q_crontab
+      )
