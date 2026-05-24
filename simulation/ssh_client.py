@@ -82,21 +82,34 @@ class SSHClient:
         )
 
 
-def from_env() -> SSHClient:
+def from_env(scope: str = "scope1") -> SSHClient:
+    """Build an SSHClient from per-scope env vars.
+
+    scope='scope1' reads SCOPE1_IP / SCOPE1_USER / SCOPE1_SSH_KEY (Linux VM).
+    scope='scope2' reads SCOPE2_IP / SCOPE2_USER and falls back to the same
+    SSH key as Scope 1 (we use one key for both VMs).
+    """
     load_dotenv(DEFAULT_ENV_PATH)
-    host = os.environ.get("SCOPE1_IP")
-    user = os.environ.get("SCOPE1_USER")
-    key = os.environ.get("SCOPE1_SSH_KEY")
+    prefix = scope.upper()
+    host = os.environ.get(f"{prefix}_IP")
+    user = os.environ.get(f"{prefix}_USER")
+    # Per-scope key override; if not set, reuse SCOPE1_SSH_KEY (one keypair
+    # signs both VM authorized_keys files — see project_windows_openssh_setup
+    # memory for the Windows admin-group quirk on key placement).
+    key = os.environ.get(f"{prefix}_SSH_KEY") or os.environ.get("SCOPE1_SSH_KEY")
     if not host or not user or not key:
         raise RuntimeError(
-            "SCOPE1_IP, SCOPE1_USER, and SCOPE1_SSH_KEY must be set in config/.env"
+            f"{prefix}_IP, {prefix}_USER, and an SSH key must be set in config/.env"
         )
     return SSHClient(host=host, user=user, key_path=Path(key))
 
 
-def _ping() -> int:
-    with from_env() as client:
-        result = client.run("uname -a")
+def _ping(scope: str) -> int:
+    # cmd.exe is the default OpenSSH shell on Windows; `ver` works there
+    # whereas `uname -a` only exists on Linux. Pick the right probe per scope.
+    probe = "uname -a" if scope == "scope1" else "ver"
+    with from_env(scope) as client:
+        result = client.run(probe)
     print(result.stdout.rstrip())
     if result.stderr:
         print(result.stderr.rstrip(), file=sys.stderr)
@@ -106,9 +119,13 @@ def _ping() -> int:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--ping", action="store_true")
+    parser.add_argument(
+        "--scope", default="scope1", choices=["scope1", "scope2"],
+        help="Target VM: scope1 = Linux (default), scope2 = Windows",
+    )
     args = parser.parse_args()
     if args.ping:
-        return _ping()
+        return _ping(args.scope)
     parser.print_help()
     return 1
 

@@ -183,6 +183,14 @@ class VelociraptorClient:
         """
         spec_clause = _build_spec_clause(artifact_name, parameters)
         max_rows_clause = f", max_rows={int(max_rows)}" if max_rows else ""
+        # Pass timeout_sec to collect_client as the flow-level deadline.
+        # Separate from our client-side _wait_for_flow polling cap (which uses
+        # the same value). Velociraptor's `timeout=` to collect_client sets
+        # the flow's hard ceiling — overrides the ~600s built-in default that
+        # otherwise kills long YARA / MFT scans.
+        timeout_clause = (
+            f", timeout={int(timeout_sec)}" if timeout_sec else ""
+        )
 
         collect_vql = (
             f"SELECT collect_client("
@@ -190,6 +198,7 @@ class VelociraptorClient:
             f"artifacts=['{artifact_name}']"
             f"{spec_clause}"
             f"{max_rows_clause}"
+            f"{timeout_clause}"
             f") AS flow FROM scope()"
         )
         collect_rows = self._run_vql(collect_vql, name="collect")
