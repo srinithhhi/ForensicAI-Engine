@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forensicai.engine/schemas/ocsf_event_v1.json",
+  "title": "ForensicAI-Engine OCSF Event (subset of OCSF v1.3.0)",
+  "description": "Vendored minimal schema covering the fields every ForensicAI-Engine mapper emits. OCSF v1.3.0 defines hundreds of optional fields; we lock the subset we actually populate so validation is fast and unambiguous. To extend the surface, add the field here AND in parsing/ocsf_base.py.",
+  "type": "object",
+  "required": [
+    "metadata",
+    "class_uid",
+    "activity_id",
+    "time",
+    "raw_data",
+    "unmapped"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["version", "product"],
+      "properties": {
+        "version": {"type": "string", "const": "1.3.0"},
+        "product": {
+          "type": "object",
+          "required": ["name"],
+          "properties": {
+            "name": {"type": "string"},
+            "vendor_name": {"type": "string"}
+          }
+        }
+      }
+    },
+    "class_uid": {
+      "type": "integer",
+      "enum": [1001, 1007, 2004, 3002, 4001, 6004],
+      "description": "OCSF class identifier. 1001=File System Activity, 1007=Process Activity, 2004=Detection Finding, 3002=Authentication, 4001=Network Activity, 6004=System Activity."
+    },
+    "activity_id": {"type": "integer", "minimum": 0},
+    "time": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Event time in epoch milliseconds UTC."
+    },
+    "severity_id": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 6,
+      "description": "0=Unknown 1=Informational 2=Low 3=Medium 4=High 5=Critical 6=Fatal."
+    },
+    "status_id": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 99,
+      "description": "1=Success 2=Failure (OCSF baseline). Mapper-specific overrides allowed."
+    },
+    "actor": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "user": {
+          "type": "object",
+          "properties": {
+            "name": {"type": ["string", "null"]},
+            "uid": {"type": ["string", "null"]}
+          }
+        },
+        "process": {
+          "type": "object",
+          "properties": {
+            "pid": {"type": ["integer", "null"]},
+            "name": {"type": ["string", "null"]},
+            "cmd_line": {"type": ["string", "null"]},
+            "file": {
+              "type": "object",
+              "properties": {
+                "path": {"type": ["string", "null"]},
+                "fingerprints": {"type": "array"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "src_endpoint": {
+      "type": "object",
+      "properties": {
+        "hostname": {"type": ["string", "null"]},
+        "ip": {"type": ["string", "null"]}
+      }
+    },
+    "dst_endpoint": {
+      "type": "object",
+      "properties": {
+        "hostname": {"type": ["string", "null"]},
+        "ip": {"type": ["string", "null"]},
+        "port": {"type": ["integer", "null"]}
+      }
+    },
+    "raw_data": {
+      "type": "string",
+      "description": "Verbatim JSON-encoded original row from the source artifact. Preserves replayability."
+    },
+    "unmapped": {
+      "type": "object",
+      "required": ["scope", "incident_id", "source_step", "source_artifact"],
+      "properties": {
+        "scope": {"type": "string", "enum": ["bare_metal", "vmware", "cloud"]},
+        "incident_id": {"type": "string", "pattern": "^(INC|SMOKE)-[A-Z0-9-]+$"},
+        "source_step": {"type": "string"},
+        "source_artifact": {"type": "string"},
+        "syslog_facility": {"type": ["integer", "null"]},
+        "syslog_identifier": {"type": ["string", "null"]},
+        "event_id": {"type": ["integer", "null"]},
+        "yara_rule": {"type": ["string", "null"]},
+        "is_privileged": {"type": ["boolean", "null"]}
+      }
+    },
+    "message": {"type": "string"}
+  }
+}
