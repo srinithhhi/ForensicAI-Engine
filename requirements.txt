@@ -4,3 +4,4 @@ paramiko>=3.4.0
 python-dotenv>=1.0.0
 PyYAML>=6.0
 jsonschema>=4.21.0
+pymisp>=2.4

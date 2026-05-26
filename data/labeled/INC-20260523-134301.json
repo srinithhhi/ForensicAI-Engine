@@ -1,0 +1,53 @@
+{
+  "features": {
+    "auth_failure_count": 0,
+    "auth_failure_ratio": 0.0,
+    "auth_success_count": 632,
+    "connections_to_threat_intel_ip": 0,
+    "cron_entries_added": 0,
+    "dns_query_count": 0,
+    "elevated_process_count": 0,
+    "encoded_command_count": 0,
+    "event_class_diversity": 6,
+    "file_integrity_changes": 78882,
+    "ioc_domain_matches": 0,
+    "ioc_hash_matches": 4,
+    "ioc_ip_matches": 0,
+    "ioc_match_threat_levels_max": 2,
+    "listen_port_count": 2,
+    "log_lines_total": 96661,
+    "log_window_hours": 36528.4,
+    "new_persistence_entries": 0,
+    "new_user_creations": 0,
+    "offhours_logins": 24,
+    "powershell_obfuscation_count": 0,
+    "process_count": 231,
+    "recently_modified_count": 47,
+    "registry_run_key_changes": 0,
+    "service_installs": 0,
+    "startup_items_added": 0,
+    "suid_additions": 24,
+    "suspicious_proc_count": 0,
+    "sysmon_high_severity_count": 0,
+    "system_file_modifications": 16578,
+    "unique_remote_ips": 1,
+    "unique_src_ips": 2,
+    "unique_yara_rules_matched": 59,
+    "yara_file_hits": 1248,
+    "yara_proc_hits": 569
+  },
+  "incident_id": "INC-20260523-134301",
+  "label": {
+    "is_benign": false,
+    "technique_ids": [
+      "T1053.003",
+      "T1078.003",
+      "T1098.004",
+      "T1105",
+      "T1543.002",
+      "T1548.001"
+    ]
+  },
+  "schema_version": "v1",
+  "scope": "bare_metal"
+}
