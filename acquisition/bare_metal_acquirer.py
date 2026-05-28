@@ -68,11 +68,55 @@ AIDE_FLOW_TIMEOUT_SEC = 1800.0
 # persistence (T1098.004) is a common attacker move so root must be included.
 AUTH_KEYS_GLOB = "/{root,home/*}/.ssh/authorized_keys*"
 
-# recently_modified scope: attacker drop targets that AIDE's default config
-# does NOT watch. /tmp and /var/tmp are common curl/wget destinations
-# (T1105); /dev/shm is an in-memory FS some attackers use to avoid disk
-# artifacts; /root and /home cover user-space staging.
-RECENTLY_MODIFIED_GLOB = "/{tmp,var/tmp,root,dev/shm,home}/**"
+# recently_modified scope: attacker drop targets (write-targets) PLUS the
+# canonical persistence directories. Velociraptor's per-artifact parsers for
+# crontab / systemd / users are unreliable on 0.76.x (Linux.Sys.Crontab
+# silently returns 0 rows even when /etc/cron.d/ has matching files), so we
+# fall back to a single broad FileFinder sweep that's filtered by
+# MoreRecentThan to a tight time window. The OCSF mapper then emits 1001
+# (File System Activity) events; persistence/auth feature extractors detect
+# attacker-installed artifacts by matching the path prefix.
+#
+# Paths included:
+#   user-space drop targets   — /tmp, /var/tmp, /dev/shm, /root, /home
+#   cron persistence          — /etc/cron.*, /var/spool/cron, /etc/crontab
+#   systemd persistence       — /etc/systemd/system, /usr/lib/systemd/system
+#   sysv init persistence     — /etc/init.d, /etc/rc*.d
+#   shell hook persistence    — /etc/profile.d
+#   privilege escalation      — /etc/sudoers, /etc/sudoers.d
+#   account modifications     — /etc/passwd, /etc/group, /etc/shadow
+# Linux.Search.FileFinder has TWO glob parameters:
+#   - SearchFilesGlob: a single VQL glob string (brace expansion supported,
+#     but commas inside braces only — comma-separated multiple globs at the
+#     top level are NOT split; the whole string becomes one glob expression).
+#   - SearchFilesGlobTable: a CSV-format string with `Glob` header and one
+#     glob per row. THIS is the form for multiple independent globs.
+#
+# We need multiple independent globs (some recursive `**`, some single-level
+# `*`, some single files), so we use the table form. The first attempt that
+# joined globs with commas at the top level silently returned 0 rows.
+_RECENTLY_MODIFIED_GLOBS: list[str] = [
+    # Attacker drop targets — recursive is fine, these are small
+    "/tmp/**", "/var/tmp/**", "/dev/shm/**",
+    # User-space staging
+    "/root/**", "/home/**",
+    # Persistence directories — single-level only. Cron / systemd / sudo /
+    # profile drop-in files are written *directly* into these dirs; using
+    # `**` here forces Velociraptor to walk every transitive subdirectory.
+    "/etc/cron.d/*", "/etc/cron.daily/*", "/etc/cron.hourly/*",
+    "/etc/cron.weekly/*", "/etc/cron.monthly/*",
+    "/etc/sudoers.d/*", "/etc/profile.d/*", "/etc/init.d/*",
+    "/etc/systemd/system/*",
+    # /usr/lib/systemd/system/ NOT scanned — that's where distro packages
+    # install units and is huge. Attacker-installed services land in
+    # /etc/systemd/system/ (the override location).
+    "/var/spool/cron/**",
+    # Specific account-database / sudoers / crontab files
+    "/etc/passwd", "/etc/group", "/etc/shadow", "/etc/sudoers", "/etc/crontab",
+]
+# CSV format expected by SearchFilesGlobTable: header line "Glob" followed
+# by one glob per line.
+RECENTLY_MODIFIED_GLOB_TABLE = "Glob\n" + "\n".join(_RECENTLY_MODIFIED_GLOBS)
 
 # yara_files: same drop-target paths as recently_modified, scanned with the
 # 884-rule corpus. SizeMax caps each file at 10 MB so a single bloated log
@@ -96,8 +140,13 @@ PLASO_FLOW_TIMEOUT_SEC = 900.0
 # wraps this. The cutoff is intentionally generous; the OCSF mapper will
 # filter further by joining with the simulation manifest's time window.
 RECENTLY_MODIFIED_WINDOW_HOURS = 24
-RECENTLY_MODIFIED_MAX_ROWS = 5000
-RECENTLY_MODIFIED_TIMEOUT_SEC = 300.0
+# Broader globs + same time window can produce more rows, mainly under /home
+# (.cache churn from desktop apps if any). 10k headroom comfortably bounds
+# worst case while still bounding a runaway scan.
+RECENTLY_MODIFIED_MAX_ROWS = 10000
+# Doubled budget because the glob is ~5× larger; observed scans complete in
+# ~30s on a clean VM, ~60s post-attack — 600s is paranoid headroom.
+RECENTLY_MODIFIED_TIMEOUT_SEC = 600.0
 
 
 def _recently_modified_cutoff() -> str:
@@ -149,7 +198,10 @@ def _default_steps() -> list[CollectionStep]:
             "recently_modified",
             "Linux.Search.FileFinder",
             parameters={
-                "SearchFilesGlob": RECENTLY_MODIFIED_GLOB,
+                # GlobTable accepts multiple independent globs (unlike
+                # SearchFilesGlob which is a single string). See
+                # RECENTLY_MODIFIED_GLOB_TABLE.
+                "SearchFilesGlobTable": RECENTLY_MODIFIED_GLOB_TABLE,
                 "MoreRecentThan": _recently_modified_cutoff(),
                 "LocalFilesystemOnly": "Y",
             },

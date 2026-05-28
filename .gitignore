@@ -1,6 +1,10 @@
 config/.env
 data/processed/
 data/simulations/
+data/raw/
+data/experiments/v0_state.json
+data/experiments/inspections/
+data/experiments/watch.log
 logs/
 __pycache__/
 *.pyc

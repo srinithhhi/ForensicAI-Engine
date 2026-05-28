@@ -41,7 +41,7 @@ def _is_offhours(time_ms: int) -> bool:
     return dt.hour < 8 or dt.hour >= 18
 
 
-def compute(events: list[dict]) -> dict:
+def compute(events: list[dict], *, simulation_started_ms: int | None = None) -> dict:
     auth = [e for e in events if e["class_uid"] == 3002]
 
     failures = sum(1 for e in auth if e.get("status_id") == 2)
@@ -61,12 +61,22 @@ def compute(events: list[dict]) -> dict:
             if _is_offhours(e.get("time", 0)):
                 offhours += 1
 
-    # New user creation signals:
+    # New user creation signals (any match → +1; deduplicated across sources):
     # - Windows EventID 4720 (event_id field in unmapped)
     # - Linux journald useradd messages
     # - Local users snapshot rows (source_step=local_users)
+    # - File-system evidence: /etc/passwd or /etc/shadow modified in the
+    #   acquisition window (caught by recently_modified once the broadened
+    #   glob includes /etc/{passwd,shadow}). Linux's stock useradd touches
+    #   both; either matching is sufficient.
     new_users = 0
     for e in auth:
+        # Window filter applies to ALL sources. local_users events have
+        # time=registry-key-Mtime which IS per-user (not acquisition-time),
+        # so freshly-created users land in-window and stock users (system
+        # accounts) get filtered out by their old Mtime.
+        if simulation_started_ms is not None and e.get("time", 0) < simulation_started_ms:
+            continue
         if e["unmapped"].get("event_id") == 4720:
             new_users += 1
             continue
@@ -75,6 +85,27 @@ def compute(events: list[dict]) -> dict:
             continue
         if _USERADD_RE.search(e.get("message") or ""):
             new_users += 1
+
+    # Additional file-system evidence pass — operates on 1001 events
+    # (recently_modified). One increment per distinct passwd-database file
+    # touched, so a single useradd that bumps both /etc/passwd and
+    # /etc/shadow counts as +1 (not +2). Gated by simulation_started_ms so
+    # carry-over mtimes from a prior bundle's T1078.003 atomic (whose
+    # userdel cleanup ALSO touched /etc/passwd) don't keep firing this
+    # feature for subsequent unrelated bundles.
+    passwd_paths_touched: set[str] = set()
+    for e in events:
+        if e["class_uid"] != 1001:
+            continue
+        if e["unmapped"].get("source_step") != "recently_modified":
+            continue
+        if simulation_started_ms is not None and e.get("time", 0) < simulation_started_ms:
+            continue
+        path = ((e.get("actor") or {}).get("process") or {}).get("file", {}).get("path") or ""
+        if path in ("/etc/passwd", "/etc/shadow", "/etc/group"):
+            passwd_paths_touched.add(path)
+    if passwd_paths_touched:
+        new_users += 1
 
     return {
         "auth_failure_count": failures,

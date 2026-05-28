@@ -48,6 +48,40 @@ FEATURE_SCHEMA_PATH = REPO_ROOT / "schemas" / "feature_vector_v1.json"
 SCHEMA_VERSION = "v1"
 
 
+def _parse_iso8601_ms(s: str | None) -> int | None:
+    """Parse an ISO 8601 timestamp string into epoch ms, or return None."""
+    if not s:
+        return None
+    from datetime import datetime, timezone
+    try:
+        # Normalise trailing Z to +00:00 for fromisoformat (Python <3.11).
+        if s.endswith("Z"):
+            s = s[:-1] + "+00:00"
+        dt = datetime.fromisoformat(s)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return int(dt.timestamp() * 1000)
+    except (ValueError, TypeError):
+        return None
+
+
+# Clock-skew tolerance applied to the simulation window. Originally 300s
+# (5 min) — wide enough to absorb the observed ~20s Windows VM clock skew,
+# but turned out to be TOO wide: Linux bundles cleaning up an atomic-created
+# user (`userdel`) re-touch /etc/passwd ~2-5 minutes before the NEXT bundle's
+# simulation starts. With 5-min grace, those cleanup mtimes were counted as
+# the new bundle's own user-creation signal → false positives in LB-08
+# (T1098.004+T1543.002 falsely showed new_user_creations=1) and in LB-11
+# (BENIGN falsely showed new_user_creations=1).
+#
+# 60s is wide enough for the worst-case clock skew + atomic execution lag we
+# observed (~20s on Windows VM, plus the few-second gap between manifest
+# creation and SSH connect) but tight enough that the previous bundle's
+# cleanup (which always runs after acquisition completes, i.e. ~12-15
+# minutes before the next bundle starts) never falls inside this window.
+WINDOW_BACKWARD_GRACE_SEC = 60
+
+
 def _load_events(processed_dir: Path) -> list[dict]:
     events_path = processed_dir / "events.ndjson"
     if not events_path.exists():
@@ -62,25 +96,28 @@ def _load_events(processed_dir: Path) -> list[dict]:
     return events
 
 
-def _load_label(simulations_dir: Path, incident_id: str) -> dict:
-    """Read simulation_manifest.json and produce the {technique_ids, is_benign} block.
+def _load_label_and_window(simulations_dir: Path, incident_id: str) -> tuple[dict, int | None]:
+    """Read simulation_manifest.json. Return ({technique_ids, is_benign}, started_at_ms).
 
-    Returns {"technique_ids": [], "is_benign": False} if no simulation manifest
-    exists — that's the right answer for a real (unlabeled) incident.
+    Returns started_at_ms=None if no simulation manifest exists — that
+    disables the time-window filter on file-based persistence/auth signals
+    (acceptable for real / unlabeled incidents).
     """
     sim_path = simulations_dir / incident_id / "simulation_manifest.json"
     if not sim_path.exists():
-        return {"technique_ids": [], "is_benign": False}
+        return ({"technique_ids": [], "is_benign": False}, None)
     with sim_path.open() as f:
         sim = json.load(f)
     techniques = sorted({run["technique_id"] for run in sim.get("runs", []) if run.get("technique_id")})
-    return {
+    label = {
         "technique_ids": techniques,
         # A bundle is "benign" only when no techniques fired AND a manifest
         # exists (meaning it was a deliberate benign-baseline run, not just
         # a missing manifest).
         "is_benign": len(techniques) == 0,
     }
+    started_ms = _parse_iso8601_ms(sim.get("started_at"))
+    return (label, started_ms)
 
 
 def _bundle_meta(processed_dir: Path) -> tuple[str, str]:
@@ -126,14 +163,28 @@ def run(processed_dir: Path, *, use_misp: bool = True) -> int:
         except RuntimeError as exc:
             print(f"[features] MISP disabled ({exc}) — ioc_* features will be 0")
 
+    label, simulation_started_ms = _load_label_and_window(
+        REPO_ROOT / "data" / "simulations", incident_id
+    )
+    if simulation_started_ms is not None:
+        # Apply backward grace BEFORE handing to feature modules — they get
+        # the already-relaxed cutoff and don't need to know about skew.
+        simulation_started_ms -= WINDOW_BACKWARD_GRACE_SEC * 1000
+    if simulation_started_ms is None:
+        print("[features] no simulation manifest — file-window filter disabled")
+    else:
+        from datetime import datetime, timezone
+        sim_iso = datetime.fromtimestamp(simulation_started_ms / 1000, tz=timezone.utc).isoformat()
+        print(f"[features] window filter active (incl. -{WINDOW_BACKWARD_GRACE_SEC}s grace): events at/after {sim_iso}")
+
     features: dict = {}
     features.update(meta.compute(events))
-    features.update(auth.compute(events))
+    features.update(auth.compute(events, simulation_started_ms=simulation_started_ms))
     features.update(process.compute(events))
     features.update(network.compute(events))
-    features.update(file_features.compute(events))
-    features.update(persistence.compute(events))
-    features.update(detection.compute(events))
+    features.update(file_features.compute(events, simulation_started_ms=simulation_started_ms))
+    features.update(persistence.compute(events, simulation_started_ms=simulation_started_ms))
+    features.update(detection.compute(events, simulation_started_ms=simulation_started_ms))
 
     # IOC pass last — it may override network.connections_to_threat_intel_ip.
     ioc_features = ioc.compute(events, misp)
@@ -141,8 +192,6 @@ def run(processed_dir: Path, *, use_misp: bool = True) -> int:
 
     if misp is not None:
         misp.flush_cache()
-
-    label = _load_label(REPO_ROOT / "data" / "simulations", incident_id)
 
     vector = {
         "incident_id": incident_id,

@@ -1,0 +1,107 @@
+# ForensicAI-Engine v0 Training Set — 30 bundles
+#
+# Reproducible spec for the first labeled dataset that the Phase 5 triage
+# model will train on. Anyone re-running the same `run_batch.py` against
+# this file produces the same 30-bundle population (modulo wall-clock
+# timestamps in incident_ids, which don't affect the model).
+#
+# Distribution rationale:
+#   - 6 single-atomic bundles per scope → one fingerprint per technique
+#   - 4 multi-atomic bundles per scope  → stacked-signal coverage
+#   - 5 benign baselines per scope      → genuine negative class
+#   Total: 30 (15 Linux + 15 Windows). Benign class ≈ 33% of training data.
+#
+# Each bundle gets a unique `slot` identifier (LB-NN for Linux, WB-NN for
+# Windows) that the run-state log uses for resumability across runs.
+
+schema_version: 1
+description: "v0 30-bundle labeled training set for ForensicAI-Engine Phase 5"
+
+# Verified Linux atomics (from the existing harness + simulation manifest of
+# INC-20260523-134301). Test numbers chosen because they leave the cleanest
+# detectable evidence in our acquisition step list.
+linux_atomics:
+  cron:       "T1053.003#3"   # cron entry under /etc/cron.d
+  account:    "T1078.003#8"   # local account creation
+  systemd:    "T1543.002#1"   # systemd service install
+  ssh_keys:   "T1098.004#1"   # SSH authorized_keys append
+  download:   "T1105#27"      # remote file download via wget/curl
+  suid:       "T1548.001#3"   # SUID-bit set on attacker-staged binary
+
+# Verified Windows atomics (from tests/run_attack_and_acquire_windows.py).
+windows_atomics:
+  account:    "T1136.001#4"   # local user via cmd `net user`
+  run_key:    "T1547.001#1"   # registry Run key persistence
+  service:    "T1543.003#2"   # Windows service install via sc.exe
+  task:       "T1053.005#1"   # scheduled task via schtasks
+  download:   "T1105#10"      # PowerShell Invoke-WebRequest
+  lsass:      "T1003.001#2"   # LSASS dump via comsvcs.dll
+
+bundles:
+  # ─── LINUX — single-atomic (6) ─────────────────────────────────────
+  - {slot: LB-01, scope: linux, techniques: ["T1053.003#3"]}
+  - {slot: LB-02, scope: linux, techniques: ["T1078.003#8"]}
+  - {slot: LB-03, scope: linux, techniques: ["T1543.002#1"]}
+  - {slot: LB-04, scope: linux, techniques: ["T1098.004#1"]}
+  - {slot: LB-05, scope: linux, techniques: ["T1105#27"]}
+  - {slot: LB-06, scope: linux, techniques: ["T1548.001#3"]}
+
+  # ─── LINUX — multi-atomic combos (4) ───────────────────────────────
+  # Pairs and triples chosen so each atomic appears in ≥2 multi-bundles.
+  - {slot: LB-07, scope: linux, techniques: ["T1053.003#3", "T1078.003#8"]}
+  - {slot: LB-08, scope: linux, techniques: ["T1543.002#1", "T1098.004#1"]}
+  - {slot: LB-09, scope: linux, techniques: ["T1105#27", "T1548.001#3"]}
+  - {slot: LB-10, scope: linux, techniques: ["T1053.003#3", "T1543.002#1", "T1078.003#8"]}
+
+  # ─── LINUX — benign baselines (5) ──────────────────────────────────
+  # Empty techniques list → run_batch.py acquires only, writes an empty
+  # simulation_manifest so is_benign=True in the labeled vector.
+  - {slot: LB-11, scope: linux, techniques: []}
+  - {slot: LB-12, scope: linux, techniques: []}
+  - {slot: LB-13, scope: linux, techniques: []}
+  - {slot: LB-14, scope: linux, techniques: []}
+  - {slot: LB-15, scope: linux, techniques: []}
+
+  # ─── WINDOWS — single-atomic (6) ───────────────────────────────────
+  - {slot: WB-01, scope: windows, techniques: ["T1136.001#4"]}
+  - {slot: WB-02, scope: windows, techniques: ["T1547.001#1"]}
+  - {slot: WB-03, scope: windows, techniques: ["T1543.003#2"]}
+  - {slot: WB-04, scope: windows, techniques: ["T1053.005#1"]}
+  - {slot: WB-05, scope: windows, techniques: ["T1105#10"]}
+  - {slot: WB-06, scope: windows, techniques: ["T1003.001#2"]}
+
+  # ─── WINDOWS — multi-atomic combos (4) ─────────────────────────────
+  - {slot: WB-07, scope: windows, techniques: ["T1136.001#4", "T1547.001#1"]}
+  - {slot: WB-08, scope: windows, techniques: ["T1543.003#2", "T1053.005#1"]}
+  - {slot: WB-09, scope: windows, techniques: ["T1105#10", "T1003.001#2"]}
+  - {slot: WB-10, scope: windows, techniques: ["T1136.001#4", "T1543.003#2", "T1053.005#1"]}
+
+  # ─── WINDOWS — benign baselines (5) ────────────────────────────────
+  - {slot: WB-11, scope: windows, techniques: []}
+  - {slot: WB-12, scope: windows, techniques: []}
+  - {slot: WB-13, scope: windows, techniques: []}
+  - {slot: WB-14, scope: windows, techniques: []}
+  - {slot: WB-15, scope: windows, techniques: []}
+
+  # ─── EXTENSION: tactic-diversity expansion (6 extra bundles) ───────
+  # Techniques chosen to exercise MITRE tactics our v0 didn't cover:
+  # Defense Evasion (T1070), Discovery (T1083, T1057), Impact (T1486),
+  # PowerShell execution (T1059.001), and feature-gap probe (T1112).
+  # Some will fire existing features cleanly; others will reveal coverage
+  # gaps in the v0 schema — both outcomes are useful training data.
+  - {slot: LB-16, scope: linux,   techniques: ["T1070.004#1"]}    # Defense Evasion — file deletion
+  - {slot: LB-17, scope: linux,   techniques: ["T1083#3"]}        # Discovery — file/dir discovery
+  - {slot: LB-18, scope: linux,   techniques: ["T1486#4"]}        # Impact — symmetric encryption (safe; openssl on /tmp test files)
+  - {slot: WB-16, scope: windows, techniques: ["T1059.001#7"]}    # Execution / Defense Evasion — PowerShell XML/COM
+  - {slot: WB-17, scope: windows, techniques: ["T1112#3"]}        # Defense Evasion — non-Run registry mod (feature-gap probe)
+  - {slot: WB-18, scope: windows, techniques: ["T1057#2"]}        # Discovery — process discovery via tasklist
+
+  # ─── EXTENSION B: tactic-coverage round 2 (4 extra bundles) ───────
+  # Covers Collection (T1560) and Signed Binary Proxy Execution (T1218)
+  # tactics not yet present in the dataset. The two T1218 atomics
+  # directly exercise the existing suspicious_proc_count LOLBin regex
+  # which has been only inadvertently triggered until now.
+  - {slot: LB-19, scope: linux,   techniques: ["T1059.004#1"]}    # Execution — Unix shell command
+  - {slot: LB-20, scope: linux,   techniques: ["T1560.001#1"]}    # Collection — archive via tar
+  - {slot: WB-19, scope: windows, techniques: ["T1218.005#1"]}    # Defense Evasion — Mshta execution
+  - {slot: WB-20, scope: windows, techniques: ["T1218.010#1"]}    # Defense Evasion — Regsvr32 execution

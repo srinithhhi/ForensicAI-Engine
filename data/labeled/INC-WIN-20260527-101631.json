@@ -1,0 +1,52 @@
+{
+  "features": {
+    "auth_failure_count": 0,
+    "auth_failure_ratio": 0.0,
+    "auth_success_count": 18287,
+    "connections_to_threat_intel_ip": 2,
+    "cron_entries_added": 0,
+    "dns_query_count": 836,
+    "elevated_process_count": 172,
+    "encoded_command_count": 57,
+    "event_class_diversity": 6,
+    "file_integrity_changes": 0,
+    "ioc_domain_matches": 1,
+    "ioc_hash_matches": 0,
+    "ioc_ip_matches": 2,
+    "ioc_match_threat_levels_max": 1,
+    "listen_port_count": 15,
+    "log_lines_total": 53076,
+    "log_window_hours": 56713.18,
+    "new_persistence_entries": 0,
+    "new_user_creations": 0,
+    "offhours_logins": 641,
+    "powershell_obfuscation_count": 1,
+    "process_count": 5482,
+    "recent_suid_creations": 0,
+    "recently_modified_count": 3041,
+    "registry_run_key_changes": 0,
+    "scheduled_task_creations": 0,
+    "service_installs": 0,
+    "ssh_keys_added": 0,
+    "startup_items_added": 0,
+    "suid_additions": 0,
+    "suspicious_proc_count": 5,
+    "sysmon_high_severity_count": 1,
+    "system_file_modifications": 14962,
+    "tmp_file_creations": 1,
+    "unique_remote_ips": 157,
+    "unique_src_ips": 0,
+    "unique_yara_rules_matched": 83,
+    "yara_file_hits": 3538,
+    "yara_proc_hits": 1076
+  },
+  "incident_id": "INC-WIN-20260527-101631",
+  "label": {
+    "is_benign": false,
+    "technique_ids": [
+      "T1003.001"
+    ]
+  },
+  "schema_version": "v1",
+  "scope": "vmware"
+}
