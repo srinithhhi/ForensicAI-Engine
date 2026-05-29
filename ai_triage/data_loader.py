@@ -9,6 +9,7 @@ import pandas as pd
 REPO_ROOT = Path(__file__).resolve().parents[1]
 LABELED_DIR = REPO_ROOT / "data" / "labeled"
 SYNTHETIC_DIR = REPO_ROOT / "data" / "synthetic"
+DEMO_DIR = REPO_ROOT / "data" / "demo"
 V0_STATE_PATH = REPO_ROOT / "data" / "experiments" / "v0_state.json"
 
 # Ambient lab-signature features identified in model_card.md §"Honest

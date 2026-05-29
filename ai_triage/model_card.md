@@ -196,3 +196,15 @@ deployment requires:
   training set, to test cross-environment generalization.
 - Pre-deployment review of the matched-pair calibration trick — it's a
   small-data hack and may not be necessary on a larger production set.
+
+## UI note (Phase 6) — the timeline score-climb is cosmetic
+
+The dashboard's animated timeline (`ui/`) shows the big score "climbing" as
+attack events sweep past the playhead. **This climb is presentation only.** The
+real score is the calibrated model probability computed once over the *full*
+feature vector — it is not recomputed per event and the model has no per-event
+or temporal component. During replay the displayed number is interpolated
+toward the final `score_10` in proportion to how many attack-flagged events have
+been revealed, purely for narrative effect; it always settles on the true
+model score. The "why this score" bullets and feature-contribution bars are
+likewise rule-based readouts of the scored vector, not independent scores.

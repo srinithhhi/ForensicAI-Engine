@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Local web fonts (no external CDN; works offline for the demo). ----- */
+/* Fonts are loaded via @font-face in app.css from ui/static/fonts/. If a
+   font file is absent the stack falls back to system-ui / ui-monospace, so
+   the layout never shifts. */
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-ink-900 text-mist-300 font-sans antialiased;
+    /* Subtle charcoal gradient, darker toward the bottom. */
+    background-image: radial-gradient(
+      120% 80% at 50% -10%,
+      #16161a 0%,
+      #0d0d0f 55%,
+      #0a0a0c 100%
+    );
+    background-attachment: fixed;
+  }
+  /* Tabular figures so animated numbers don't reflow width. */
+  .tnum {
+    font-feature-settings: "tnum" 1;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl2 border border-ink-500 bg-ink-700/80 backdrop-blur-sm;
+    transition: border-color 200ms theme(transitionTimingFunction.out-cubic),
+      box-shadow 200ms theme(transitionTimingFunction.out-cubic),
+      transform 200ms theme(transitionTimingFunction.out-cubic);
+  }
+  .card-hover:hover {
+    @apply border-pink-500;
+    box-shadow: theme(boxShadow.pink-glow);
+  }
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-mono uppercase tracking-wider;
+  }
+  .btn-pink {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-pink-400 px-5 py-2.5 text-sm font-medium text-ink-900;
+    transition: background-color 160ms theme(transitionTimingFunction.out-cubic),
+      box-shadow 160ms theme(transitionTimingFunction.out-cubic),
+      transform 120ms theme(transitionTimingFunction.out-cubic);
+  }
+  .btn-pink:hover {
+    @apply bg-pink-500;
+    box-shadow: theme(boxShadow.pink-glow);
+  }
+  .btn-pink:active {
+    transform: translateY(1px);
+  }
+  .tl-speed.is-active {
+    @apply bg-pink-700/40 text-pink-400;
+  }
+}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Upload incident · ForensicAI{% endblock %}
+
+{% block content %}
+<section class="mx-auto max-w-2xl rise-in">
+  <a href="/" class="mb-6 inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest text-mist-500 transition-colors hover:text-pink-400">
+    <span>&larr;</span> Back
+  </a>
+
+  <h1 class="text-2xl font-semibold tracking-tight text-mist-100">Upload incident</h1>
+  <p class="mt-2 text-sm text-mist-400">
+    Drop a Velociraptor bundle ZIP. It must contain a
+    <span class="font-mono text-mist-300">manifest.json</span> at the root.
+  </p>
+
+  <!-- Drop zone -->
+  <form id="upload-form" class="mt-6">
+    <label id="dropzone"
+      class="card flex cursor-pointer flex-col items-center justify-center gap-3 px-6 py-14 text-center transition-colors">
+      <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-pink-700/30 text-pink-400">
+        {% include "_components/icon_upload.html" %}
+      </div>
+      <div>
+        <p class="text-sm font-medium text-mist-100">
+          Drag &amp; drop your <span class="font-mono text-pink-400">.zip</span> here
+        </p>
+        <p class="mt-1 text-xs text-mist-500">or click to browse</p>
+      </div>
+      <p id="filename" class="hidden font-mono text-xs text-pink-400"></p>
+      <input id="file-input" type="file" name="file" accept=".zip,application/zip" class="hidden" />
+    </label>
+
+    <button id="submit-btn" type="submit"
+      class="btn-pink mt-5 w-full disabled:cursor-not-allowed disabled:opacity-40" disabled>
+      Run pipeline
+    </button>
+  </form>
+
+  <!-- Progress panel (hidden until a run starts) -->
+  <div id="progress" class="card mt-6 hidden p-5">
+    <div class="flex items-center justify-between">
+      <p class="text-sm font-medium text-mist-100">Scoring incident</p>
+      <span id="status-pill" class="pill bg-pink-700/40 text-pink-400">running</span>
+    </div>
+    <div class="relative mt-4 h-1.5 overflow-hidden rounded-full bg-ink-600">
+      <div id="progress-sweep" class="sweep-bar absolute inset-0"></div>
+    </div>
+    <pre id="log" class="mt-4 max-h-48 overflow-auto rounded-lg bg-ink-900/80 p-3 font-mono text-xs leading-relaxed text-mist-400"></pre>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/app.js" defer></script>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}ForensicAI Triage{% endblock %}
+
+{% block content %}
+<section class="mx-auto max-w-3xl text-center rise-in">
+  <h1 class="text-3xl font-semibold tracking-tight text-mist-100 sm:text-4xl">
+    Forensic incident triage
+  </h1>
+  <p class="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-mist-400">
+    Acquire a host or drop a Velociraptor bundle. The pipeline maps to OCSF,
+    extracts features, and returns a calibrated <span class="font-mono text-pink-400">1&ndash;10</span> risk score.
+  </p>
+</section>
+
+<section class="mx-auto mt-10 grid max-w-3xl gap-5 sm:grid-cols-2">
+  <!-- Acquire Live — stub in M1, wired in M3. -->
+  <div class="card relative flex flex-col p-6 opacity-70">
+    <span class="pill absolute right-4 top-4 bg-ink-600 text-mist-500">~18 min</span>
+    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-ink-600 text-pink-400">
+      {% include "_components/icon_radar.html" %}
+    </div>
+    <h2 class="text-lg font-semibold text-mist-100">Acquire Live</h2>
+    <p class="mt-1.5 flex-1 text-sm text-mist-400">
+      Collect from a running VM over Velociraptor, stage by stage.
+    </p>
+    <span class="mt-5 inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest text-mist-500">
+      Coming in M3
+    </span>
+  </div>
+
+  <!-- Upload Incident — primary M1 path. -->
+  <a href="/upload" class="card card-hover group relative flex flex-col p-6">
+    <span class="pill absolute right-4 top-4 bg-pink-700/40 text-pink-400">~30 sec</span>
+    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-pink-700/30 text-pink-400 transition-colors group-hover:bg-pink-600/40">
+      {% include "_components/icon_upload.html" %}
+    </div>
+    <h2 class="text-lg font-semibold text-mist-100">Upload Incident</h2>
+    <p class="mt-1.5 flex-1 text-sm text-mist-400">
+      Drop a pre-captured bundle ZIP and watch it score in seconds.
+    </p>
+    <span class="mt-5 inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest text-pink-400">
+      Start
+      <span class="transition-transform group-hover:translate-x-0.5">&rarr;</span>
+    </span>
+  </a>
+</section>
+{% endblock %}

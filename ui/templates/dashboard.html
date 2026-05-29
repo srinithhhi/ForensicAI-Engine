@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}{{ incident_id }} · ForensicAI{% endblock %}
+
+{% set sev_map = {
+  "low":      ("sev-low",      "_components/icon_check.html"),
+  "med":      ("sev-med",      "_components/icon_shield.html"),
+  "high":     ("sev-high",     "_components/icon_shield.html"),
+  "critical": ("sev-critical", "_components/icon_alert.html")
+} %}
+{% set sev_class = sev_map.get(result.risk, sev_map["med"])[0] %}
+{% set sev_icon = sev_map.get(result.risk, sev_map["med"])[1] %}
+
+{% block content %}
+<div class="rise-in">
+  <!-- Incident header -->
+  <div class="mb-8 flex flex-wrap items-end justify-between gap-4">
+    <div>
+      <a href="/" class="mb-2 inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest text-mist-500 transition-colors hover:text-pink-400">
+        <span>&larr;</span> New triage
+      </a>
+      <h1 class="font-mono text-xl font-semibold text-mist-100">{{ incident_id }}</h1>
+      <div class="mt-2 flex flex-wrap items-center gap-2 text-xs">
+        <span class="pill bg-ink-600 text-mist-400">scope · {{ scope or "unknown" }}</span>
+        {% if label and label.is_benign %}
+          <span class="pill bg-ink-600 text-mist-400">labeled · benign</span>
+        {% elif label and label.technique_ids %}
+          <span class="pill bg-pink-700/40 text-pink-400">{{ label.technique_ids | join(", ") }}</span>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 1: score card | timeline -->
+  <div class="grid items-stretch gap-6 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,2fr)]">
+    {% include "_components/score_card.html" %}
+    {% include "_components/timeline_chart.html" %}
+  </div>
+
+  <!-- Row 2: why panel | feature bars -->
+  <div class="mt-6 grid gap-6 lg:grid-cols-2">
+    {% include "_components/why_panel.html" %}
+    {% include "_components/feature_bars.html" %}
+  </div>
+
+  <p class="mt-8 text-center text-xs text-mist-500">
+    v0.3 demo model · mid-band scores draw on synthetic training data · timeline score-climb is a cosmetic replay (see model card).
+  </p>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/plotly.min.js"></script>
+<script src="/static/js/score_animation.js" defer></script>
+<script src="/static/js/timeline.js" defer></script>
+{% endblock %}

@@ -1,0 +1,30 @@
+{# Top feature contributions: (value / dataset-max) × model importance.
+   Expects: feature_rows [{name, value, importance, contribution, fill_pct}]. #}
+<div class="card p-6">
+  <div class="mb-1 flex items-center justify-between">
+    <h2 class="text-sm font-semibold text-mist-100">Feature contributions</h2>
+    <span class="font-mono text-[10px] uppercase tracking-widest text-mist-500">signal · value</span>
+  </div>
+  <p class="mb-5 text-xs text-mist-500">
+    Bar = how unusually high this incident's value is, weighted by the model's importance for that feature.
+  </p>
+
+  {% if feature_rows %}
+  <ul class="space-y-3.5">
+    {% for f in feature_rows %}
+    <li>
+      <div class="mb-1 flex items-baseline justify-between gap-3">
+        <span class="font-mono text-xs text-mist-300">{{ f.name }}</span>
+        <span class="font-mono text-xs text-pink-400 tnum">{{ f.value }}</span>
+      </div>
+      <div class="feature-bar-track h-1.5 w-full overflow-hidden rounded-full">
+        <div class="feature-bar-fill h-full rounded-full"
+             style="width: {{ "%.1f"|format(f.fill_pct) }}%"></div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="text-sm text-mist-500">No contributing features above baseline.</p>
+  {% endif %}
+</div>

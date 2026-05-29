@@ -1,0 +1,26 @@
+{# Plain-English reasoning bullets, ordered by driving-feature importance.
+   Expects: why_bullets [{text, feature, value, importance}]. #}
+<div class="card flex h-full flex-col p-6">
+  <h2 class="text-sm font-semibold text-mist-100">Why this score</h2>
+  <p class="mb-4 mt-1 text-xs text-mist-500">Highest-signal evidence the model picked up.</p>
+
+  {% if why_bullets %}
+  <ul class="space-y-3">
+    {% for b in why_bullets %}
+    <li class="flex items-start gap-2.5">
+      <span class="mt-1.5 h-1.5 w-1.5 flex-none rounded-full bg-pink-400"></span>
+      <div class="min-w-0">
+        <p class="text-sm leading-snug text-mist-200">{{ b.text }}</p>
+        <p class="mt-0.5 font-mono text-[10px] uppercase tracking-wider text-mist-500">{{ b.feature }}</p>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="text-sm text-mist-500">No strong attack signals — consistent with a benign or stale host.</p>
+  {% endif %}
+
+  <p class="mt-auto pt-5 text-[10px] leading-relaxed text-mist-500">
+    Evidence bullets are rule-based readouts of the feature vector; the score itself is the calibrated model probability.
+  </p>
+</div>

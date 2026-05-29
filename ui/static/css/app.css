@@ -1,0 +1,100 @@
+/* Custom theme layer — severity intensity, glows, and animation keyframes.
+ * Loaded AFTER tailwind.css so these win on conflict.
+ *
+ * Fonts: we intentionally rely on the system stack (Inter -> system-ui,
+ * JetBrains Mono -> ui-monospace) rather than shipping web-font files. On the
+ * demo Mac that resolves to San Francisco / SF Mono — crisp, high-DPI, zero
+ * network, zero 404s, no layout shift. Drop .woff2 files into ui/static/fonts/
+ * and add @font-face here if you want exact brand fonts later. */
+
+:root {
+  --pink-accent: #ec4899;
+  --pink-crit: #ff0080;
+  --pink-hover: #d6336c;
+  --pink-dim: #9d2455;
+}
+
+/* Severity is expressed via pink INTENSITY only (never hue). Each band sets
+   a --sev-color the score card / icons read from. */
+.sev-low {
+  --sev-color: #9d2455;
+  --sev-glow: rgba(157, 36, 85, 0.35);
+}
+.sev-med {
+  --sev-color: #d6336c;
+  --sev-glow: rgba(214, 51, 108, 0.4);
+}
+.sev-high {
+  --sev-color: #ec4899;
+  --sev-glow: rgba(236, 72, 153, 0.5);
+}
+.sev-critical {
+  --sev-color: #ff0080;
+  --sev-glow: rgba(255, 0, 128, 0.6);
+}
+
+.sev-text {
+  color: var(--sev-color);
+}
+.sev-glow-ring {
+  box-shadow: 0 0 36px -2px var(--sev-glow), inset 0 0 0 1px var(--sev-color);
+}
+
+/* Big score number. Tabular figures keep the width fixed during count-up. */
+.score-number {
+  color: var(--sev-color);
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 0 28px var(--sev-glow);
+  line-height: 1;
+}
+
+/* Feature-bar fill — pink intensity scaled by the caller via inline width. */
+.feature-bar-track {
+  background: rgba(236, 72, 153, 0.08);
+}
+.feature-bar-fill {
+  background: linear-gradient(90deg, var(--pink-dim), var(--pink-accent));
+  transition: width 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Entrance animation for cards — fade + lift, transform-only (no layout). */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.rise-in {
+  animation: rise-in 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Indeterminate processing bar used on the upload screen. */
+@keyframes sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+.sweep-bar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 25%;
+  background: linear-gradient(90deg, transparent, var(--pink-accent), transparent);
+  animation: sweep 1.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise-in,
+  .sweep-bar::after,
+  .feature-bar-fill {
+    animation: none;
+    transition: none;
+  }
+}

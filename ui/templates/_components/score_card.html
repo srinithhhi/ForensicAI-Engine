@@ -1,0 +1,29 @@
+{# Big-number risk score card.
+   Expects: result {risk, score, score_10, model_version}, sev_class, sev_icon. #}
+<div class="card {{ sev_class }} sev-glow-ring flex flex-col items-center p-8 text-center">
+  <div class="sev-text mb-3">
+    {% include sev_icon %}
+  </div>
+
+  <div class="flex items-baseline gap-1.5">
+    <span id="score-number"
+          class="score-number tnum font-mono text-7xl font-bold"
+          data-target="{{ result.score_10 }}">0</span>
+    <span class="font-mono text-2xl text-mist-500">/10</span>
+  </div>
+
+  <span class="pill mt-4 sev-text" style="background: color-mix(in srgb, var(--sev-color) 14%, transparent);">
+    {{ result.risk }} risk
+  </span>
+
+  <dl class="mt-6 grid w-full grid-cols-2 gap-px overflow-hidden rounded-lg bg-ink-500 text-left">
+    <div class="bg-ink-700 px-3 py-2.5">
+      <dt class="font-mono text-[10px] uppercase tracking-widest text-mist-500">probability</dt>
+      <dd class="mt-0.5 font-mono text-sm text-mist-100 tnum">{{ "%.4f"|format(result.score) }}</dd>
+    </div>
+    <div class="bg-ink-700 px-3 py-2.5">
+      <dt class="font-mono text-[10px] uppercase tracking-widest text-mist-500">model</dt>
+      <dd class="mt-0.5 font-mono text-sm text-mist-100">{{ result.model_version }}</dd>
+    </div>
+  </dl>
+</div>

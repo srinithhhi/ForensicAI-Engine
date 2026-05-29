@@ -1,0 +1,41 @@
+{# Plotly timeline container + playback controls.
+   Expects: incident_id. Data is fetched client-side from /api/timeline/{id}. #}
+<div class="card p-6" data-incident="{{ incident_id }}">
+  <div class="mb-4 flex flex-wrap items-center justify-between gap-3">
+    <div>
+      <h2 class="text-sm font-semibold text-mist-100">Event timeline</h2>
+      <p id="tl-summary" class="mt-1 text-xs text-mist-500">loading events…</p>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <button id="tl-play" type="button"
+        class="inline-flex h-9 items-center gap-2 rounded-lg bg-pink-400 px-4 text-sm font-medium text-ink-900 transition-colors hover:bg-pink-500">
+        <span id="tl-play-label">Play</span>
+      </button>
+      <button id="tl-restart" type="button"
+        class="inline-flex h-9 items-center justify-center rounded-lg border border-ink-500 px-3 text-sm text-mist-300 transition-colors hover:border-pink-500 hover:text-pink-400">
+        Restart
+      </button>
+      <div class="flex overflow-hidden rounded-lg border border-ink-500 font-mono text-xs">
+        {% for spd in [1, 2, 5] %}
+        <button type="button" data-speed="{{ spd }}"
+          class="tl-speed px-2.5 py-1.5 text-mist-400 transition-colors hover:text-pink-400 {% if spd == 1 %}is-active{% endif %}">
+          {{ spd }}×
+        </button>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Reserve height before Plotly mounts so the layout never shifts. -->
+  <div id="timeline-plot" class="h-[340px] w-full"></div>
+
+  <div class="mt-3 flex items-center gap-5 text-[11px] text-mist-500">
+    <span class="inline-flex items-center gap-1.5">
+      <span class="h-2 w-2 rounded-full" style="background:#ff0080"></span> attack
+    </span>
+    <span class="inline-flex items-center gap-1.5">
+      <span class="h-2 w-2 rounded-full" style="background:#5c1733"></span> benign
+    </span>
+  </div>
+</div>

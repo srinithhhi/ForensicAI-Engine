@@ -12,20 +12,20 @@ from pathlib import Path
 import joblib
 import pandas as pd
 
-from .data_loader import REPO_ROOT, SYNTHETIC_DIR
+from .data_loader import DEMO_DIR, REPO_ROOT, SYNTHETIC_DIR
 
 MODEL_PATH = REPO_ROOT / "ai_triage" / "model.pkl"
 LABELED_DIR = REPO_ROOT / "data" / "labeled"
 
 
 def _find_vector(incident_id: str) -> Path:
-    """Look in data/labeled/ first, then data/synthetic/ as fallback."""
-    for d in (LABELED_DIR, SYNTHETIC_DIR):
+    """Look in data/labeled/, data/synthetic/, then data/demo/."""
+    for d in (LABELED_DIR, SYNTHETIC_DIR, DEMO_DIR):
         candidate = d / f"{incident_id}.json"
         if candidate.exists():
             return candidate
     raise FileNotFoundError(
-        f"No labeled vector for {incident_id} in data/labeled/ or data/synthetic/"
+        f"No labeled vector for {incident_id} in labeled/, synthetic/, or demo/"
     )
 
 # Locked thresholds — must match docs/PHASE5_HANDOFF.md §3.

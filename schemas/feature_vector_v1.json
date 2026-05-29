@@ -9,7 +9,7 @@
   "properties": {
     "incident_id": {
       "type": "string",
-      "pattern": "^(INC|SMOKE|SYNTH)-[A-Z0-9-]+$"
+      "pattern": "^(INC|SMOKE|SYNTH|DEMO)-[A-Z0-9-]+$"
     },
     "scope": {
       "type": "string",

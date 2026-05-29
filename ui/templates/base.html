@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{% block title %}ForensicAI Triage{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/tailwind.css" />
+    <link rel="stylesheet" href="/static/css/app.css" />
+    <script src="/static/js/htmx.min.js" defer></script>
+    {% block head %}{% endblock %}
+  </head>
+  <body class="min-h-screen">
+    <header class="border-b border-ink-500/70">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <a href="/" class="flex items-center gap-2.5">
+          <span class="inline-block h-2.5 w-2.5 rounded-full bg-pink-400 shadow-pink-glow"></span>
+          <span class="font-mono text-sm font-semibold tracking-widest text-mist-100">
+            FORENSIC<span class="text-pink-400">AI</span>
+          </span>
+        </a>
+        <span class="font-mono text-xs uppercase tracking-widest text-mist-500">
+          triage · rf-v0.3
+        </span>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-6 py-10">
+      {% block content %}{% endblock %}
+    </main>
+
+    {% block scripts %}{% endblock %}
+  </body>
+</html>
