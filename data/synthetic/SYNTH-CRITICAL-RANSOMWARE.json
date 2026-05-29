@@ -1,0 +1,52 @@
+{
+  "features": {
+    "auth_failure_count": 0,
+    "auth_failure_ratio": 0.0,
+    "auth_success_count": 3,
+    "connections_to_threat_intel_ip": 0,
+    "cron_entries_added": 0,
+    "dns_query_count": 12,
+    "elevated_process_count": 12,
+    "encoded_command_count": 5,
+    "event_class_diversity": 6,
+    "file_integrity_changes": 200,
+    "ioc_domain_matches": 0,
+    "ioc_hash_matches": 3,
+    "ioc_ip_matches": 0,
+    "ioc_match_threat_levels_max": 1,
+    "listen_port_count": 8,
+    "log_lines_total": 45000,
+    "log_window_hours": 6.0,
+    "new_persistence_entries": 4,
+    "new_user_creations": 0,
+    "offhours_logins": 0,
+    "powershell_obfuscation_count": 4,
+    "process_count": 60,
+    "recent_suid_creations": 0,
+    "recently_modified_count": 800,
+    "registry_run_key_changes": 2,
+    "scheduled_task_creations": 2,
+    "service_installs": 1,
+    "ssh_keys_added": 0,
+    "startup_items_added": 0,
+    "suid_additions": 0,
+    "suspicious_proc_count": 8,
+    "sysmon_high_severity_count": 3,
+    "system_file_modifications": 50,
+    "tmp_file_creations": 30,
+    "unique_remote_ips": 8,
+    "unique_src_ips": 1,
+    "unique_yara_rules_matched": 4,
+    "yara_file_hits": 15,
+    "yara_proc_hits": 5
+  },
+  "incident_id": "SYNTH-CRITICAL-RANSOMWARE",
+  "label": {
+    "is_benign": false,
+    "technique_ids": [
+      "T1486"
+    ]
+  },
+  "schema_version": "v1",
+  "scope": "vmware"
+}

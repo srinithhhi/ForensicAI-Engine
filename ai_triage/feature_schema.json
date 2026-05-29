@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forensicai.engine/schemas/feature_vector_v1.json",
+  "title": "ForensicAI-Engine Feature Vector v1",
+  "description": "One-per-incident summary that the Phase 5 AI triage model consumes. Locked contract — adding/removing/renaming features requires bumping the version. Features are scope-agnostic: Linux-only features (e.g. suid_additions) are zero on Windows incidents and vice versa, so the same model can score either scope.",
+  "type": "object",
+  "required": ["incident_id", "scope", "schema_version", "features", "label"],
+  "additionalProperties": false,
+  "properties": {
+    "incident_id": {
+      "type": "string",
+      "pattern": "^(INC|SMOKE)-[A-Z0-9-]+$"
+    },
+    "scope": {
+      "type": "string",
+      "enum": ["bare_metal", "vmware", "cloud"]
+    },
+    "schema_version": {"type": "string", "const": "v1"},
+    "features": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "log_lines_total", "log_window_hours", "event_class_diversity",
+        "auth_failure_count", "auth_success_count", "auth_failure_ratio",
+        "unique_src_ips", "offhours_logins", "new_user_creations",
+        "process_count", "elevated_process_count", "suspicious_proc_count",
+        "powershell_obfuscation_count", "encoded_command_count",
+        "unique_remote_ips", "listen_port_count", "dns_query_count",
+        "connections_to_threat_intel_ip",
+        "file_integrity_changes", "suid_additions",
+        "recently_modified_count", "system_file_modifications",
+        "tmp_file_creations", "recent_suid_creations",
+        "new_persistence_entries", "registry_run_key_changes",
+        "cron_entries_added", "service_installs", "startup_items_added",
+        "ssh_keys_added", "scheduled_task_creations",
+        "ioc_hash_matches", "ioc_ip_matches", "ioc_domain_matches",
+        "ioc_match_threat_levels_max",
+        "yara_proc_hits", "yara_file_hits", "unique_yara_rules_matched",
+        "sysmon_high_severity_count"
+      ],
+      "properties": {
+        "log_lines_total": {"type": "integer", "minimum": 0, "description": "Total OCSF events across all artifacts. Proxy for collection completeness."},
+        "log_window_hours": {"type": "number", "minimum": 0, "description": "Span between earliest and latest event time, in hours. Bundles span ~ a few hours of real activity to several days of background logs."},
+        "event_class_diversity": {"type": "integer", "minimum": 0, "maximum": 6, "description": "Distinct class_uid values observed (max 6: 1001, 1007, 2004, 3002, 4001, 6004)."},
+
+        "auth_failure_count": {"type": "integer", "minimum": 0, "description": "class_uid=3002 events with status_id=2."},
+        "auth_success_count": {"type": "integer", "minimum": 0, "description": "class_uid=3002 events with status_id=1."},
+        "auth_failure_ratio": {"type": "number", "minimum": 0, "maximum": 1, "description": "auth_failure_count / (auth_failure_count + auth_success_count). 0 if no auth events."},
+        "unique_src_ips": {"type": "integer", "minimum": 0, "description": "Distinct source IPs across all class_uid=3002 events (parsed from message field for sshd; from EventData for evtx)."},
+        "offhours_logins": {"type": "integer", "minimum": 0, "description": "Successful logon events (3002, status_id=1, activity_id=1) outside 08:00–18:00 host-local."},
+        "new_user_creations": {"type": "integer", "minimum": 0, "description": "Count of user-creation auth events: sshd useradd lines on Linux, Windows EventID 4720, or Windows.Sys.Users entries newer than baseline."},
+
+        "process_count": {"type": "integer", "minimum": 0, "description": "Distinct class_uid=1007 events with activity_id=1 (Launch)."},
+        "elevated_process_count": {"type": "integer", "minimum": 0, "description": "1007 events whose unmapped.is_privileged is true (Windows TokenIsElevated or Linux SUID-flagged exec)."},
+        "suspicious_proc_count": {"type": "integer", "minimum": 0, "description": "Process events whose cmd_line contains known LOLBin patterns (certutil, bitsadmin, regsvr32 /s /u, mshta, rundll32 javascript:)."},
+        "powershell_obfuscation_count": {"type": "integer", "minimum": 0, "description": "Process events (1007) OR shell-history events (6004 with source_step in {bash_history, powershell_history}) matching obfuscation markers: `frombase64string`, `iex (new-object`, `-w hidden`, backtick-noise."},
+        "encoded_command_count": {"type": "integer", "minimum": 0, "description": "Events whose cmd_line OR message contains `-encodedcommand`, `-enc`, or `EncodedCommand`."},
+
+        "unique_remote_ips": {"type": "integer", "minimum": 0, "description": "Distinct dst_endpoint.ip values across class_uid=4001 events (excluding 0.0.0.0 / 127.* / ::)."},
+        "listen_port_count": {"type": "integer", "minimum": 0, "description": "Distinct local ports with class_uid=4001 activity_id=7 (LISTEN)."},
+        "dns_query_count": {"type": "integer", "minimum": 0, "description": "class_uid=4001 events with unmapped.event_id=22 (Sysmon DNS) — Linux currently 0."},
+        "connections_to_threat_intel_ip": {"type": "integer", "minimum": 0, "description": "Subset of class_uid=4001 events whose dst_endpoint.ip matches a MISP IP IOC."},
+
+        "file_integrity_changes": {"type": "integer", "minimum": 0, "description": "class_uid=1001 events from source_step=aide_diff."},
+        "suid_additions": {"type": "integer", "minimum": 0, "description": "1001 events with unmapped.is_privileged=true (SUID-flagged files). Linux only — zero on Windows incidents."},
+        "recently_modified_count": {"type": "integer", "minimum": 0, "description": "1001 events from source_step in {recently_modified}."},
+        "system_file_modifications": {"type": "integer", "minimum": 0, "description": "1001 events whose actor.process.file.path starts with /etc, /usr/bin, /usr/sbin, C:\\Windows, or C:\\Program Files."},
+        "tmp_file_creations": {"type": "integer", "minimum": 0, "description": "Distinct files in /tmp, /var/tmp, or /dev/shm with mtime within the simulation window. Catches T1105 (ingress tool transfer) drops, malicious staging files, and atomic-test framework artifacts. Benign baselines should be 0."},
+        "recent_suid_creations": {"type": "integer", "minimum": 0, "description": "Distinct files modified in the simulation window whose Velociraptor-reported Mode has Go's ModeSetuid bit (1<<23) set. Catches T1548.001 (Setuid and Setgid). The stock SUID baseline counted by suid_additions stays constant across runs; this feature isolates the *dynamic* SUID-bit setting that's the real attack signal."},
+
+        "new_persistence_entries": {"type": "integer", "minimum": 0, "description": "Sum of cron_entries_added + service_installs + startup_items_added — aggregate persistence signal."},
+        "registry_run_key_changes": {"type": "integer", "minimum": 0, "description": "Sysmon Event 13 events (registry value set) whose target path is under a Run/RunOnce/StartupApproved key, OR startup_items rows. Linux always 0."},
+        "cron_entries_added": {"type": "integer", "minimum": 0, "description": "6004 events from source_step=cron. Windows always 0."},
+        "service_installs": {"type": "integer", "minimum": 0, "description": "6004 events whose unmapped.event_id=7045 (Windows service install) OR source_step=systemd with severity_id=4."},
+        "startup_items_added": {"type": "integer", "minimum": 0, "description": "6004 events from source_step=startup_items with severity_id>=3."},
+        "ssh_keys_added": {"type": "integer", "minimum": 0, "description": "Count of distinct authorized_keys files modified during the bundle's simulation window (file path matches /root/.ssh/authorized_keys* or /home/*/.ssh/authorized_keys*). Catches T1098.004 / Modify Authentication Process. Windows always 0."},
+        "scheduled_task_creations": {"type": "integer", "minimum": 0, "description": "Count of distinct task XML files written to C:\\Windows\\System32\\Tasks\\ during the simulation window — detected via Sysmon EID 11 (FileCreate). Catches T1053.005 / Scheduled Task because Windows audit policy 4698 is OFF by default, so Security.evtx won't help. Linux always 0."},
+
+        "ioc_hash_matches": {"type": "integer", "minimum": 0, "description": "Count of distinct process/file SHA256 hashes seen in MISP."},
+        "ioc_ip_matches": {"type": "integer", "minimum": 0, "description": "Count of distinct dst_endpoint.ip values seen in MISP."},
+        "ioc_domain_matches": {"type": "integer", "minimum": 0, "description": "Count of distinct DNS query hostnames seen in MISP. Linux currently 0 (no DNS source)."},
+        "ioc_match_threat_levels_max": {"type": "integer", "minimum": 0, "maximum": 4, "description": "Highest MISP threat_level_id seen across all matched IOCs. 1=High 2=Medium 3=Low 4=Undefined, 0=no matches."},
+
+        "yara_proc_hits": {"type": "integer", "minimum": 0, "description": "class_uid=2004 events from source_step=yara_proc."},
+        "yara_file_hits": {"type": "integer", "minimum": 0, "description": "class_uid=2004 events from source_step=yara_files (a.k.a. yara_glob)."},
+        "unique_yara_rules_matched": {"type": "integer", "minimum": 0, "description": "Distinct unmapped.yara_rule values across all 2004 events."},
+
+        "sysmon_high_severity_count": {"type": "integer", "minimum": 0, "description": "class_uid=2004 events from source_step=sysmon (Sysmon EID 8 CreateRemoteThread + EID 10 ProcessAccess — credential-dump and injection signals). Windows only — Linux always 0."}
+      }
+    },
+    "label": {
+      "type": "object",
+      "required": ["technique_ids", "is_benign"],
+      "additionalProperties": false,
+      "properties": {
+        "technique_ids": {
+          "type": "array",
+          "items": {"type": "string", "pattern": "^T\\d{4}(\\.\\d{3})?$"},
+          "description": "MITRE ATT&CK technique IDs fired during simulation. Empty list when the incident has no simulation manifest (real incident or benign baseline)."
+        },
+        "is_benign": {"type": "boolean", "description": "True if technique_ids is empty AND the bundle came from a deliberate benign-baseline run. False for simulated attacks and for unlabeled real incidents."}
+      }
+    }
+  }
+}

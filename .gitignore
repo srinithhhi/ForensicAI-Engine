@@ -8,6 +8,7 @@ data/experiments/watch.log
 logs/
 __pycache__/
 *.pyc
+ai_triage/model.pkl
 .DS_Store
 .venv/
 venv/
