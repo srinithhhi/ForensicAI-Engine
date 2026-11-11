@@ -1,53 +1,47 @@
 # Project Context — ForensicAI-Engine
 
 ## What this is
-AI-powered incident triage pipeline for two scopes:
-- Scope 1: Bare metal Ubuntu VM (192.168.1.10)
-- Scope 2: Windows 10 VM (192.168.1.6)
+An AI-powered incident-triage pipeline that acquires, normalises and triages forensic
+evidence across two target scopes:
+- **Scope 1:** Ubuntu Linux VM
+- **Scope 2:** Windows 10 VM
 
-## Host machine
-MacBook Air M2 (arm64) - 192.168.1.3
-Runs: Velociraptor server, MISP (Docker), YARA rules
+## Environment
+- **Host:** macOS (Apple Silicon) — runs the Velociraptor server, MISP (Docker) and YARA rules
+- **Targets:** Linux and Windows virtual machines, each running a Velociraptor agent
+- Network addresses, hostnames and credentials are kept in a local, untracked `config/.env`
+  file and are intentionally not committed to this repository.
 
 ## Tools per scope
-Scope 1: Velociraptor agent, osquery, AIDE, LiME, Plaso, YARA, MISP
-Scope 2: Velociraptor agent, Sysmon, KAPE, EvtxECmd, YARA, MISP
-
-## Key paths
-- Project: /Users/srinithi/ForensicAI-Engine/
-- Velociraptor binary: /Users/srinithi/Downloads/tools/velociraptor
-- Velociraptor config: /Users/srinithi/velociraptor-server/server.config.yaml
-- MISP: https://localhost (Docker)
-- YARA rules: /Users/srinithi/yara-rules
-- Atomic Red Team Linux: /home/admin/atomic-red-team/atomics
-- Atomic Red Team Windows: C:\AtomicRedTeam\atomics
-
-## IPs
-- Mac host: 192.168.1.3
-- Ubuntu VM: 192.168.1.10, user: admin
-- Windows VM: 192.168.1.6, user: admin
+- **Scope 1 (Linux):** Velociraptor agent, osquery, AIDE, LiME, Plaso, YARA, MISP
+- **Scope 2 (Windows):** Velociraptor agent, Sysmon, KAPE, EvtxECmd, YARA, MISP
+- **Attack simulation:** Atomic Red Team (Linux and Windows atomics)
 
 ## Pipeline flow
 Attack simulation → Acquisition layer → OCSF normalisation → Feature extraction → AI triage
 
 ## Directory structure
+```
 ForensicAI-Engine/
 ├── orchestrator/       # main.py
 ├── acquisition/        # bare_metal_acquirer.py, vmware_acquirer.py
 ├── parsing/
-│   └── ocsf_mappers/  # one mapper per tool output
+│   └── ocsf_mappers/   # one mapper per tool output
 ├── normalisation/      # feature_extractor.py
-├── ai_triage/         # model training and inference
-├── config/            # .env file with credentials
+├── ai_triage/          # model training and inference
+├── config/             # local .env (untracked) with credentials and host details
 ├── data/
-│   ├── raw/           # raw tool outputs per incident
-│   ├── processed/     # OCSF mapped events
-│   └── labeled/       # feature vectors with labels
+│   ├── raw/            # raw tool outputs per incident
+│   ├── processed/      # OCSF-mapped events
+│   └── labeled/        # feature vectors with labels
 ├── logs/
 └── tests/
+```
 
-## Current status
-All tools installed and verified. Ready to write Python files.
+## Configuration
+All host addresses, VM details, tool paths and credentials are environment-specific and
+must be supplied via a local `config/.env` file (not committed). See `requirements.txt`
+for Python dependencies.
 
-## Start here
-Always read CONTEXT.md first before writing any code.
+## Status
+Active development.
